@@ -26,6 +26,11 @@ const demos: Record<DemoSlug, React.ComponentType> = {
   "ppe-check": dynamic(() => import("@/components/demos/PpeCheck"), { ssr: false, loading: Loading }),
   "fatigue-monitor": dynamic(() => import("@/components/demos/FatigueMonitor"), { ssr: false, loading: Loading }),
   "segment-anything": dynamic(() => import("@/components/demos/SegmentAnything"), { ssr: false, loading: Loading }),
+  "movement-heatmap": dynamic(() => import("@/components/demos/MovementHeatmap"), { ssr: false, loading: Loading }),
+  "queue-dwell": dynamic(() => import("@/components/demos/QueueDwell"), { ssr: false, loading: Loading }),
+  "vehicle-speed": dynamic(() => import("@/components/demos/VehicleSpeed"), { ssr: false, loading: Loading }),
+  "image-enhance": dynamic(() => import("@/components/demos/ImageEnhance"), { ssr: false, loading: Loading }),
+  "scene-describe": dynamic(() => import("@/components/demos/SceneDescribe"), { ssr: false, loading: Loading }),
 };
 
 export default function DemoLoader({ slug }: { slug: DemoSlug }) {

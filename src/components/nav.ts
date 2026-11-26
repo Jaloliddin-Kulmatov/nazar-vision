@@ -4,7 +4,7 @@ export const navItems = [
   { href: "/solutions", key: "solutions" },
   { href: "/use-cases", key: "useCases" },
   { href: "/services", key: "services" },
-  { href: "/pricing", key: "pricing" },
+  { href: "/code", key: "code" },
 ] as const;
 
 export const footerItems = [

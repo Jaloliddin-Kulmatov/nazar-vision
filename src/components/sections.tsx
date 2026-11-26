@@ -168,7 +168,7 @@ export function TwoPaths() {
       <div className="rounded-[20px] border border-line bg-panel/50 p-8">
         <h3 className="font-display text-2xl font-bold">{t("build.title")}</h3>
         <p className="mt-3 text-muted">{t("build.text")}</p>
-        <ButtonLink href="/open-source" variant="ghost" className="mt-6">
+        <ButtonLink href="/code" variant="ghost" className="mt-6">
           {t("build.cta")}
         </ButtonLink>
       </div>

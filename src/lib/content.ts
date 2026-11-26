@@ -3,7 +3,7 @@ import {
   ShoppingBag, Factory, ShieldCheck, Car, FileText, Warehouse, Wheat, Stethoscope,
   ScanLine, Users, ScanFace, PersonStanding, Hand, ScanText, ScanBarcode, Eraser,
   SearchCheck, Layers, Radar, Cpu, Tag, LifeBuoy, Gauge, Bot, Shirt,
-  Siren, HardHat, Eye, MousePointerClick,
+  Siren, HardHat, Eye, MousePointerClick, Flame, Timer, ZoomIn, MessageSquareText,
 } from "lucide-react";
 
 /** Public sample images (CORS-enabled) from the Transformers.js docs dataset on Hugging Face. */
@@ -50,6 +50,11 @@ export const demoSlugs = [
   "depth-estimation",
   "fatigue-monitor",
   "segment-anything",
+  "movement-heatmap",
+  "queue-dwell",
+  "vehicle-speed",
+  "image-enhance",
+  "scene-describe",
 ] as const;
 export type DemoSlug = (typeof demoSlugs)[number];
 
@@ -68,7 +73,7 @@ export type DemoMeta = {
   cover?: string;
 };
 
-export const demoGroups = ["safety", "counting", "quality", "documents", "privacy"] as const;
+export const demoGroups = ["safety", "counting", "quality", "understanding", "documents", "privacy"] as const;
 export type DemoGroup = (typeof demoGroups)[number];
 
 /** Still frame for a sample video in /public/videos (made at build time into /public/posters). */
@@ -93,6 +98,11 @@ export const demos: DemoMeta[] = [
   { slug: "depth-estimation", icon: Layers, engine: "Transformers.js", model: "Depth Anything V2 Small", size: "25 MB", webcam: false, repos: ["huggingface/transformers.js", "DepthAnything/Depth-Anything-V2"], group: "quality", cover: samples.house },
   { slug: "fatigue-monitor", icon: Eye, engine: "MediaPipe", model: "Face Landmarker + blendshapes", size: "4 MB", webcam: true, repos: ["google-ai-edge/mediapipe"], group: "safety", cover: "/posters/driver.jpg" },
   { slug: "segment-anything", icon: MousePointerClick, engine: "Transformers.js", model: "SlimSAM-77 (Segment Anything)", size: "14 MB", webcam: false, repos: ["huggingface/transformers.js", "facebookresearch/segment-anything"], group: "quality", cover: "/posters/conveyor.jpg" },
+  { slug: "movement-heatmap", icon: Flame, engine: "MediaPipe", model: "EfficientDet-Lite0 + heatmap", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/crowd.jpg" },
+  { slug: "queue-dwell", icon: Timer, engine: "MediaPipe", model: "EfficientDet-Lite0 + tracker", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/workers.jpg" },
+  { slug: "vehicle-speed", icon: Gauge, engine: "MediaPipe", model: "EfficientDet-Lite0 + two-line speed trap", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/traffic.jpg" },
+  { slug: "image-enhance", icon: ZoomIn, engine: "Transformers.js", model: "Swin2SR ×2 (Apache-2.0)", size: "21 MB", webcam: false, repos: ["huggingface/transformers.js", "mv-lab/swin2sr"], group: "quality", cover: "/posters/hardhat.jpg" },
+  { slug: "scene-describe", icon: MessageSquareText, engine: "Transformers.js", model: "Florence-2 base (MIT)", size: "270 MB", webcam: false, repos: ["huggingface/transformers.js"], group: "understanding", cover: "/posters/warehouse.jpg" },
 ];
 
 export const getDemo = (slug: string) => demos.find((d) => d.slug === slug);
@@ -107,13 +117,13 @@ export const industries: { id: IndustryId; icon: LucideIcon; demos: DemoSlug[] }
   { id: "manufacturing", icon: Factory, demos: ["defect-check", "safety-zone", "ppe-check", "people-counter", "barcode-scanner"] },
   { id: "textile", icon: Shirt, demos: ["defect-check", "segment-anything", "ocr", "barcode-scanner"] },
   { id: "robotics", icon: Bot, demos: ["segment-anything", "depth-estimation", "object-detection", "pose-estimation", "hand-gestures"] },
-  { id: "logistics", icon: Warehouse, demos: ["safety-zone", "barcode-scanner", "object-detection", "fatigue-monitor"] },
-  { id: "retail", icon: ShoppingBag, demos: ["people-counter", "object-detection", "face-anonymizer"] },
-  { id: "security", icon: ShieldCheck, demos: ["safety-zone", "face-anonymizer", "pose-estimation", "object-detection"] },
-  { id: "traffic", icon: Car, demos: ["people-counter", "object-detection", "fatigue-monitor", "ocr"] },
-  { id: "documents", icon: FileText, demos: ["ocr", "barcode-scanner"] },
+  { id: "logistics", icon: Warehouse, demos: ["safety-zone", "movement-heatmap", "barcode-scanner", "object-detection", "fatigue-monitor"] },
+  { id: "retail", icon: ShoppingBag, demos: ["queue-dwell", "movement-heatmap", "people-counter", "scene-describe", "face-anonymizer"] },
+  { id: "security", icon: ShieldCheck, demos: ["safety-zone", "image-enhance", "face-anonymizer", "scene-describe", "object-detection"] },
+  { id: "traffic", icon: Car, demos: ["vehicle-speed", "people-counter", "object-detection", "fatigue-monitor", "image-enhance"] },
+  { id: "documents", icon: FileText, demos: ["ocr", "scene-describe", "barcode-scanner"] },
   { id: "agriculture", icon: Wheat, demos: ["defect-check", "object-detection", "background-removal"] },
-  { id: "healthcare", icon: Stethoscope, demos: ["people-counter", "face-anonymizer", "ocr"] },
+  { id: "healthcare", icon: Stethoscope, demos: ["queue-dwell", "people-counter", "face-anonymizer", "ocr"] },
 ];
 
 export const serviceIds = ["discovery", "models", "robotics", "labeling", "integration", "support"] as const;

@@ -15,7 +15,8 @@
     "menu": "Menyu",
     "close": "Yopish",
     "language": "Til",
-    "useCases": "Qo‘llanilishi"
+    "useCases": "Qo‘llanilishi",
+    "code": "Bepul kod"
   },
   "common": {
     "tryIt": "Sinab ko‘ring",
@@ -41,7 +42,7 @@
     },
     "stats": [
       {
-        "value": "14",
+        "value": "19",
         "label": "namuna videolari bilan jonli demo"
       },
       {
@@ -134,8 +135,8 @@
     "paths": {
       "build": {
         "title": "Jamoangiz bormi? O‘zingiz quring.",
-        "text": "Ochiq kod kutubxonasi va demolarni ko‘rib chiqing. Muhandislaringizga maslahat berishga tayyormiz.",
-        "cta": "Ochiq kod kutubxonasi"
+        "text": "Barcha demolarning bepul manba kodini yuklab oling va rivojlantiring. Muhandislaringizga maslahat berishdan xursandmiz.",
+        "cta": "Bepul kodni olish"
       },
       "operate": {
         "title": "Muammo bormi? Bizga olib keling.",
@@ -156,7 +157,7 @@
     "scenes": {
       "title": "Sahnani tanlang va model ishini ko‘ring",
       "subtitle": "Har biri shu videoda allaqachon ishlayotgan demoni ochadi. Keyin veb-kamerani yoqing yoki o‘z videongizni yuklang.",
-      "all": "Barcha 14 ta demo",
+      "all": "Barcha 19 ta demo",
       "items": {
         "safety-zone": "Yuklagichli ombor",
         "ppe-check": "Planshetli ishchi",
@@ -669,6 +670,31 @@
         "title": "Istalgan obyektni ajratish",
         "short": "Istalgan obyektni bosing — u pikselgacha aniq niqob bilan ajratiladi, so‘ng uni o‘lchang yoki yuklab oling.",
         "business": "Detal va nuqsonlarni o‘lchash, bir necha daqiqada o‘qitish ma’lumotlarini tayyorlash, robot ushlashi."
+      },
+      "movement-heatmap": {
+        "title": "Harakat issiqlik xaritasi",
+        "short": "Odamlar yoki mashinalar qayerda ko‘p vaqt o‘tkazishini ko‘ring. Video qancha uzoq ishlasa, gavjum joylar va bo‘sh burchaklar shuncha aniq bo‘ladi.",
+        "business": "Do‘kon rejasi va mahsulot joylashuvi, ombor yo‘laklaridan foydalanish, sexdagi tor joylar, yangi kamera yoki belgi qo‘yiladigan joy."
+      },
+      "queue-dwell": {
+        "title": "Navbat va kutish vaqti",
+        "short": "Kassa, peshtaxta yoki eshikni belgilang. U yerda nechta odam va qancha kutayotganini ko‘ring; navbat uzayib ketsa ogohlantirish.",
+        "business": "Mijozlar ketib qolmasdan yangi kassa ochish, bank va klinikalarda xizmat vaqtini o‘lchash, darvoza oldida yuk mashinalari qancha kutishini bilish."
+      },
+      "vehicle-speed": {
+        "title": "Transport tezligi",
+        "short": "Ikki chiziq va ma’lum masofa har qanday kamerani tezlik nazoratiga aylantiradi. Har bir mashinaning km/soat tezligi ko‘rinadi, oshirganlar belgilanadi.",
+        "business": "Zavod va ombor hududida, hovlilar va avtoturargohlarda tezlik nazorati; radarsiz transport tadqiqotlari."
+      },
+      "image-enhance": {
+        "title": "Tasvirni yaxshilash",
+        "short": "Kichik yoki xira kamera kadrini ikki baravar kattalashtiring va tiniqlashtiring, keyin oldin va keyingisini slayder bilan solishtiring.",
+        "business": "Eski kameralardan o‘qiladigan tafsilotlar, tahlil uchun tiniqroq kadrlar, kamera uzoqda bo‘lsa boshqa modellar uchun yaxshiroq kirish."
+      },
+      "scene-describe": {
+        "title": "Rasm haqida so‘rang",
+        "short": "Bitta model sahnani so‘z bilan tasvirlaydi, undagi narsalarni sanaydi, siz yozgan narsani topadi va matnni o‘qiydi.",
+        "business": "Kamera arxivida qidiruv, hodisalar haqida avtomatik yozuvlar, xodimlar yuborgan rasmlarni tekshirish, detektor o‘rgatilmagan narsalarni topish."
       }
     },
     "ui": {
@@ -763,7 +789,9 @@
         "hardhatFrame": "Kaskadagi ishchi",
         "warehouseFrame": "Ombor",
         "workersFrame": "Ombor ishchilari",
-        "bottlesFrame": "Liniyadagi butilkalar"
+        "bottlesFrame": "Liniyadagi butilkalar",
+        "trafficFrame": "Yo‘l harakati",
+        "crowdFrame": "Gavjum ko‘cha"
       },
       "style": "Uslub",
       "uploadMedia": "Rasm yoki video yuklash",
@@ -831,7 +859,54 @@
       "useOwnFile": "O‘z rasm yoki videomni yuklash",
       "allScenes": "Boshqa sahnalar",
       "liveBadge": "Jonli",
-      "videoBadge": "Video"
+      "videoBadge": "Video",
+      "heatWhat": "Nimani xaritaga tushirish",
+      "heatOpacity": "Xarita yorqinligi",
+      "showBoxes": "Ramkalarni ko‘rsatish",
+      "heatSamples": "Yozilgan joylar",
+      "heatHotspot": "Eng gavjum 10% da",
+      "heatReset": "Xaritani tozalash",
+      "heatNote": "Joylashuv soniyasiga besh marta oyoqlar (odamlar) yoki g‘ildiraklar (transport) bo‘yicha yoziladi. Haqiqiy tizimda bu kunlab ishlaydi va haftama-hafta solishtiriladi.",
+      "queueStatus": "Navbat holati",
+      "queueOk": "Navbat me’yorida",
+      "queueBusy": "{n} kishi kutmoqda: yana kassa oching",
+      "queueNow": "Hozir kutmoqda",
+      "queueLongest": "Eng uzoq kutish",
+      "queueAverage": "O‘rtacha kutish",
+      "queueVisits": "Tugagan tashriflar",
+      "queueArea": "Kutish hududi",
+      "queueLimit": "Ogohlantirish chegarasi",
+      "queueDraw": "O‘z kutish hududingizni belgilash uchun videoda 4 nuqtani bosing: kassa, peshtaxta, eshik.",
+      "speedMeasured": "O‘lchandi",
+      "speedAverage": "O‘rtacha km/soat",
+      "speedOver": "Oshirganlar",
+      "speedLog": "Oxirgi o‘lchovlar",
+      "speedSetup": "Tezlik nazorati",
+      "speedDistance": "Chiziqlar orasidagi masofa",
+      "speedLimit": "Tezlik chegarasi",
+      "speedDraw": "Yo‘l bo‘ylab A va B chiziqlarini qo‘yish uchun 4 nuqtani bosing, keyin ular orasidagi haqiqiy masofani belgilang.",
+      "speedNote": "Aniqlik yerdagi masofa qanchalik to‘g‘ri o‘lchanganiga bog‘liq. Qo‘zg‘almas, sozlangan kamera bir necha km/soat xato qiladi; bu yerda taxminiy baho.",
+      "enhanceBefore": "Oldin",
+      "enhanceAfter": "Keyin",
+      "enhanceCompare": "Solishtirish",
+      "enhanceSplit": "Ajratgich",
+      "enhanceIn": "Kirish",
+      "enhanceOut": "Chiqish",
+      "enhanceTime": "Vaqt",
+      "enhanceDownload": "Yaxshilangan rasmni yuklab olish",
+      "enhanceNote": "Model tafsilotlarni tiniqlashtiradi, lekin kamera umuman olmagan narsani tiklay olmaydi. Brauzerda ishlashi uchun kadrlar kichraytirilgan; noutbukda 10–60 soniya oladi.",
+      "askTask": "Nimani bilmoqchisiz?",
+      "askTasks": {
+        "describe": "Sahnani tasvirlash",
+        "objects": "Narsalarni sanash",
+        "find": "Biror narsani topish",
+        "text": "Matnni o‘qish"
+      },
+      "askFindLabel": "Nimani topish, masalan forklift",
+      "askFind": "Topish",
+      "askNote": "Javoblar ingliz tilida, so‘rovlarni ham inglizcha yozing. Zamonaviy videokartasiz kompyuterda har bir javob 10–40 soniya oladi.",
+      "askNothing": "Hech narsa topilmadi. Boshqa so‘zlarni sinab ko‘ring.",
+      "askTime": "{s} soniyada javob berdi"
     },
     "card": {
       "video": "Video va veb-kamera",
@@ -844,9 +919,15 @@
       "counting": "Sanash va kuzatish",
       "quality": "Sifat va o‘lchash",
       "documents": "Hujjatlar va kodlar",
-      "privacy": "Odamlar va maxfiylik"
+      "privacy": "Odamlar va maxfiylik",
+      "understanding": "Tasvirlash va qidirish"
     },
-    "moreDemos": "Yana sinab ko‘ring"
+    "moreDemos": "Yana sinab ko‘ring",
+    "getCode": "Manba kodini olish",
+    "codeBand": {
+      "title": "Bu yerdagi barcha demolar bepul va ochiq kodli",
+      "text": "To‘liq ishlaydigan kodni (MIT litsenziyasi) yuklab olish va rivojlantirish uchun bir marta ro‘yxatdan o‘ting."
+    }
   },
   "oss": {
     "eyebrow": "Ochiq kod kutubxonasi",
@@ -1094,7 +1175,7 @@
   "offers": {
     "eyebrow": "Biz bilan qanday ishlash",
     "title": "To‘rt bosqich. Istalganidan keyin to‘xtashingiz mumkin.",
-    "subtitle": "Bepul javobdan boshlang, o‘z videolaringizda isbotlang, keyin joriy qiling va aniqligini saqlang. Har bir bosqichning hajmi va narxi qat’iy belgilangan.",
+    "subtitle": "Bepul javobdan boshlang, o‘z videolaringizda isbotlang, keyin joriy qiling va aniqligini saqlang. Har bir bosqichdan oldin qat’iy smeta olasiz.",
     "check": {
       "name": "Bepul imkoniyat tekshiruvi",
       "time": "5 ish kuni",
@@ -1110,7 +1191,7 @@
     "pilot": {
       "name": "Konsepsiya isboti (pilot)",
       "time": "2–4 hafta",
-      "price": "{price} dan",
+      "price": "Qat’iy smeta",
       "outcome": "O‘z videolaringizdagi dalil — muvaffaqiyat va to‘xtash mezonlari boshidan kelishiladi.",
       "points": [
         "Bitta aniq savol, yozma kelishilgan",
@@ -1123,7 +1204,7 @@
     "deploy": {
       "name": "Joriy etish",
       "time": "4–10 hafta",
-      "price": "{price} dan",
+      "price": "Obyekt bo‘yicha smeta",
       "outcome": "Liniya yoki obyektingizda ishlaydigan tizim — jamoangiz foydalanadigan vositalarga ulangan.",
       "points": [
         "Kameralar, yoritish va edge kompyuter joyida o‘rnatiladi",
@@ -1136,7 +1217,7 @@
     "care": {
       "name": "Xizmat ko‘rsatish rejasi",
       "time": "Har oy",
-      "price": "{price}/oy dan",
+      "price": "Oylik, obyekt bo‘yicha",
       "outcome": "Mahsulot, yoritish va mavsum o‘zgarsa ham aniqlik yuqori qoladi.",
       "points": [
         "Aniqlik va ishlash monitoringi",
@@ -1380,6 +1461,68 @@
         "how": "Poza baholash yiqilishni aniqlab, shaxsni aniqlash mumkin bo‘lgan videoni yozmasdan xodimlarni ogohlantiradi.",
         "kpi": "yordam yetib kelish vaqti"
       }
+    }
+  },
+  "code": {
+    "eyebrow": "Bepul kod",
+    "title": "Har bir demo uchun bepul manba kodi",
+    "subtitle": "Bir marta ro‘yxatdan o‘ting va saytdagi barcha demolarning to‘liq, ishlaydigan kodini yuklab oling. O‘rganish, prototip yoki o‘z mahsulotingiz uchun.",
+    "includedTitle": "Nimalar olasiz",
+    "included": [
+      "Saytdagi barcha demolar bilan ishga tayyor Next.js va TypeScript loyihasi",
+      "Kamera, video va rasm bilan ishlash xuddi shunday: veb-kamera, yuklash, namunaviy sahnalar, model yuklanishi jarayoni bilan",
+      "Qayta foydalanish mumkin bo‘lgan kuzatish, hudud, chiziq bo‘yicha sanash, tezlik va kutish vaqti mantiqi",
+      "Kodimiz uchun MIT litsenziyasi: tijoriy foydalanish ham bepul",
+      "Namunaviy videolarni yuklovchi skript va har bir model litsenziyasiga havolalar"
+    ],
+    "demosTitle": "Barcha {n} ta demo kiritilgan",
+    "runTitle": "Ishga tushirish uchun to‘rtta buyruq",
+    "runSubtitle": "Node.js 20 yoki yangiroq kerak. Hammasi o‘z kompyuteringizda ishlaydi; akkaunt yoki API kalit kerak emas.",
+    "steps": [
+      {
+        "title": "Arxivni oching va papkaga kiring",
+        "cmd": "cd nazar-vision-demos",
+        "text": "Istalgan papka bo‘ladi."
+      },
+      {
+        "title": "O‘rnating",
+        "cmd": "npm install",
+        "text": "Kutubxonalarni yuklaydi, taxminan 1 GB."
+      },
+      {
+        "title": "Namunaviy videolarni oling",
+        "cmd": "npm run samples",
+        "text": "Saytimizdan taxminan 20 MB bepul Pexels videolari."
+      },
+      {
+        "title": "Ishga tushiring",
+        "cmd": "npm run dev",
+        "text": "http://localhost:3000 ni oching va demoni tanlang."
+      }
+    ],
+    "licence": "Kodimiz MIT litsenziyasi ostida. AI modellar mualliflaridan yuklanadi va o‘z litsenziyalarini saqlaydi; tijoriy foydalanishdan oldin har bir model kartasini tekshiring. Arxivdagi README barcha modellarni havolalar bilan sanab o‘tadi.",
+    "access": {
+      "formTitle": "Yuklab olish uchun ro‘yxatdan o‘ting",
+      "formText": "Bepul. Pochtangizga kirish havolasini yuboramiz, parol kerak emas.",
+      "name": "Ismingiz",
+      "company": "Kompaniya (ixtiyoriy)",
+      "email": "Ish pochtasi",
+      "submit": "Kirish havolasini yuborish",
+      "privacy": "Ma’lumotlaringizni faqat havola yuborish va ba’zan yangi demolar haqida xabar berish uchun ishlatamiz. Spam yo‘q, boshqalarga berilmaydi.",
+      "sentTitle": "Pochtangizni tekshiring",
+      "sentText": "Yuborgan havolamizni shu brauzerda oching. U sizni yuklab olish tayyor holda shu yerga qaytaradi.",
+      "useAnother": "Boshqa pochtani kiritish",
+      "readyTitle": "Yuklab olish tayyor",
+      "readyText": "{email} sifatida kirdingiz.",
+      "download": "Manba kodini yuklab olish ({size})",
+      "signOut": "Chiqish",
+      "tooMany": "Qisqa vaqtda juda ko‘p xat. Bir necha daqiqa kutib, qayta urinib ko‘ring.",
+      "failed": "Xat yuborilmadi. Manzilni tekshirib, qayta urinib ko‘ring.",
+      "linkFailed": "Kirish havolasi ishlamadi: muddati o‘tgan yoki boshqa brauzerda ochilgan bo‘lishi mumkin. Quyida yangisini so‘rang.",
+      "required": "Kodni yuklab olish uchun quyida ro‘yxatdan o‘ting.",
+      "soonTitle": "Ro‘yxatdan o‘tish tez orada ochiladi",
+      "soonText": "Kodni yuklab olish uchun akkauntlarni ulamoqdamiz. Hozircha bizga yozing, kodni to‘g‘ridan-to‘g‘ri yuboramiz.",
+      "soonCta": "Kodni so‘rash"
     }
   }
 }

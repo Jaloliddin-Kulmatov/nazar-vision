@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { estimateRoi, type RoiInput } from "@/lib/roi";
-import { site } from "@/config/site";
 import { ButtonLink } from "@/components/ui";
 
 type Field = { key: keyof RoiInput; min: number; max: number; step: number; pct?: boolean; money?: boolean };
@@ -28,9 +27,9 @@ const DEFAULTS: RoiInput = {
   escapes: 20,
   escapeCost: 60,
   caught: 0.5,
-  // Pilot + deployment + roughly $1,500 of cameras and an edge computer.
-  projectCost: site.priceValues.pilot + site.priceValues.deployment + 1500,
-  runningCost: site.priceValues.care,
+  // An example one-off budget for a single line or site, including cameras and an edge computer.
+  projectCost: 9000,
+  runningCost: 150,
 };
 
 const usd = (n: number) => `${n < 0 ? "−" : ""}$${Math.round(Math.abs(n)).toLocaleString("en-US")}`;

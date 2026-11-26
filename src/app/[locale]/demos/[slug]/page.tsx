@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Cpu, HardDriveDownload, Briefcase, ExternalLink } from "lucide-react";
+import { ArrowLeft, Cpu, HardDriveDownload, Briefcase, ExternalLink, Code2 } from "lucide-react";
 import { Container, ButtonLink } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -105,9 +105,14 @@ export default function DemoPage({ params }: PageProps<"/[locale]/demos/[slug]">
                 </li>
               ))}
             </ul>
-            <ButtonLink href="/contact" className="mt-5">
-              {c("talkToUs")}
-            </ButtonLink>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <ButtonLink href="/code">
+                <Code2 className="size-4" aria-hidden="true" /> {t("getCode")}
+              </ButtonLink>
+              <ButtonLink href="/contact" variant="ghost">
+                {c("talkToUs")}
+              </ButtonLink>
+            </div>
           </div>
         </div>
 

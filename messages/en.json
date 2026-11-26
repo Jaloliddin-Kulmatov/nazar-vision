@@ -15,7 +15,8 @@
     "menu": "Menu",
     "close": "Close",
     "language": "Language",
-    "useCases": "Use cases"
+    "useCases": "Use cases",
+    "code": "Free code"
   },
   "common": {
     "tryIt": "Try it",
@@ -41,7 +42,7 @@
     },
     "stats": [
       {
-        "value": "14",
+        "value": "19",
         "label": "live demos, with sample videos"
       },
       {
@@ -134,8 +135,8 @@
     "paths": {
       "build": {
         "title": "Have a team? Build it yourself.",
-        "text": "Browse the open-source library and demos. We’re happy to advise your engineers.",
-        "cta": "Open-source library"
+        "text": "Download the free source code of every demo and build on it. We’re happy to advise your engineers.",
+        "cta": "Get the free code"
       },
       "operate": {
         "title": "Have a problem? Bring it to us.",
@@ -156,7 +157,7 @@
     "scenes": {
       "title": "Pick a scene and watch a model work on it",
       "subtitle": "Each one opens a live demo already running on that clip. Then switch to your webcam or upload your own footage.",
-      "all": "All 14 demos",
+      "all": "All 19 demos",
       "items": {
         "safety-zone": "Warehouse with a forklift",
         "ppe-check": "Worker with a tablet",
@@ -669,6 +670,31 @@
         "title": "Segment anything",
         "short": "Click any object to cut it out with a pixel-accurate mask, then measure or download it.",
         "business": "Measuring parts and defects, building training data in minutes, and robot grasping."
+      },
+      "movement-heatmap": {
+        "title": "Movement heatmap",
+        "short": "See where people or vehicles spend their time. The longer the video runs, the clearer the busy spots and empty corners.",
+        "business": "Store layout and product placement, warehouse aisle use, bottlenecks on the shop floor, where to put a new camera or sign."
+      },
+      "queue-dwell": {
+        "title": "Queue and wait time",
+        "short": "Mark a till, counter or doorway. See how many people wait there and for how long, with an alert when the queue gets too long.",
+        "business": "Open another till before customers leave, measure service time at banks and clinics, check how long trucks wait at a gate."
+      },
+      "vehicle-speed": {
+        "title": "Vehicle speed",
+        "short": "Two lines and a known distance turn any camera into a speed check. Each car gets its own km/h, and speeders are flagged.",
+        "business": "Speed control on factory and warehouse sites, residential streets and parking lots; traffic studies without radar."
+      },
+      "image-enhance": {
+        "title": "Image enhance",
+        "short": "Make a small or blurry CCTV frame twice as large and sharper, then compare before and after with a slider.",
+        "business": "Readable details from old cameras, sharper evidence frames, better input for other models when the camera is far away."
+      },
+      "scene-describe": {
+        "title": "Ask about a photo",
+        "short": "One model that describes a scene in words, lists the objects in it, finds anything you type and reads the text.",
+        "business": "Searchable camera archives, automatic incident notes, checking photos sent by field staff, and finding objects no detector was trained for."
       }
     },
     "ui": {
@@ -763,7 +789,9 @@
         "warehouseFrame": "Warehouse",
         "workersFrame": "Warehouse workers",
         "bottlesFrame": "Bottles on a line",
-        "driverVideo": "Drowsy driver video"
+        "driverVideo": "Drowsy driver video",
+        "trafficFrame": "Traffic",
+        "crowdFrame": "Busy street"
       },
       "style": "Style",
       "uploadMedia": "Upload photo or video",
@@ -831,7 +859,54 @@
       "useOwnFile": "Upload my photo or video",
       "allScenes": "Other scenes",
       "liveBadge": "Live",
-      "videoBadge": "Video"
+      "videoBadge": "Video",
+      "heatWhat": "What to map",
+      "heatOpacity": "Heat strength",
+      "showBoxes": "Show boxes",
+      "heatSamples": "Positions logged",
+      "heatHotspot": "In busiest 10%",
+      "heatReset": "Clear heatmap",
+      "heatNote": "Positions are logged five times a second at the feet (people) or wheels (vehicles). In a real system this runs for days and is compared week to week.",
+      "queueStatus": "Queue status",
+      "queueOk": "Queue is fine",
+      "queueBusy": "{n} waiting: open another till",
+      "queueNow": "Waiting now",
+      "queueLongest": "Longest wait",
+      "queueAverage": "Average wait",
+      "queueVisits": "Finished visits",
+      "queueArea": "Waiting area",
+      "queueLimit": "Alert from",
+      "queueDraw": "Click 4 points on the video to mark your own waiting area: a till, a counter, a doorway.",
+      "speedMeasured": "Measured",
+      "speedAverage": "Average km/h",
+      "speedOver": "Over limit",
+      "speedLog": "Last measurements",
+      "speedSetup": "Speed trap",
+      "speedDistance": "Distance between lines",
+      "speedLimit": "Speed limit",
+      "speedDraw": "Click 4 points to place line A and line B across the road, then set the real distance between them.",
+      "speedNote": "Accuracy depends on measuring that distance on the ground. A fixed, calibrated camera measures within a few km/h; this demo is an estimate.",
+      "enhanceBefore": "Before",
+      "enhanceAfter": "After",
+      "enhanceCompare": "Compare",
+      "enhanceSplit": "Divider",
+      "enhanceIn": "Input",
+      "enhanceOut": "Output",
+      "enhanceTime": "Time",
+      "enhanceDownload": "Download enhanced image",
+      "enhanceNote": "The model makes details clearer but cannot recover what the camera never captured. Frames are kept small so it runs in a browser; expect 10–60 seconds on a laptop.",
+      "askTask": "What do you want to know?",
+      "askTasks": {
+        "describe": "Describe the scene",
+        "objects": "List objects",
+        "find": "Find something",
+        "text": "Read the text"
+      },
+      "askFindLabel": "What to find, e.g. forklift",
+      "askFind": "Find",
+      "askNote": "Answers are in English. On a computer without a modern graphics chip, each answer takes 10–40 seconds.",
+      "askNothing": "Nothing found. Try other words.",
+      "askTime": "Answered in {s} s"
     },
     "card": {
       "video": "Video and webcam",
@@ -844,9 +919,15 @@
       "counting": "Counting and tracking",
       "quality": "Quality and measuring",
       "documents": "Documents and codes",
-      "privacy": "People and privacy"
+      "privacy": "People and privacy",
+      "understanding": "Describe and search"
     },
-    "moreDemos": "Try next"
+    "moreDemos": "Try next",
+    "getCode": "Get the source code",
+    "codeBand": {
+      "title": "Every demo here is free and open source",
+      "text": "Sign up once to download the full working code (MIT licence) and build on it."
+    }
   },
   "oss": {
     "eyebrow": "Open-source library",
@@ -1094,7 +1175,7 @@
   "offers": {
     "eyebrow": "How to work with us",
     "title": "Four steps. You can stop after any of them.",
-    "subtitle": "Start with a free answer, prove it on your own footage, then deploy and keep it accurate. Every step has a fixed scope and price.",
+    "subtitle": "Start with a free answer, prove it on your own footage, then deploy and keep it accurate. You get a fixed quote before each step.",
     "check": {
       "name": "Free feasibility check",
       "time": "5 business days",
@@ -1110,7 +1191,7 @@
     "pilot": {
       "name": "Proof-of-concept pilot",
       "time": "2–4 weeks",
-      "price": "from {price}",
+      "price": "Fixed quote",
       "outcome": "Evidence on your own footage, with success and stop criteria agreed before we start.",
       "points": [
         "One clear question, agreed in writing",
@@ -1123,7 +1204,7 @@
     "deploy": {
       "name": "Deployment",
       "time": "4–10 weeks",
-      "price": "from {price}",
+      "price": "Quoted per site",
       "outcome": "A working system on your line or site, connected to the tools your team already uses.",
       "points": [
         "Cameras, lighting and edge computer set up on site",
@@ -1136,7 +1217,7 @@
     "care": {
       "name": "Care plan",
       "time": "Monthly",
-      "price": "from {price}/mo",
+      "price": "Monthly, per site",
       "outcome": "Accuracy stays high as products, lighting and seasons change.",
       "points": [
         "Accuracy and uptime monitoring",
@@ -1380,6 +1461,68 @@
         "how": "Pose estimation spots a fall and alerts staff, without recording identifiable video.",
         "kpi": "time to assistance"
       }
+    }
+  },
+  "code": {
+    "eyebrow": "Free code",
+    "title": "Free source code for every demo",
+    "subtitle": "Sign up once and download the complete, working code behind all the demos on this site. Use it to learn, to prototype, or inside your own product.",
+    "includedTitle": "What you get",
+    "included": [
+      "A ready-to-run Next.js and TypeScript project with every demo from this site",
+      "The same camera, video and photo handling: webcam, uploads, sample scenes, model downloads with progress",
+      "Tracking, zones, line counting, speed and wait-time logic you can reuse",
+      "MIT licence for our code: free for commercial use",
+      "A script that downloads the sample videos, and links to each model’s own licence"
+    ],
+    "demosTitle": "All {n} demos are included",
+    "runTitle": "Running it takes four commands",
+    "runSubtitle": "You need Node.js 20 or newer. Everything runs on your own computer; no account or API key is needed.",
+    "steps": [
+      {
+        "title": "Unzip and open the folder",
+        "cmd": "cd nazar-vision-demos",
+        "text": "Any folder works."
+      },
+      {
+        "title": "Install",
+        "cmd": "npm install",
+        "text": "Downloads the libraries, about 1 GB."
+      },
+      {
+        "title": "Get the sample videos",
+        "cmd": "npm run samples",
+        "text": "About 20 MB of free Pexels clips from our site."
+      },
+      {
+        "title": "Start",
+        "cmd": "npm run dev",
+        "text": "Open http://localhost:3000 and pick a demo."
+      }
+    ],
+    "licence": "Our code is MIT-licensed. The AI models are downloaded from their publishers and keep their own licences; check each model card before commercial use. The README in the download lists every model with a link.",
+    "access": {
+      "formTitle": "Sign up to download",
+      "formText": "Free. We email you a sign-in link; no password needed.",
+      "name": "Your name",
+      "company": "Company (optional)",
+      "email": "Work email",
+      "submit": "Email me a sign-in link",
+      "privacy": "We use your details only to send the link and, now and then, news about new demos. No spam, no sharing.",
+      "sentTitle": "Check your email",
+      "sentText": "Open the link we just sent from this browser. It brings you back here, signed in, with the download ready.",
+      "useAnother": "Use a different email",
+      "readyTitle": "Your download is ready",
+      "readyText": "Signed in as {email}.",
+      "download": "Download source code ({size})",
+      "signOut": "Sign out",
+      "tooMany": "Too many sign-in emails in a short time. Wait a few minutes and try again.",
+      "failed": "We couldn’t send the email. Check the address and try again.",
+      "linkFailed": "That sign-in link didn’t work: it may have expired or been opened in another browser. Ask for a new one below.",
+      "required": "Sign up below to download the code.",
+      "soonTitle": "Sign-up opens shortly",
+      "soonText": "We are switching on accounts for code downloads. Until then, write to us and we’ll send you the code directly.",
+      "soonCta": "Ask for the code"
     }
   }
 }

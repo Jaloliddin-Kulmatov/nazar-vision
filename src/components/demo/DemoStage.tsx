@@ -299,11 +299,12 @@ export default function DemoStage({
     const pick = samples.find((s) => s.key === wanted) ?? (autoStart ? samples[0] : undefined);
     if (!pick) return;
     // The flag is set when the sample really starts, so a cancelled first run (React dev mode) can retry.
-    const id = requestAnimationFrame(() => {
+    // A timer, not an animation frame: frames don't run in background tabs, timers do.
+    const id = window.setTimeout(() => {
       started.current = true;
       void pickSample(pick);
-    });
-    return () => cancelAnimationFrame(id);
+    }, 0);
+    return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

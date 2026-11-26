@@ -4,15 +4,8 @@ import {
   ShieldAlert, Wrench,
 } from "lucide-react";
 import { ButtonLink } from "@/components/ui";
-import { site } from "@/config/site";
 
 const offerIds = ["check", "pilot", "deploy", "care"] as const;
-const offerPrice: Record<(typeof offerIds)[number], string | null> = {
-  check: null,
-  pilot: site.prices.pilot,
-  deploy: site.prices.deployment,
-  care: site.prices.care,
-};
 
 /** The four ways to start working with us, cheapest and least risky first. */
 export function OfferLadder({ compact = false }: { compact?: boolean }) {
@@ -20,7 +13,6 @@ export function OfferLadder({ compact = false }: { compact?: boolean }) {
   return (
     <ol className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
       {offerIds.map((id, i) => {
-        const price = offerPrice[id];
         const featured = id === "pilot";
         return (
           <li
@@ -36,9 +28,7 @@ export function OfferLadder({ compact = false }: { compact?: boolean }) {
               </span>
             </div>
             <h3 className="mt-5 font-display text-lg font-bold">{t(`${id}.name`)}</h3>
-            <p className={`mt-1 font-display text-2xl font-bold ${price ? "text-text" : "text-lime"}`}>
-              {price ? t(`${id}.price`, { price }) : t(`${id}.price`)}
-            </p>
+            <p className={`mt-1 font-display text-xl font-bold ${id === "check" ? "text-lime" : "text-text"}`}>{t(`${id}.price`)}</p>
             <p className={`mt-3 text-[15px] text-muted ${compact ? "flex-1" : ""}`}>{t(`${id}.outcome`)}</p>
             {!compact && (
               <ul className="mt-4 flex-1 space-y-2 text-sm">
