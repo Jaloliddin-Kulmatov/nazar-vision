@@ -10,3 +10,8 @@ export function setSessionCookie(res: NextResponse, token: string, secure: boole
 export function clearSessionCookie(res: NextResponse) {
   res.cookies.set(SESSION_COOKIE, "", { httpOnly: true, path: "/", maxAge: 0 });
 }
+
+/** Only allow redirects back into this site. */
+export function safeNext(next: string | null, fallback: string) {
+  return next && /^\/(en|ru|uz)(\/[\w-]*)*$/.test(next) ? next : fallback;
+}

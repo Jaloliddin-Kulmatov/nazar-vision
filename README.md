@@ -60,15 +60,32 @@ IPv6-only and Vercel can't reach it. Put the real database password in it, URL-e
 characters. Optional: `SESSION_SECRET` (otherwise derived from `DATABASE_URL`), and the Resend
 variables from the contact form to get an email for each new sign-up.
 
-People who signed up can sign in again with their email at `/[locale]/account` (the "Sign in" link
-in the header appears once the database is connected).
+People sign up or sign in at `/[locale]/code` or `/[locale]/account` (the "Sign in" link in the header
+appears once the database is connected), in two ways:
+
+- **Continue with Google.** Needs `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` from Google Cloud →
+  APIs & Services → Credentials → Create OAuth client ID (type "Web application"). Add
+  `https://nazar-vision.vercel.app/api/auth/google/callback` (and `http://localhost:3000/api/auth/google/callback`
+  for local work) under Authorized redirect URIs. On the OAuth consent screen choose "External" and
+  publish it, or only listed test users can sign in. Only Google accounts with a verified email are
+  accepted. Set `GOOGLE_REDIRECT_ORIGIN` if previews should send people back to a fixed address.
+- **Email.** Every address is checked first: format, a domain that can receive mail (MX lookup),
+  about 120,000 known throwaway-inbox domains, and likely typos ("gmial.com" → "Did you mean
+  gmail.com?"). When `RESEND_API_KEY` is set, a 6-digit code is emailed in the visitor's language
+  (10 minutes, 5 tries, at most 6 codes a day per address, 45 s between sends) and the address is
+  marked confirmed. Without it, people are signed in straight after the checks. Resend's test sender
+  (`onboarding@resend.dev`) only delivers to your own Resend email: verify your domain in Resend and
+  set `CONTACT_FROM_EMAIL` (e.g. `Nazar Vision <code@yourdomain.uz>`) before launch.
+
+The same Resend settings send the contact form and an email to `CONTACT_TO_EMAIL` for each new sign-up.
 
 ## Owner dashboard and analytics
 
 `/en/admin` (not linked anywhere, not indexed) shows visits, page views, demo runs by demo and by
 how they were started (auto-start, scene link, sample, own webcam, own file), demo errors, sign-ups,
 code downloads, contact messages, countries, referrers, devices and site language, for the last 7, 30
-or 90 days. It also lists everyone who signed up, exports them as CSV, deletes a person, and has a
+or 90 days. It also lists everyone who signed up (with Google or email, and whether the email is
+confirmed), exports them as CSV, deletes a person, and has a
 switch to pause new sign-ups.
 
 Set `ADMIN_PASSWORD` in Vercel to open it (a long random string; changing it signs everyone out).

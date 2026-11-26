@@ -107,12 +107,22 @@ export async function adminStats(days: number) {
   };
 }
 
-export type SignupListRow = { id: string; name: string; email: string; company: string; created_at: string; last_seen_at: string; downloads: number };
+export type SignupListRow = {
+  id: string;
+  name: string;
+  email: string;
+  company: string;
+  provider: string;
+  email_verified: boolean;
+  created_at: string;
+  last_seen_at: string;
+  downloads: number;
+};
 
 export async function listSignups(limit = 500): Promise<SignupListRow[]> {
   const s = await db();
   return s<SignupListRow[]>`
-    select u.id, u.name, u.email, u.company, u.created_at, u.last_seen_at, count(d.id)::int as downloads
+    select u.id, u.name, u.email, u.company, u.provider, u.email_verified, u.created_at, u.last_seen_at, count(d.id)::int as downloads
     from nazar_vision.signups u left join nazar_vision.code_downloads d on d.signup_id = u.id
     group by u.id order by u.created_at desc limit ${limit}`;
 }
@@ -129,7 +139,7 @@ export function toCsv(rows: SignupListRow[]): string {
     if (/^[=+\-@]/.test(t)) t = `'${t}`;
     return `"${t.replace(/"/g, '""')}"`;
   };
-  const head = ["name", "email", "company", "signed_up", "last_seen", "downloads"];
-  const body = rows.map((r) => [r.name, r.email, r.company, new Date(r.created_at).toISOString(), new Date(r.last_seen_at).toISOString(), r.downloads].map(cell).join(","));
+  const head = ["name", "email", "company", "signed_up_with", "email_confirmed", "signed_up", "last_seen", "downloads"];
+  const body = rows.map((r) => [r.name, r.email, r.company, r.provider, r.email_verified ? "yes" : "no", new Date(r.created_at).toISOString(), new Date(r.last_seen_at).toISOString(), r.downloads].map(cell).join(","));
   return [head.join(","), ...body].join("\n") + "\n";
 }

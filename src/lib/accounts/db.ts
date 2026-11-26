@@ -63,6 +63,18 @@ async function migrate(db: postgres.Sql) {
       key text primary key,
       value text not null
     );
+    alter table nazar_vision.signups add column if not exists provider text not null default 'email';
+    alter table nazar_vision.signups add column if not exists email_verified boolean not null default false;
+    create table if not exists nazar_vision.email_codes (
+      email text primary key,
+      code_hash text not null,
+      payload jsonb not null,
+      expires_at timestamptz not null,
+      attempts int not null default 0,
+      sent_at timestamptz not null default now(),
+      sends_today int not null default 1,
+      day date not null default current_date
+    );
   `);
   // On Supabase, keep the API roles out even if someone exposes the schema later.
   await db.unsafe(`
@@ -85,14 +97,25 @@ export async function db(): Promise<postgres.Sql> {
   return s;
 }
 
-/** Creates the sign-up, or refreshes name and company if the email signed up before. */
-export async function upsertSignup(d: { name: string; email: string; company: string }): Promise<{ id: string; isNew: boolean }> {
+/**
+ * Creates the sign-up, or refreshes it if the email signed up before. A confirmed email
+ * (code or Google) stays confirmed; an empty company or name never overwrites a known one.
+ */
+export async function upsertSignup(d: {
+  name: string;
+  email: string;
+  company: string;
+  provider?: "email" | "google";
+  verified?: boolean;
+}): Promise<{ id: string; isNew: boolean }> {
   const s = await db();
   const [row] = await s<{ id: string; is_new: boolean }[]>`
-    insert into nazar_vision.signups (email, name, company)
-    values (${d.email}, ${d.name}, ${d.company})
-    on conflict (email) do update set name = excluded.name,
+    insert into nazar_vision.signups (email, name, company, provider, email_verified)
+    values (${d.email}, ${d.name}, ${d.company}, ${d.provider ?? "email"}, ${d.verified ?? false})
+    on conflict (email) do update set
+      name = case when excluded.name = '' then nazar_vision.signups.name else excluded.name end,
       company = case when excluded.company = '' then nazar_vision.signups.company else excluded.company end,
+      email_verified = nazar_vision.signups.email_verified or excluded.email_verified,
       last_seen_at = now()
     returning id, (xmax = 0) as is_new`;
   return { id: row.id, isNew: row.is_new };
@@ -142,9 +165,12 @@ export async function setSetting(key: string, value: string) {
     on conflict (key) do update set value = excluded.value`;
 }
 
-export async function findSignupByEmail(email: string): Promise<{ id: string; email: string } | null> {
+export async function findSignupByEmail(email: string, markVerified = false): Promise<{ id: string; email: string } | null> {
   const s = await db();
   const [row] = await s<{ id: string; email: string }[]>`select id, email from nazar_vision.signups where email = ${email}`;
-  if (row) await s`update nazar_vision.signups set last_seen_at = now() where id = ${row.id}`;
+  if (row) {
+    await s`update nazar_vision.signups set last_seen_at = now(),
+      email_verified = email_verified or ${markVerified} where id = ${row.id}`;
+  }
   return row ?? null;
 }

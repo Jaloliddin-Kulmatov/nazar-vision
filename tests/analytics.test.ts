@@ -48,9 +48,9 @@ describe("helpers", () => {
 describe("toCsv", () => {
   it("quotes cells and defuses spreadsheet formulas", () => {
     const csv = toCsv([
-      { id: "1", name: '=HYPERLINK("x")', email: "a@b.co", company: 'Acme "Ltd"', created_at: "2026-11-26T00:00:00Z", last_seen_at: "2026-11-26T00:00:00Z", downloads: 2 },
+      { id: "1", name: '=HYPERLINK("x")', email: "a@b.co", company: 'Acme "Ltd"', provider: "email", email_verified: true, created_at: "2026-11-26T00:00:00Z", last_seen_at: "2026-11-26T00:00:00Z", downloads: 2 },
     ]);
-    expect(csv.split("\n")[0]).toBe("name,email,company,signed_up,last_seen,downloads");
+    expect(csv.split("\n")[0]).toBe("name,email,company,signed_up_with,email_confirmed,signed_up,last_seen,downloads");
     expect(csv).toContain(`"'=HYPERLINK(""x"")"`);
     expect(csv).toContain(`"Acme ""Ltd"""`);
   });

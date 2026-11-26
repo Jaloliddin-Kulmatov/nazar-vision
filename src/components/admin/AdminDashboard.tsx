@@ -18,7 +18,7 @@ type Stats = {
   referrers: Count[];
   signupsOpen: boolean;
 };
-type Signup = { id: string; name: string; email: string; company: string; created_at: string; last_seen_at: string; downloads: number };
+type Signup = { id: string; name: string; email: string; company: string; provider: string; email_verified: boolean; created_at: string; last_seen_at: string; downloads: number };
 type Load = { status: "loading" } | { status: "login"; error?: string } | { status: "error"; error: string } | { status: "ready"; stats: Stats; signups: Signup[] };
 
 const fmtDate = (s: string) => new Date(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -249,12 +249,13 @@ export default function AdminDashboard() {
           <p className="mt-3 text-sm text-muted">No sign-ups yet.</p>
         ) : (
           <div className="mt-3 overflow-x-auto">
-            <table className="w-full min-w-[720px] text-sm">
+            <table className="w-full min-w-[860px] text-sm">
               <thead className="text-left text-dim">
                 <tr>
                   <th className="py-2 font-medium">Name</th>
                   <th className="py-2 font-medium">Company</th>
                   <th className="py-2 font-medium">Email</th>
+                  <th className="py-2 font-medium">Via</th>
                   <th className="py-2 font-medium">Signed up</th>
                   <th className="py-2 font-medium">Last seen</th>
                   <th className="py-2 text-right font-medium">Downloads</th>
@@ -270,6 +271,14 @@ export default function AdminDashboard() {
                       <a href={`mailto:${s.email}`} className="text-cyan hover:text-cyan-hi">
                         {s.email}
                       </a>
+                    </td>
+                    <td className="py-2">
+                      <span className="text-muted">{s.provider === "google" ? "Google" : "Email"}</span>
+                      {s.email_verified ? (
+                        <span className="ml-2 rounded bg-lime/10 px-1.5 py-0.5 text-xs text-lime">confirmed</span>
+                      ) : (
+                        <span className="ml-2 rounded bg-line px-1.5 py-0.5 text-xs text-dim">not confirmed</span>
+                      )}
                     </td>
                     <td className="tabular py-2 text-muted">{fmtDate(s.created_at)}</td>
                     <td className="tabular py-2 text-muted">{fmtDate(s.last_seen_at)}</td>
