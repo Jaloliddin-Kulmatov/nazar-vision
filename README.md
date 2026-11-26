@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nazar Vision — computer vision & robot perception website
 
-## Getting Started
+Marketing site for a computer-vision firm, in English, Uzbek and Russian. It has 14 live in-browser demos (with sample videos), a services section built for selling pilots, 36 use cases and a licence-aware open-source library.
 
-First, run the development server:
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm test           # vitest: translations, repo filters, contact API, demo logic
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Make it yours
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | Where |
+|---|---|
+| Brand name, email, Telegram, WhatsApp, booking link, prices (pilot, deployment, care plan) | `src/config/site.ts`. Keep `priceValues` in step with `prices`: the ROI calculator uses them |
+| All copy (EN / UZ / RU) | `messages/{en,uz,ru}.json`. `npm test` fails if a key is missing in one language |
+| Industries, demos, services, use cases, sample videos | `src/lib/content.ts` |
+| Open-source repo list | `scripts/catalog.mjs`, then `npm run repos:update` (uses `gh auth token` or `GITHUB_TOKEN`) |
+| Colours and fonts | `src/app/globals.css` and `src/app/[locale]/layout.tsx` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact form
 
-## Learn More
+It sends email through [Resend](https://resend.com). Set these in Vercel → Project → Environment Variables:
 
-To learn more about Next.js, take a look at the following resources:
+- `RESEND_API_KEY`
+- `CONTACT_TO_EMAIL`: where inquiries go
+- `CONTACT_FROM_EMAIL` (optional): a sender on your verified domain
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Without a key, the form tells visitors to use Telegram or email instead.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Demos
 
-## Deploy on Vercel
+All demos run client-side. Models download on first use from Google (MediaPipe), Hugging Face (Transformers.js) and jsDelivr (Tesseract, ZXing). Images never leave the device.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Sample images are hot-linked from the public `Xenova/transformers.js-docs` dataset on Hugging Face. Replace them with your own photos in `src/lib/content.ts` before launch.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sample videos live in `public/videos/` (about 20 MB, Pexels licence; sources in `public/videos/CREDITS.md`). They are served from the site itself because browsers block frame analysis on videos from other domains. Your own factory footage will sell better: drop MP4s in the same folder and update `videos` in `src/lib/content.ts`.
+
+The PPE demo downloads OWLv2 (163 MB) on first use; the other new demos are 4–22 MB.
+
+## Docs
+
+- `docs/superpowers/specs/2026-11-24-cv-firm-site-design.md`: design
+- `docs/superpowers/plans/2026-11-24-cv-firm-site.md`: implementation plan
+- `docs/market-analysis-2026-11.md`: competitors, positioning and the 90-day plan

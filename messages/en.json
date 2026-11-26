@@ -1,0 +1,1385 @@
+{
+  "meta": {
+    "title": "Nazar Vision — Computer vision & robot perception for business",
+    "description": "We build computer vision systems that count, inspect, read and guide robots — for manufacturing, textiles, logistics, retail and more. Try our live demos in your browser."
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "services": "Services",
+    "demos": "Demos",
+    "openSource": "Open Source",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Book a call",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language",
+    "useCases": "Use cases"
+  },
+  "common": {
+    "tryIt": "Try it",
+    "tryLive": "Try live",
+    "learnMore": "Learn more",
+    "privacy": "Images never leave your device",
+    "exampleScenario": "Example scenario",
+    "allDemos": "All demos",
+    "seeSolutions": "See solutions",
+    "talkToUs": "Talk to us",
+    "backToDemos": "Back to Demo Lab",
+    "home": "Home"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Computer vision & robot perception",
+      "title": "Put the cameras you already have to work",
+      "titleAccent": "business intelligence",
+      "subtitle": "We build computer vision for factories, warehouses and shops: safety alerts, counting, quality checks and document reading. It runs on your cameras and your servers.",
+      "primary": "Try it on this video",
+      "secondary": "Book a free call",
+      "note": "No sign-up. The demos run in your browser, so your images stay on your device."
+    },
+    "stats": [
+      {
+        "value": "14",
+        "label": "live demos, with sample videos"
+      },
+      {
+        "value": "80+",
+        "label": "open-source tools reviewed"
+      },
+      {
+        "value": "3",
+        "label": "languages: EN · UZ · RU"
+      },
+      {
+        "value": "0",
+        "label": "images uploaded by our demos"
+      }
+    ],
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Vision AI for the jobs that eat your time",
+      "subtitle": "From the shop floor to the warehouse gate — one platform of skills, tuned for your operation."
+    },
+    "pipeline": {
+      "eyebrow": "How it works",
+      "title": "From camera stream to decision",
+      "subtitle": "Every system we ship follows the same proven pipeline. Each block is swappable, so you only pay for what you need.",
+      "steps": [
+        {
+          "title": "Capture",
+          "text": "Existing IP cameras, phones or industrial cameras."
+        },
+        {
+          "title": "Detect",
+          "text": "Models find objects, people, defects or text."
+        },
+        {
+          "title": "Track",
+          "text": "Objects keep an ID across frames."
+        },
+        {
+          "title": "Measure",
+          "text": "Count, time, size, read, compare to spec."
+        },
+        {
+          "title": "Act",
+          "text": "Alerts, dashboards, ERP or Telegram bots."
+        }
+      ]
+    },
+    "demos": {
+      "eyebrow": "Demo Lab",
+      "title": "Don’t take our word for it. Try it.",
+      "subtitle": "Real models running in your browser — on your webcam or your own photos."
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "From idea to production, end to end",
+      "cta": "All services"
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "A pilot first. Proof before you commit.",
+      "steps": [
+        {
+          "title": "Discovery call",
+          "time": "Day 1",
+          "text": "We learn your process, cameras and the decision you want to automate."
+        },
+        {
+          "title": "Paid pilot",
+          "time": "2–4 weeks",
+          "text": "A working model on your own footage, with a measured accuracy report."
+        },
+        {
+          "title": "Deployment",
+          "time": "1–3 months",
+          "text": "Production system on edge devices or your servers, integrated with your tools."
+        },
+        {
+          "title": "Support & retraining",
+          "time": "Ongoing",
+          "text": "Monitoring, model updates as your products and lighting change."
+        }
+      ]
+    },
+    "oss": {
+      "eyebrow": "Open source",
+      "title": "We build on the best free tools — and tell you which ones are safe to use",
+      "text": "Our library tracks 80+ open-source computer vision and robotics projects with live GitHub data and licence checks. Some of the most popular models are AGPL-licensed, which can force you to open your own code. We flag that for you.",
+      "cta": "Explore the library"
+    },
+    "paths": {
+      "build": {
+        "title": "Have a team? Build it yourself.",
+        "text": "Browse the open-source library and demos. We’re happy to advise your engineers.",
+        "cta": "Open-source library"
+      },
+      "operate": {
+        "title": "Have a problem? Bring it to us.",
+        "text": "Tell us what you want to see, count or catch. We’ll tell you honestly if vision AI can do it.",
+        "cta": "Book a free call"
+      }
+    },
+    "live": {
+      "badge": "Real model output",
+      "person": "person",
+      "people": "{n, plural, =0 {Nobody in view} one {# person in view} other {# people in view}}",
+      "clear": "Forklift lane clear",
+      "alert": "Person in forklift lane",
+      "pause": "Pause video",
+      "play": "Play video",
+      "caption": "People found by EfficientDet-Lite2 on this clip, frame by frame. We drew the forklift lane; in the demo you draw your own."
+    },
+    "scenes": {
+      "title": "Pick a scene and watch a model work on it",
+      "subtitle": "Each one opens a live demo already running on that clip. Then switch to your webcam or upload your own footage.",
+      "all": "All 14 demos",
+      "items": {
+        "safety-zone": "Warehouse with a forklift",
+        "ppe-check": "Worker with a tablet",
+        "people-counter": "Bottles on a filling line",
+        "fatigue-monitor": "Driver at the wheel",
+        "object-detection": "City traffic",
+        "face-anonymizer": "Busy street"
+      }
+    }
+  },
+  "industries": {
+    "manufacturing": {
+      "name": "Manufacturing & quality control",
+      "outcome": "Catch defects early",
+      "problems": [
+        "Manual inspection is slow and inconsistent",
+        "Defects found by the customer, not the line",
+        "Counting and measuring by hand"
+      ],
+      "solutions": [
+        "Surface defect detection (scratches, dents, stains)",
+        "Part counting and dimension checks",
+        "Label, date-code and barcode verification"
+      ],
+      "measure": [
+        "Defect escape rate",
+        "Inspection throughput",
+        "Scrap and rework cost"
+      ]
+    },
+    "textile": {
+      "name": "Textile & light industry",
+      "outcome": "Ship flawless fabric",
+      "problems": [
+        "Fabric defects found after cutting and sewing",
+        "Manual grading of cotton and yarn",
+        "Needle and machine safety incidents"
+      ],
+      "solutions": [
+        "Real-time fabric defect detection on the loom or inspection table",
+        "Garment QC: stitching, stains, labels and size checks",
+        "Cotton and yarn grading by colour and impurities"
+      ],
+      "measure": [
+        "Defects per 100 m of fabric",
+        "Second-grade product rate",
+        "Inspection time per roll"
+      ]
+    },
+    "robotics": {
+      "name": "Robotics & automation",
+      "outcome": "Give robots eyes",
+      "problems": [
+        "Robots need parts in fixed positions and costly jigs",
+        "Random, cluttered parts can't be picked",
+        "Mobile robots stop or collide in busy aisles"
+      ],
+      "solutions": [
+        "3D vision for pick-and-place and bin picking",
+        "Hand-eye calibration and part pose estimation",
+        "ROS 2 perception nodes for arms and mobile robots"
+      ],
+      "measure": [
+        "Pick success rate",
+        "Cycle time",
+        "Changeover time for new parts"
+      ]
+    },
+    "logistics": {
+      "name": "Warehouse & logistics",
+      "outcome": "Track every box",
+      "problems": [
+        "Inventory counts take days",
+        "Damaged parcels slip through",
+        "Dock and forklift safety risks"
+      ],
+      "solutions": [
+        "Pallet and box counting",
+        "Damage detection at receiving",
+        "Forklift–pedestrian proximity alerts"
+      ],
+      "measure": [
+        "Inventory accuracy",
+        "Damage claims",
+        "Dock turnaround time"
+      ]
+    },
+    "retail": {
+      "name": "Retail & shopping centres",
+      "outcome": "Understand your shoppers",
+      "problems": [
+        "No reliable footfall numbers per hour or zone",
+        "Queues build up before anyone notices",
+        "Empty shelves and misplaced price tags"
+      ],
+      "solutions": [
+        "People counting at doors and zones",
+        "Queue length alerts to staff phones",
+        "Shelf gap and planogram checks"
+      ],
+      "measure": [
+        "Footfall and conversion rate",
+        "Average queue wait time",
+        "Shelf availability"
+      ]
+    },
+    "security": {
+      "name": "Safety & security",
+      "outcome": "Keep people safe",
+      "problems": [
+        "Hundreds of camera hours nobody watches",
+        "PPE rules ignored on site",
+        "Intrusions noticed too late"
+      ],
+      "solutions": [
+        "PPE detection: helmets, vests, masks",
+        "Restricted-zone and after-hours alerts",
+        "Privacy-first face anonymisation"
+      ],
+      "measure": [
+        "Safety incidents",
+        "Alert response time",
+        "PPE compliance rate"
+      ]
+    },
+    "traffic": {
+      "name": "Traffic & parking",
+      "outcome": "See every vehicle",
+      "problems": [
+        "No data on traffic flow by time of day",
+        "Parking occupancy is a guess",
+        "Manual gate logs"
+      ],
+      "solutions": [
+        "Vehicle counting and classification",
+        "Licence-plate recognition at gates",
+        "Live parking occupancy maps"
+      ],
+      "measure": [
+        "Vehicles per hour",
+        "Occupancy rate",
+        "Gate processing time"
+      ]
+    },
+    "documents": {
+      "name": "Documents & OCR",
+      "outcome": "Stop retyping paper",
+      "problems": [
+        "Staff retype invoices and forms",
+        "Errors when copying numbers",
+        "Paper archives no one can search"
+      ],
+      "solutions": [
+        "OCR in Uzbek, Russian and English",
+        "Invoice and receipt field extraction",
+        "Barcode and QR reading at scale"
+      ],
+      "measure": [
+        "Documents processed per hour",
+        "Data-entry error rate",
+        "Cost per document"
+      ]
+    },
+    "agriculture": {
+      "name": "Agriculture & food",
+      "outcome": "Grade and grow better",
+      "problems": [
+        "Manual sorting and grading of produce",
+        "Plant disease spotted too late",
+        "Livestock counts by hand"
+      ],
+      "solutions": [
+        "Fruit and grain grading by size and colour",
+        "Leaf disease detection from phone photos",
+        "Animal counting and activity monitoring"
+      ],
+      "measure": [
+        "Grading consistency",
+        "Crop loss",
+        "Labour hours"
+      ]
+    },
+    "healthcare": {
+      "name": "Healthcare operations",
+      "outcome": "Run clinics smoothly",
+      "problems": [
+        "Waiting rooms overflow unpredictably",
+        "Hygiene and PPE compliance is hard to check",
+        "Paper forms slow down admission"
+      ],
+      "solutions": [
+        "Waiting-room occupancy and flow",
+        "PPE and hand-hygiene compliance (anonymised)",
+        "Admission form OCR"
+      ],
+      "measure": [
+        "Patient wait time",
+        "Compliance rate",
+        "Admission time"
+      ]
+    }
+  },
+  "solutionsPage": {
+    "eyebrow": "Solutions",
+    "title": "What we build, industry by industry",
+    "subtitle": "Each solution is a starting point. We adapt it to your products, cameras and workflow during the pilot.",
+    "problems": "The problem",
+    "weBuild": "What we build",
+    "measure": "What we measure",
+    "tryDemos": "Related demos",
+    "notListed": "Your industry isn’t listed?",
+    "notListedText": "If a person can see it, a camera can usually learn it. Tell us about your process.",
+    "disclaimer": "Healthcare work covers operations only — we don’t build diagnostic tools."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Vision systems that work on the factory floor, not just in the lab",
+    "subtitle": "We take a problem from a phone video to a running system: feasibility, data, models, cameras, edge computers and integration. Hire us for all of it or just the part you’re missing.",
+    "items": {
+      "discovery": {
+        "title": "Discovery & feasibility",
+        "text": "We study your process and footage and tell you honestly what accuracy is realistic — before you spend on hardware.",
+        "points": [
+          "On-site or remote assessment",
+          "Camera, lens and lighting advice",
+          "Clear go / no-go report with a budget range"
+        ]
+      },
+      "models": {
+        "title": "Custom model training",
+        "text": "Detection, segmentation, classification and OCR models trained on your own images.",
+        "points": [
+          "Detection, segmentation, classification, OCR",
+          "Measured precision and recall on your data",
+          "Commercial-safe licences; you own the model"
+        ]
+      },
+      "robotics": {
+        "title": "Robot vision & perception",
+        "text": "We give robot arms and mobile robots the eyes they need: 3D cameras, part detection, pose estimation and calibration.",
+        "points": [
+          "ROS 2 perception packages",
+          "Bin-picking & pick-and-place feasibility",
+          "RealSense, OAK-D, Orbbec, Zivid cameras"
+        ]
+      },
+      "labeling": {
+        "title": "Data labeling & datasets",
+        "text": "AI-assisted annotation with human review, so your model learns from clean data.",
+        "points": [
+          "Boxes, polygons, keypoints, masks",
+          "Video tracking annotation",
+          "Two-step quality review"
+        ]
+      },
+      "integration": {
+        "title": "Edge, hardware & dashboards",
+        "text": "We choose cameras, lighting and edge computers, install them on your line, and send results where your team works.",
+        "points": [
+          "IP / RTSP and industrial cameras",
+          "NVIDIA Jetson, industrial PCs, offline",
+          "Dashboards, 1C / ERP, Telegram alerts"
+        ]
+      },
+      "support": {
+        "title": "Support & retraining",
+        "text": "Models drift when products, seasons or lighting change. We keep them sharp.",
+        "points": [
+          "Accuracy and drift monitoring",
+          "Scheduled retraining on new data",
+          "Response-time SLA"
+        ]
+      }
+    },
+    "labelTypes": {
+      "title": "Annotation types we deliver",
+      "items": [
+        "Bounding boxes",
+        "Polygons",
+        "Instance masks",
+        "Keypoints & pose",
+        "Classification tags",
+        "Video object tracking",
+        "OCR text regions",
+        "Oriented boxes"
+      ]
+    },
+    "stack": {
+      "title": "Tools we work with",
+      "text": "Open standards, no lock-in. You get the code and the model."
+    },
+    "linesEyebrow": "What we do",
+    "linesTitle": "Six services, one team",
+    "pilotPack": {
+      "eyebrow": "Pilot deliverables",
+      "title": "A pilot that ends in a decision, not a demo",
+      "subtitle": "Many vision projects fail because nobody agreed what “working” means. Every pilot we run produces the same evidence pack, and it belongs to you.",
+      "items": [
+        {
+          "title": "Claim sheet",
+          "text": "One page: the question, the camera, what counts as a defect, and the pass and stop thresholds. Agreed before work starts."
+        },
+        {
+          "title": "Frozen test set",
+          "text": "Images or clips from your site, labelled and set aside before tuning, so the score can’t be gamed."
+        },
+        {
+          "title": "Baseline comparison",
+          "text": "The model against your current method (an inspector, a rule, a manual count) on the same cases."
+        },
+        {
+          "title": "Failed-case report",
+          "text": "Every miss and false alarm, grouped by cause: lighting, angle, rare defect or unclear rule."
+        },
+        {
+          "title": "Speed and cost",
+          "text": "Frames per second on the target hardware and the running cost per camera."
+        },
+        {
+          "title": "Model and code",
+          "text": "Trained weights, inference code and setup notes. Commercial-safe licences only."
+        },
+        {
+          "title": "Production gap list",
+          "text": "What a full deployment still needs: integration, access, monitoring, who handles alerts."
+        },
+        {
+          "title": "Decision memo",
+          "text": "One of four outcomes: deploy, narrow the scope, fix a prerequisite first, or stop."
+        }
+      ]
+    },
+    "risks": {
+      "eyebrow": "Honest engineering",
+      "title": "Why vision projects fail, and what we do about it",
+      "items": [
+        {
+          "risk": "98% in the lab, 70% on the floor",
+          "fix": "We collect test images on your site, at different times of day and on different shifts, before we promise any accuracy."
+        },
+        {
+          "risk": "Data is the real budget",
+          "fix": "Labelling is quoted up front, and AI-assisted annotation with human review cuts the hours."
+        },
+        {
+          "risk": "Glare, dust and shaking cameras",
+          "fix": "We fix the scene first. Camera position, lens and lighting are cheaper than a bigger model."
+        },
+        {
+          "risk": "A wrong answer is expensive",
+          "fix": "Safety and quality decisions keep a person in the loop, with confidence thresholds you approve."
+        },
+        {
+          "risk": "Licence surprises",
+          "fix": "We don’t put AGPL models in closed products, and every licence is listed in the handover."
+        }
+      ]
+    },
+    "needs": {
+      "title": "What we need from you",
+      "items": [
+        "20–50 example photos or a short video of the real scene",
+        "One person who knows the process and can answer questions",
+        "A clear rule for what counts as good and bad",
+        "Today’s numbers: units per hour, staff on checks, current miss rate",
+        "Access to one camera, or permission to install a test camera"
+      ]
+    },
+    "hardware": {
+      "eyebrow": "Hardware & integration",
+      "title": "Your cameras, your servers, your tools",
+      "subtitle": "We reuse the cameras you already have where we can. No cloud is required: everything can run on site, even offline.",
+      "groups": [
+        {
+          "title": "Cameras",
+          "items": [
+            "IP / RTSP cameras you already own (Hikvision, Dahua and others)",
+            "Industrial GigE or USB3 cameras for fast lines",
+            "3D depth cameras for robots: RealSense, OAK-D, Orbbec, Zivid"
+          ],
+          "note": "Existing cameras: $0 · new: ~$100–1,500 per station"
+        },
+        {
+          "title": "Compute",
+          "items": [
+            "NVIDIA Jetson Orin edge computers next to the line",
+            "Industrial PC with a GPU for many cameras",
+            "Your own server or private cloud"
+          ],
+          "note": "Edge computer from ~$250–600"
+        },
+        {
+          "title": "Integrations",
+          "items": [
+            "Telegram alerts and daily reports",
+            "Web dashboard with history and exports",
+            "PLC (Modbus / OPC UA), reject gates, warning lights",
+            "1C, ERP, MES or your REST API"
+          ],
+          "note": "Included in deployment scope"
+        }
+      ],
+      "compare": "For comparison, all-in-one AI inspection cameras from specialist vendors list at about $4,500–13,500 per unit. Standard cameras sharing one edge computer usually cost a fraction of that."
+    },
+    "roi": {
+      "eyebrow": "ROI calculator",
+      "title": "Will it pay for itself?",
+      "subtitle": "A quick, conservative estimate for an inspection or monitoring project. Move the sliders to match your line.",
+      "fields": {
+        "inspectors": "People on visual checks, per shift",
+        "shifts": "Shifts per day",
+        "monthlyCost": "Monthly cost per person",
+        "automated": "Share of checking work automated",
+        "escapes": "Defects or incidents missed per month",
+        "escapeCost": "Cost of one miss",
+        "caught": "Share of misses the system catches",
+        "projectCost": "One-off cost: pilot, deployment, hardware",
+        "runningCost": "Care plan per month"
+      },
+      "monthly": "Net saving per month",
+      "labour": "Labour freed",
+      "quality": "Misses prevented",
+      "firstYear": "Net saving in year one",
+      "payback": "Payback",
+      "months": "{n} months",
+      "never": "At these numbers the system doesn’t pay for itself. Vision may still be worth it for safety or compliance.",
+      "note": "An estimate, not a quote. In the pilot we measure the real numbers on your site.",
+      "cta": "Check these numbers with us"
+    },
+    "cta": {
+      "title": "Have footage? Send it today.",
+      "text": "Start with a free feasibility check. You get a written answer within five business days, and you’re under no obligation.",
+      "primary": "Request a free check",
+      "secondary": "Book a 30-minute call"
+    }
+  },
+  "demos": {
+    "eyebrow": "Demo Lab",
+    "title": "Live computer vision, in your browser",
+    "subtitle": "Each demo downloads a model once and runs it on your device. Use your webcam, upload a photo or pick a sample.",
+    "sizeLabel": "Model size",
+    "engineLabel": "Runs on",
+    "items": {
+      "object-detection": {
+        "title": "Object detection",
+        "short": "Find and label 80 types of everyday objects. Switch between a real-time model and a more accurate one.",
+        "business": "Basis for counting products, vehicles, tools or people, on a live camera or recorded video."
+      },
+      "people-counter": {
+        "title": "Line counter",
+        "short": "Draw a line and count people, cars or bottles crossing it in each direction.",
+        "business": "Footfall for shops and offices, traffic counts, and units passing on a conveyor."
+      },
+      "face-anonymizer": {
+        "title": "Face anonymiser",
+        "short": "Detect faces and blur them automatically — privacy by design.",
+        "business": "GDPR-friendly analytics and footage sharing."
+      },
+      "pose-estimation": {
+        "title": "Pose estimation",
+        "short": "Track 33 body keypoints to understand posture and motion.",
+        "business": "Ergonomics, fall detection, fitness and sports."
+      },
+      "hand-gestures": {
+        "title": "Hand gestures",
+        "short": "Recognise hand gestures and track 21 points per hand.",
+        "business": "Touchless kiosks and hygienic controls."
+      },
+      "ocr": {
+        "title": "Text recognition (OCR)",
+        "short": "Read printed text from photos in English, Uzbek and Russian.",
+        "business": "Invoices, receipts, forms and labels."
+      },
+      "barcode-scanner": {
+        "title": "Barcode & QR scanner",
+        "short": "Read QR, EAN, Code 128, DataMatrix and more.",
+        "business": "Inventory, logistics and product traceability."
+      },
+      "background-removal": {
+        "title": "Background removal",
+        "short": "Cut out people and products for clean catalogue photos.",
+        "business": "E-commerce product photos at scale."
+      },
+      "defect-check": {
+        "title": "Zero-shot quality check",
+        "short": "Type your own labels — e.g. “scratched” vs “clean” — and the model judges the image.",
+        "business": "Quick feasibility test for inspection before custom training."
+      },
+      "depth-estimation": {
+        "title": "Depth estimation",
+        "short": "Estimate how far every pixel is from the camera, from one photo.",
+        "business": "Volume estimation, robotics and spatial analytics."
+      },
+      "safety-zone": {
+        "title": "Danger zone alert",
+        "short": "Mark an area next to a machine or forklift lane. An alarm fires the moment a person steps in.",
+        "business": "Worker safety near presses, robots, conveyors and forklift routes. Logs every breach with its duration."
+      },
+      "ppe-check": {
+        "title": "PPE check",
+        "short": "Type what workers must wear: helmet, vest, gloves. The model finds each item and flags who is missing it.",
+        "business": "Safety compliance on factory floors, construction sites and warehouses, with no custom training for a first pilot."
+      },
+      "fatigue-monitor": {
+        "title": "Operator fatigue",
+        "short": "Tracks eye closure, blinks and yawns on a face, and warns about drowsiness and microsleep.",
+        "business": "Truck, bus and forklift drivers, crane and control-room operators on long shifts."
+      },
+      "segment-anything": {
+        "title": "Segment anything",
+        "short": "Click any object to cut it out with a pixel-accurate mask, then measure or download it.",
+        "business": "Measuring parts and defects, building training data in minutes, and robot grasping."
+      }
+    },
+    "ui": {
+      "webcam": "Webcam",
+      "upload": "Upload photo",
+      "sample": "Sample",
+      "stop": "Stop",
+      "loadModel": "Load model",
+      "loading": "Loading model…",
+      "downloading": "Downloading model",
+      "ready": "Ready",
+      "running": "Running",
+      "retry": "Retry",
+      "error": "Something went wrong",
+      "cameraDenied": "Camera access was blocked or no camera was found. You can still upload a photo or use a sample.",
+      "modelFailed": "The model couldn’t be downloaded. Check your connection and try again.",
+      "dropHint": "Drop an image or video here, or click to choose",
+      "pickSource": "Choose a source to start",
+      "results": "Results",
+      "noResults": "Nothing detected yet",
+      "fps": "FPS",
+      "threshold": "Confidence threshold",
+      "count": "Count",
+      "firstLoad": "First load downloads about {size}. After that it’s cached.",
+      "howItWorks": "How it works",
+      "businessUse": "Business use",
+      "inside": "Inside",
+      "outside": "Outside",
+      "crossIn": "In",
+      "crossOut": "Out",
+      "drawLine": "Click two points on the image to redraw the counting line.",
+      "resetCount": "Reset count",
+      "people": "People in view",
+      "blur": "Blur",
+      "pixelate": "Pixelate",
+      "box": "Box only",
+      "faces": "Faces",
+      "bodies": "Bodies",
+      "hands": "Hands",
+      "gesture": "Gesture",
+      "language": "Language",
+      "recognize": "Read text",
+      "progress": "Progress",
+      "copy": "Copy",
+      "copied": "Copied",
+      "confidence": "Confidence",
+      "generateSample": "Generate sample codes",
+      "scanning": "Scanning…",
+      "codesFound": "Codes found",
+      "noCodes": "No codes found. Try a sharper, closer photo.",
+      "quality": "Quality",
+      "fast": "Fast (6 MB)",
+      "best": "Best (109 MB)",
+      "download": "Download PNG",
+      "labels": "Labels (comma-separated)",
+      "classify": "Check image",
+      "near": "Near",
+      "far": "Far",
+      "processing": "Processing…",
+      "webgpu": "GPU (WebGPU)",
+      "wasm": "CPU (WebAssembly)",
+      "torsoAngle": "Torso tilt",
+      "upright": "Upright",
+      "bending": "Bending / possible fall",
+      "qualityNote": "Best quality needs a WebGPU browser (recent Chrome or Edge).",
+      "labelsHint": "Describe each class in plain English, e.g. “fresh bread, burnt bread, moldy bread”.",
+      "topMatch": "Best match",
+      "blend": "Photo ↔ depth",
+      "imageFailed": "That image couldn’t be loaded. Try another file.",
+      "handsUp": "Hands up",
+      "samples": {
+        "street": "Street",
+        "football": "Football match",
+        "portrait": "Portrait",
+        "manCar": "Man & car",
+        "invoice": "Invoice",
+        "receipt": "Receipt",
+        "bread": "Bread",
+        "house": "House",
+        "cats": "Cats",
+        "trilingual": "EN · UZ · RU text",
+        "codes": "QR + EAN-13",
+        "trafficVideo": "Traffic video",
+        "warehouseVideo": "Warehouse video",
+        "crowdVideo": "Street crowd video",
+        "conveyorVideo": "Bottling line video",
+        "workersVideo": "Workers video",
+        "squatVideo": "Squat video",
+        "handsVideo": "Hands video",
+        "tiredVideo": "Tired worker video",
+        "hardhatFrame": "Worker in hard hat",
+        "warehouseFrame": "Warehouse",
+        "workersFrame": "Warehouse workers",
+        "bottlesFrame": "Bottles on a line",
+        "driverVideo": "Drowsy driver video"
+      },
+      "style": "Style",
+      "uploadMedia": "Upload photo or video",
+      "videoFailed": "That video couldn’t be played. Try an MP4 or WebM file.",
+      "play": "Play",
+      "pause": "Pause",
+      "model": "Model",
+      "engines": {
+        "fast": "Real-time",
+        "accurate": "High accuracy"
+      },
+      "enginesNote": "Real-time runs at video speed on most devices. High accuracy (RT-DETR) finds more small and crowded objects but updates less often on video.",
+      "countWhat": "What to count",
+      "classes": {
+        "person": "People",
+        "car": "Cars",
+        "truck": "Trucks",
+        "bus": "Buses",
+        "bicycle": "Bicycles",
+        "motorcycle": "Motorbikes",
+        "bottle": "Bottles"
+      },
+      "inView": "In view",
+      "zoneStatus": "Zone status",
+      "zoneAlert": "Person inside the danger zone",
+      "zoneClear": "Zone clear",
+      "inZone": "In zone",
+      "breaches": "Breaches",
+      "occupiedFor": "Occupied for {s} s",
+      "zone": "Danger zone",
+      "zoneDrawing": "Click {n} more point(s) to finish the zone.",
+      "zoneHint": "Click 4 points on the image to draw your own zone. A person counts as inside when their feet are inside.",
+      "zoneReset": "Reset zone",
+      "ppeOk": "all PPE",
+      "ppeItems": "What to look for (comma-separated)",
+      "apply": "Apply",
+      "ppeHint": "Include “person” to check each worker. Head items (helmet) and torso items (vest, jacket) are matched to the person wearing them. Wording matters: “helmet” works better than “hard hat”. Zero-shot models can confuse similar items; a production system is fine-tuned on your own images.",
+      "ppeWearing": "{item}: {ok} of {total} people",
+      "fatigueStatus": "Driver state",
+      "fatigue": {
+        "none": "Alert and attentive",
+        "drowsy": "Signs of drowsiness",
+        "microsleep": "Eyes closed: microsleep risk"
+      },
+      "fatigueLiveOnly": "Fatigue is measured over time: play a video or start the webcam. On a photo you see eye and mouth openness only.",
+      "noFace": "No face found. Face the camera with your whole face in view.",
+      "eyeClosure": "Eye closure",
+      "jawOpen": "Mouth open",
+      "blinks": "Blinks",
+      "yawns": "Yawns",
+      "perclosNote": "PERCLOS is the share of the last 30 s with eyes closed, a standard drowsiness measure. A real system is tuned per camera and person.",
+      "clickMode": "Click to",
+      "include": "Include",
+      "exclude": "Exclude",
+      "samHint": "Click an object to select it. Add more points to grow the mask, or switch to Exclude to cut parts away.",
+      "clearPoints": "Clear points",
+      "samEmpty": "Click on the image to segment an object.",
+      "maskArea": "Area of image",
+      "maskSize": "Bounding box",
+      "maskScore": "Mask quality",
+      "downloadPng": "Download cut-out",
+      "pickScene": "Pick a scene to test",
+      "pickSceneHint": "Click a picture to run the model on it. The first run downloads {size}; after that it’s instant.",
+      "useWebcam": "Use my webcam",
+      "useOwnFile": "Upload my photo or video",
+      "allScenes": "Other scenes",
+      "liveBadge": "Live",
+      "videoBadge": "Video"
+    },
+    "card": {
+      "video": "Video and webcam",
+      "photo": "Photos",
+      "download": "Runs in your browser. {size} download, once."
+    },
+    "groups": {
+      "all": "All",
+      "safety": "Safety",
+      "counting": "Counting and tracking",
+      "quality": "Quality and measuring",
+      "documents": "Documents and codes",
+      "privacy": "People and privacy"
+    },
+    "moreDemos": "Try next"
+  },
+  "oss": {
+    "eyebrow": "Open-source library",
+    "title": "The free computer vision toolbox, checked for business use",
+    "subtitle": "Star counts and activity come straight from GitHub. Licence badges tell you whether a project is safe to ship inside a commercial product.",
+    "updated": "Data updated",
+    "search": "Search repos, e.g. “ocr”, “tracking”, “yolo”",
+    "allTasks": "All tasks",
+    "commercialOnly": "Commercial-safe only",
+    "sort": "Sort",
+    "sortStars": "Most stars",
+    "sortUpdated": "Recently updated",
+    "sortName": "Name",
+    "results": "{count} repositories",
+    "none": "No repositories match these filters.",
+    "reset": "Reset filters",
+    "stars": "stars",
+    "lastPush": "last update",
+    "archived": "Archived",
+    "stale": "Inactive 1y+",
+    "license": {
+      "permissive": "Commercial-safe",
+      "copyleft": "Copyleft — check before shipping",
+      "unknown": "Licence unclear — check"
+    },
+    "licenseNote": {
+      "title": "Why licences matter",
+      "text": "Permissive licences (MIT, Apache-2.0, BSD) let you use a project inside closed-source products. AGPL and GPL can require you to publish your own source code — Ultralytics YOLO, the most popular detector, is AGPL-3.0 unless you buy an enterprise licence. Projects marked “unclear” use custom or research-only terms."
+    },
+    "tasks": {
+      "detection": "Object detection",
+      "segmentation": "Segmentation",
+      "foundation": "Foundation & vision-language",
+      "pose-face": "Pose & face",
+      "ocr": "OCR & documents",
+      "tracking": "Tracking & analytics",
+      "data": "Labeling & datasets",
+      "deploy": "Deployment & runtimes",
+      "image": "Image processing",
+      "robotics": "Robotics & 3D perception",
+      "3d": "3D & video"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Start small. Scale when it works.",
+    "subtitle": "Every engagement starts with a fixed-price pilot, so you see real results on your own data before a bigger commitment.",
+    "from": "from",
+    "popular": "Most chosen",
+    "plans": {
+      "feasibility": {
+        "name": "Feasibility check",
+        "price": "Free",
+        "desc": "Find out if vision AI can solve it.",
+        "features": [
+          "Send 20–50 photos or a short video",
+          "Our engineers test current models on them",
+          "Written report in 5 business days",
+          "Honest go / no-go and rough budget",
+          "No commitment"
+        ],
+        "cta": "Request a free check"
+      },
+      "pilot": {
+        "name": "Pilot",
+        "price": "fixed price",
+        "desc": "Prove it works on your footage.",
+        "features": [
+          "Claim sheet with pass and stop criteria",
+          "Test set from your site, labelled (up to 1,000 images)",
+          "Proof-of-concept model on your footage",
+          "Accuracy vs your current process, with failed cases",
+          "Go / no-go memo you own · 2–4 weeks"
+        ],
+        "cta": "Start a pilot"
+      },
+      "deployment": {
+        "name": "Deployment",
+        "price": "per project",
+        "desc": "A production system on your site.",
+        "features": [
+          "Production-grade model",
+          "Edge or cloud deployment",
+          "Dashboard and alerts",
+          "API, ERP or Telegram integration",
+          "3 months of support included"
+        ],
+        "cta": "Plan a deployment"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "desc": "Multi-site and mission-critical.",
+        "features": [
+          "Multiple sites and cameras",
+          "On-premises, air-gapped options",
+          "SLA and dedicated engineer",
+          "Continuous retraining",
+          "Security review and NDA"
+        ],
+        "cta": "Contact sales"
+      }
+    },
+    "note": "Prices are starting points in USD, excluding hardware. Data labeling is quoted per project. We can invoice in UZS.",
+    "faqTitle": "Common questions",
+    "care": {
+      "name": "Care plan",
+      "price": "from {price} / month",
+      "desc": "After deployment: accuracy monitoring, retraining on new data and fixes within an agreed response time."
+    },
+    "roiLink": "Estimate your payback"
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Do we need to buy new cameras?",
+        "a": "Often not. Most IP cameras with an RTSP stream work. For precise inspection we may recommend an industrial camera and lighting — we tell you during discovery."
+      },
+      {
+        "q": "Where does our video and data go?",
+        "a": "Wherever you decide. We can run everything on-premises or on edge devices with no internet. We sign an NDA before seeing your footage."
+      },
+      {
+        "q": "How accurate will it be?",
+        "a": "We measure it on your own data during the pilot and report precision and recall before you commit to a full deployment."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "A pilot takes 2–4 weeks. A production deployment usually takes 1–3 months, depending on sites and integrations."
+      },
+      {
+        "q": "Do you use open-source models? Is that safe?",
+        "a": "Yes, and we check every licence. We prefer commercially permissive models (Apache-2.0, MIT) and tell you when a model needs a paid licence."
+      },
+      {
+        "q": "Do you work outside Uzbekistan?",
+        "a": "Yes. We work remotely with clients worldwide, in English, Uzbek and Russian, and can travel for on-site installation."
+      },
+      {
+        "q": "Can you work with our robots?",
+        "a": "Yes. We build ROS 2 perception and integrate with major robot brands through their SDKs or PLC I/O. We start with a free feasibility check on your real parts."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A small team obsessed with practical vision AI",
+    "subtitle": "We build computer vision that solves a real business problem — not research demos that never leave the lab.",
+    "principles": {
+      "title": "How we work",
+      "items": [
+        {
+          "title": "Proof before promises",
+          "text": "Every project starts with a pilot on your data and a measured result."
+        },
+        {
+          "title": "Privacy by design",
+          "text": "On-premises options, face anonymisation and minimal data collection."
+        },
+        {
+          "title": "No lock-in",
+          "text": "You own the model and the code. Open standards, clear licences."
+        },
+        {
+          "title": "Built for real conditions",
+          "text": "Dust, glare, night shifts and cheap cameras — we test for them."
+        }
+      ]
+    },
+    "stack": {
+      "title": "Our toolbox",
+      "text": "PyTorch, OpenCV, ONNX Runtime, TensorRT, OpenVINO, MediaPipe, RF-DETR, SAM, PaddleOCR, Tesseract, ROS 2, MoveIt 2, Open3D, FastAPI, Next.js, Docker, NVIDIA Jetson."
+    },
+    "honesty": "We’re a young firm, so you won’t find a wall of client logos here yet. You’ll find working demos instead — and we’re happy to run a pilot to prove ourselves."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us what you want your cameras to see",
+    "subtitle": "We reply within one business day. The first consultation is free.",
+    "form": {
+      "name": "Your name",
+      "company": "Company",
+      "email": "Work email",
+      "phone": "Phone or Telegram (optional)",
+      "industry": "Industry",
+      "industryPlaceholder": "Choose…",
+      "other": "Other",
+      "message": "What do you want to detect, count or inspect?",
+      "messagePlaceholder": "e.g. We want to count customers at 3 store entrances and see peak hours.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you! We’ll get back to you within one business day.",
+      "error": "Sorry, the message couldn’t be sent. Please email or message us on Telegram instead.",
+      "invalid": "Please fill in your name, a valid email and a message.",
+      "consent": "We only use your details to reply to you.",
+      "need": "What do you need?",
+      "needs": {
+        "check": "Free feasibility check",
+        "pilot": "Pilot on our footage",
+        "deploy": "Full deployment",
+        "care": "Support for an existing system",
+        "labeling": "Data labelling only",
+        "robotics": "Robot vision",
+        "other": "Not sure yet"
+      },
+      "cameras": "Cameras, lines or sites",
+      "camerasPlaceholder": "e.g. 2 lines, 6 cameras",
+      "timeline": "When do you want to start?",
+      "timelines": {
+        "now": "As soon as possible",
+        "quarter": "In 1–3 months",
+        "later": "Later this year",
+        "exploring": "Just exploring"
+      },
+      "budget": "Budget (USD)",
+      "budgets": {
+        "b1": "Under $2,000",
+        "b2": "$2,000–10,000",
+        "b3": "$10,000–50,000",
+        "b4": "Over $50,000",
+        "unknown": "Not sure yet"
+      },
+      "filesHint": "Have photos or a video? Paste a link (Google Drive, Telegram, Dropbox) in the message."
+    },
+    "channels": {
+      "title": "Prefer a direct line?",
+      "call": "Book a 30-minute call",
+      "telegram": "Message on Telegram",
+      "whatsapp": "Message on WhatsApp",
+      "email": "Email us"
+    }
+  },
+  "footer": {
+    "tagline": "Computer vision applications for business.",
+    "rights": "All rights reserved.",
+    "privacy": "Our demos process images locally in your browser. We don’t store them.",
+    "company": "Company",
+    "explore": "Explore"
+  },
+  "notFound": {
+    "title": "Nothing detected here",
+    "text": "This page doesn’t exist. Our models looked everywhere.",
+    "home": "Back home"
+  },
+  "offers": {
+    "eyebrow": "How to work with us",
+    "title": "Four steps. You can stop after any of them.",
+    "subtitle": "Start with a free answer, prove it on your own footage, then deploy and keep it accurate. Every step has a fixed scope and price.",
+    "check": {
+      "name": "Free feasibility check",
+      "time": "5 business days",
+      "price": "Free",
+      "outcome": "A straight answer: can cameras solve this, how well, and roughly for how much.",
+      "points": [
+        "Send 20–50 photos or a 1-minute video",
+        "We test current models on your footage",
+        "Written go / no-go with a budget range"
+      ],
+      "cta": "Request a check"
+    },
+    "pilot": {
+      "name": "Proof-of-concept pilot",
+      "time": "2–4 weeks",
+      "price": "from {price}",
+      "outcome": "Evidence on your own footage, with success and stop criteria agreed before we start.",
+      "points": [
+        "One clear question, agreed in writing",
+        "Test set from your site, frozen before tuning",
+        "Accuracy against your current process, with every failed case",
+        "Go / no-go memo that you own"
+      ],
+      "cta": "Start a pilot"
+    },
+    "deploy": {
+      "name": "Deployment",
+      "time": "4–10 weeks",
+      "price": "from {price}",
+      "outcome": "A working system on your line or site, connected to the tools your team already uses.",
+      "points": [
+        "Cameras, lighting and edge computer set up on site",
+        "Alerts in Telegram, dashboards, PLC or 1C / ERP",
+        "Acceptance test on real production",
+        "Operator training and handover documents"
+      ],
+      "cta": "Plan a deployment"
+    },
+    "care": {
+      "name": "Care plan",
+      "time": "Monthly",
+      "price": "from {price}/mo",
+      "outcome": "Accuracy stays high as products, lighting and seasons change.",
+      "points": [
+        "Accuracy and uptime monitoring",
+        "Retraining on new data",
+        "Fixes within an agreed response time"
+      ],
+      "cta": "Ask about care"
+    }
+  },
+  "useCases": {
+    "eyebrow": "Use cases",
+    "title": "36 jobs cameras can do for your business",
+    "subtitle": "Concrete problems we see in factories, warehouses, shops and on the road, what a vision system does about them, and what to measure. Most start with a pilot of 2–4 weeks.",
+    "all": "All",
+    "count": "Showing {n} use cases",
+    "problem": "Today",
+    "how": "With vision",
+    "kpi": "Measure",
+    "tryDemo": "Try the demo",
+    "effort": {
+      "1": "Quick win",
+      "2": "Standard",
+      "3": "Advanced"
+    },
+    "effortNote": "Quick win: usually works with standard models and existing cameras. Standard: needs custom training on your images. Advanced: needs special cameras, lighting or 3D, and a longer pilot.",
+    "ctaTitle": "Found your problem? Here’s how we start.",
+    "items": {
+      "assembly": {
+        "title": "Assembly verification",
+        "problem": "A missing screw, clip or cable is found only at final test, or by the customer.",
+        "how": "A camera checks each unit at the station and confirms every part is present and in the right place.",
+        "kpi": "missed-part rate, rework hours"
+      },
+      "surface": {
+        "title": "Surface defect inspection",
+        "problem": "Scratches, dents and stains are judged by tired eyes, differently on every shift.",
+        "how": "A model trained on your good and bad parts flags defects at line speed and saves an image of each.",
+        "kpi": "escape rate, false rejects, inspections per hour"
+      },
+      "fillLevel": {
+        "title": "Fill level and cap check",
+        "problem": "Under-filled bottles and loose caps slip through and come back as complaints.",
+        "how": "Each container is measured as it passes; out-of-spec units trigger a reject gate.",
+        "kpi": "under-fill rate, giveaway volume"
+      },
+      "labelCheck": {
+        "title": "Label, date and batch code check",
+        "problem": "A wrong label or an unreadable expiry date forces a recall.",
+        "how": "OCR reads the printed text and compares it with the batch on the production order.",
+        "kpi": "mislabel incidents, recall risk"
+      },
+      "weld": {
+        "title": "Weld and seam inspection",
+        "problem": "Weld quality is checked by sampling, so bad joints reach assembly.",
+        "how": "Every weld is imaged and classified; doubtful ones are routed to a person.",
+        "kpi": "defects found per 1,000 welds, rework cost"
+      },
+      "dimensions": {
+        "title": "Dimension measurement",
+        "problem": "Parts are measured by hand with calipers on a small sample.",
+        "how": "A calibrated camera measures length, diameter or gaps on every part without contact.",
+        "kpi": "measurement time, out-of-tolerance escapes"
+      },
+      "packaging": {
+        "title": "Packaging integrity",
+        "problem": "Crushed boxes, torn film and open flaps leave the plant.",
+        "how": "Cameras at the end of the line check every pack before palletising.",
+        "kpi": "damaged-pack rate, customer claims"
+      },
+      "conveyorCount": {
+        "title": "Conveyor counting",
+        "problem": "Output is counted by hand or by sensors that miss touching items.",
+        "how": "Vision counts units crossing a line, by product type, and reports output per hour.",
+        "kpi": "count accuracy, OEE input data"
+      },
+      "machineZone": {
+        "title": "Machine danger zones",
+        "problem": "People step into press, robot or conveyor areas while machines run.",
+        "how": "A zone is drawn around the machine; an entry raises an alarm or slows the machine via the PLC.",
+        "kpi": "zone breaches per week, near misses"
+      },
+      "ppe": {
+        "title": "PPE compliance",
+        "problem": "Hard hats, vests and gloves are checked only during audits.",
+        "how": "Cameras at entrances and work areas flag missing PPE and send a photo to the shift lead.",
+        "kpi": "compliance rate by area and shift"
+      },
+      "gauges": {
+        "title": "Analog gauge and meter reading",
+        "problem": "Someone walks the plant to write down pressure, temperature and meter readings.",
+        "how": "Cheap cameras read dials and counters and log values automatically, with alerts on limits.",
+        "kpi": "rounds saved, out-of-range alerts"
+      },
+      "fabric": {
+        "title": "Fabric defect detection",
+        "problem": "Holes, stains and broken yarns are spotted late, after cutting.",
+        "how": "Cameras over the loom or inspection table flag defects and log their position on the roll.",
+        "kpi": "defects per 100 m, fabric waste"
+      },
+      "seams": {
+        "title": "Seam and stitch inspection",
+        "problem": "Skipped stitches and crooked seams are caught at final QC or not at all.",
+        "how": "Garments are imaged at the station; faulty seams are flagged before the next operation.",
+        "kpi": "second-grade rate, rework"
+      },
+      "shade": {
+        "title": "Colour and shade matching",
+        "problem": "Shade differences between batches are judged by eye under shop lights.",
+        "how": "A controlled-light camera compares each batch with the approved reference.",
+        "kpi": "shade complaints, re-dye batches"
+      },
+      "garmentCount": {
+        "title": "Piece and bundle counting",
+        "problem": "Piece-rate counts per worker are disputed and checked by hand.",
+        "how": "Cameras count finished pieces per station and feed the payroll report.",
+        "kpi": "counting disputes, admin hours"
+      },
+      "binPicking": {
+        "title": "Bin picking",
+        "problem": "Robots can’t pick parts that lie jumbled in a bin, so a person feeds the line.",
+        "how": "3D vision finds each part and its pose and gives the robot a safe grasp point.",
+        "kpi": "picks per hour, pick success rate"
+      },
+      "cobotSafety": {
+        "title": "Collaborative robot cell safety",
+        "problem": "Fences slow work, but without them people get too close to robots.",
+        "how": "Vision tracks people around the cell and slows or pauses the robot when someone comes near.",
+        "kpi": "stoppages, cycle time"
+      },
+      "partPose": {
+        "title": "Part position for pick-and-place",
+        "problem": "Fixtures must hold every part in exactly the same place.",
+        "how": "A camera locates each part and corrects the robot’s path, so fixtures can be simpler.",
+        "kpi": "changeover time, fixture cost"
+      },
+      "dock": {
+        "title": "Dock and pallet monitoring",
+        "problem": "Nobody knows how long trucks wait or how many pallets were loaded.",
+        "how": "Cameras count pallets in and out and time each truck at the dock.",
+        "kpi": "dock time, loading errors"
+      },
+      "forkliftProximity": {
+        "title": "Forklift–pedestrian alerts",
+        "problem": "Near misses between forklifts and people go unreported until someone is hurt.",
+        "how": "Vision detects people in forklift lanes and alerts the driver and the supervisor.",
+        "kpi": "near misses per week by zone"
+      },
+      "parcelSize": {
+        "title": "Parcel dimensioning",
+        "problem": "Parcel sizes are typed in by hand, so shipping is billed wrongly.",
+        "how": "A depth camera measures each parcel’s size on the conveyor or table.",
+        "kpi": "billing errors, seconds per parcel"
+      },
+      "scanTunnel": {
+        "title": "Barcode scan tunnel",
+        "problem": "Workers scan each box by hand, and damaged labels stop the line.",
+        "how": "Several cameras read every barcode on a moving box, from any side.",
+        "kpi": "read rate, manual scans"
+      },
+      "damage": {
+        "title": "Damaged goods at receiving",
+        "problem": "Damage is noticed after the supplier’s driver has left.",
+        "how": "Every incoming pallet is photographed and checked for damage, with images saved as evidence.",
+        "kpi": "supplier claims won, receiving time"
+      },
+      "footfall": {
+        "title": "Footfall and conversion",
+        "problem": "Shops know their sales, but not how many people walked in.",
+        "how": "Entrance cameras count visitors in and out by hour, without storing faces.",
+        "kpi": "visitors, conversion rate, staffing per hour"
+      },
+      "queues": {
+        "title": "Queue length alerts",
+        "problem": "Customers leave long queues before anyone opens another till.",
+        "how": "Vision counts people waiting and pings staff when a queue passes a limit.",
+        "kpi": "average wait, abandoned queues"
+      },
+      "shelves": {
+        "title": "Shelf availability",
+        "problem": "Empty shelves are found by store walks a few times a day.",
+        "how": "Cameras or phone photos spot gaps and wrong placements and create a restock task.",
+        "kpi": "out-of-stock hours, planogram compliance"
+      },
+      "perimeter": {
+        "title": "Perimeter and after-hours intrusion",
+        "problem": "Guards watch dozens of screens and alarms fire on cats and shadows.",
+        "how": "Alarms trigger only when a person or vehicle enters a defined zone.",
+        "kpi": "false alarms per night, response time"
+      },
+      "privacy": {
+        "title": "Privacy-safe video",
+        "problem": "Footage can’t be shared or stored because it shows faces.",
+        "how": "Faces are blurred automatically before video leaves the site.",
+        "kpi": "compliance with data rules"
+      },
+      "vehicleCount": {
+        "title": "Vehicle counting and classification",
+        "problem": "Traffic and parking counts are done by hand on a few days a year.",
+        "how": "Cameras count cars, trucks and buses by direction and hour, all year.",
+        "kpi": "vehicles per hour by type"
+      },
+      "plates": {
+        "title": "Number plate recognition",
+        "problem": "Gate staff write plates down and check passes by eye.",
+        "how": "Plates are read at the gate and checked against the allowed list automatically.",
+        "kpi": "gate time per vehicle, unauthorised entries"
+      },
+      "driverFatigue": {
+        "title": "Driver and operator fatigue",
+        "problem": "Long shifts on trucks, buses and forklifts lead to microsleep accidents.",
+        "how": "An in-cab camera watches eye closure and yawning and warns the driver and dispatcher.",
+        "kpi": "fatigue alerts per 1,000 km, incidents"
+      },
+      "waybills": {
+        "title": "Waybill and invoice capture",
+        "problem": "Staff retype invoices and waybills in Uzbek, Russian and English.",
+        "how": "OCR reads the documents and fills the fields in 1C or your ERP for a person to confirm.",
+        "kpi": "minutes per document, typing errors"
+      },
+      "grading": {
+        "title": "Fruit and vegetable grading",
+        "problem": "Produce is sorted by hand, so grades vary from shift to shift.",
+        "how": "Cameras grade each item by size, colour and blemishes and steer it to the right lane.",
+        "kpi": "grading accuracy, sorting throughput"
+      },
+      "livestock": {
+        "title": "Livestock counting",
+        "problem": "Animals are counted by hand at gates and in pens.",
+        "how": "Cameras count animals passing a gate and track headcount per pen.",
+        "kpi": "count accuracy, labour hours"
+      },
+      "bakery": {
+        "title": "Baked goods quality",
+        "problem": "Burnt or underbaked items are sorted out by eye at the end of the oven.",
+        "how": "A camera grades each item by colour and shape as it leaves the oven.",
+        "kpi": "waste rate, complaints"
+      },
+      "falls": {
+        "title": "Fall detection in care settings",
+        "problem": "A fall at night may go unnoticed for hours.",
+        "how": "Pose estimation spots a fall and alerts staff, without recording identifiable video.",
+        "kpi": "time to assistance"
+      }
+    }
+  }
+}

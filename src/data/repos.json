@@ -1,0 +1,855 @@
+{
+  "updatedAt": "2026-11-24",
+  "repos": [
+    {
+      "name": "ultralytics/ultralytics",
+      "url": "https://github.com/ultralytics/ultralytics",
+      "stars": 63711,
+      "license": "AGPL-3.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Ultralytics YOLO27, YOLO26, YOLO11, YOLOv8 — object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
+      "task": "detection"
+    },
+    {
+      "name": "ultralytics/yolov5",
+      "url": "https://github.com/ultralytics/yolov5",
+      "stars": 58304,
+      "license": "AGPL-3.0",
+      "pushedAt": "2026-11-23",
+      "archived": false,
+      "description": "Ultralytics YOLOv5 in PyTorch for object detection, instance segmentation, classification, training, and export.",
+      "task": "detection"
+    },
+    {
+      "name": "WongKinYiu/yolov9",
+      "url": "https://github.com/WongKinYiu/yolov9",
+      "stars": 9574,
+      "license": "GPL-3.0",
+      "pushedAt": "2024-08-09",
+      "archived": false,
+      "description": "Implementation of paper - YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information",
+      "task": "detection"
+    },
+    {
+      "name": "THU-MIG/yolov10",
+      "url": "https://github.com/THU-MIG/yolov10",
+      "stars": 11344,
+      "license": "AGPL-3.0",
+      "pushedAt": "2025-03-14",
+      "archived": false,
+      "description": "YOLOv10: Real-Time End-to-End Object Detection [NeurIPS 2024]",
+      "task": "detection"
+    },
+    {
+      "name": "roboflow/rf-detr",
+      "url": "https://github.com/roboflow/rf-detr",
+      "stars": 10154,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "RF-DETR is a real-time object detection and segmentation model architecture developed by Roboflow, SOTA on COCO, designed for fine-tuning. [ICLR 2026]",
+      "task": "detection"
+    },
+    {
+      "name": "lyuwenyu/RT-DETR",
+      "url": "https://github.com/lyuwenyu/RT-DETR",
+      "stars": 5686,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-10-09",
+      "archived": false,
+      "description": "[CVPR 2024] Official RT-DETR (RTDETR paddle pytorch), Real-Time DEtection TRansformer, DETRs Beat YOLOs on Real-time Object Detection. 🔥 🔥 🔥",
+      "task": "detection"
+    },
+    {
+      "name": "Peterande/D-FINE",
+      "url": "https://github.com/Peterande/D-FINE",
+      "stars": 3425,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-10-05",
+      "archived": false,
+      "description": "D-FINE: Redefine Regression Task of DETRs as Fine-grained Distribution Refinement  [ICLR 2025 Spotlight]",
+      "task": "detection"
+    },
+    {
+      "name": "Megvii-BaseDetection/YOLOX",
+      "url": "https://github.com/Megvii-BaseDetection/YOLOX",
+      "stars": 10720,
+      "license": "Apache-2.0",
+      "pushedAt": "2025-06-08",
+      "archived": false,
+      "description": "YOLOX is a high-performance anchor-free YOLO, exceeding yolov3~v5 with MegEngine, ONNX, TensorRT, ncnn, and OpenVINO supported. Documentation: https://yolox.readthedocs.io/",
+      "task": "detection"
+    },
+    {
+      "name": "facebookresearch/detectron2",
+      "url": "https://github.com/facebookresearch/detectron2",
+      "stars": 35007,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-10-27",
+      "archived": false,
+      "description": "Detectron2 is a platform for object detection, segmentation and other visual recognition tasks.",
+      "task": "detection"
+    },
+    {
+      "name": "open-mmlab/mmdetection",
+      "url": "https://github.com/open-mmlab/mmdetection",
+      "stars": 33053,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-08-21",
+      "archived": false,
+      "description": "OpenMMLab Detection Toolbox and Benchmark",
+      "task": "detection"
+    },
+    {
+      "name": "PaddlePaddle/PaddleDetection",
+      "url": "https://github.com/PaddlePaddle/PaddleDetection",
+      "stars": 14487,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-05-28",
+      "archived": false,
+      "description": "Object Detection toolkit based on PaddlePaddle. It supports object detection, instance segmentation, multiple object tracking and real-time multi-person keypoint detection.",
+      "task": "detection"
+    },
+    {
+      "name": "IDEA-Research/GroundingDINO",
+      "url": "https://github.com/IDEA-Research/GroundingDINO",
+      "stars": 10771,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-08-12",
+      "archived": false,
+      "description": "[ECCV 2024] Official implementation of the paper \"Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection\"",
+      "task": "detection"
+    },
+    {
+      "name": "open-edge-platform/anomalib",
+      "url": "https://github.com/open-edge-platform/anomalib",
+      "stars": 6422,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "An anomaly detection library comprising state-of-the-art algorithms and features such as experiment management, hyper-parameter optimization, and edge inference.",
+      "task": "detection"
+    },
+    {
+      "name": "facebookresearch/segment-anything",
+      "url": "https://github.com/facebookresearch/segment-anything",
+      "stars": 55176,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-09-18",
+      "archived": false,
+      "description": "The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+      "task": "segmentation"
+    },
+    {
+      "name": "facebookresearch/sam2",
+      "url": "https://github.com/facebookresearch/sam2",
+      "stars": 20217,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-05-30",
+      "archived": false,
+      "description": "The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+      "task": "segmentation"
+    },
+    {
+      "name": "facebookresearch/sam3",
+      "url": "https://github.com/facebookresearch/sam3",
+      "stars": 12401,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-17",
+      "archived": false,
+      "description": "The repository provides code for running inference and finetuning with the Meta Segment Anything Model 3 (SAM 3), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+      "task": "segmentation"
+    },
+    {
+      "name": "IDEA-Research/Grounded-Segment-Anything",
+      "url": "https://github.com/IDEA-Research/Grounded-Segment-Anything",
+      "stars": 17795,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-09-05",
+      "archived": false,
+      "description": "Grounded SAM: Marrying Grounding DINO with Segment Anything & Stable Diffusion & Recognize Anything - Automatically Detect , Segment and Generate Anything",
+      "task": "segmentation"
+    },
+    {
+      "name": "open-mmlab/mmsegmentation",
+      "url": "https://github.com/open-mmlab/mmsegmentation",
+      "stars": 9988,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-08-13",
+      "archived": false,
+      "description": "OpenMMLab Semantic Segmentation Toolbox and Benchmark.",
+      "task": "segmentation"
+    },
+    {
+      "name": "PaddlePaddle/PaddleSeg",
+      "url": "https://github.com/PaddlePaddle/PaddleSeg",
+      "stars": 9417,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-02-05",
+      "archived": false,
+      "description": "Easy-to-use image segmentation library with awesome pre-trained model zoo, supporting wide-range of practical tasks in Semantic Segmentation, Interactive Segmentation, Panoptic Segmentation, Image Matting, 3D Segmentation, etc.",
+      "task": "segmentation"
+    },
+    {
+      "name": "ZhengPeng7/BiRefNet",
+      "url": "https://github.com/ZhengPeng7/BiRefNet",
+      "stars": 4449,
+      "license": "MIT",
+      "pushedAt": "2026-10-25",
+      "archived": false,
+      "description": "[CAAI AIR'24] Bilateral Reference for High-Resolution Dichotomous Image Segmentation",
+      "task": "segmentation"
+    },
+    {
+      "name": "danielgatis/rembg",
+      "url": "https://github.com/danielgatis/rembg",
+      "stars": 25660,
+      "license": "MIT",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Rembg is a tool to remove images background",
+      "task": "segmentation"
+    },
+    {
+      "name": "openai/CLIP",
+      "url": "https://github.com/openai/CLIP",
+      "stars": 34654,
+      "license": "MIT",
+      "pushedAt": "2026-03-25",
+      "archived": false,
+      "description": "CLIP (Contrastive Language-Image Pretraining),  Predict the most relevant text snippet given an image",
+      "task": "foundation"
+    },
+    {
+      "name": "mlfoundations/open_clip",
+      "url": "https://github.com/mlfoundations/open_clip",
+      "stars": 14285,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-21",
+      "archived": false,
+      "description": "An open source implementation of CLIP.",
+      "task": "foundation"
+    },
+    {
+      "name": "facebookresearch/dinov2",
+      "url": "https://github.com/facebookresearch/dinov2",
+      "stars": 13568,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-05",
+      "archived": false,
+      "description": "PyTorch code and models for the DINOv2 self-supervised learning method.",
+      "task": "foundation"
+    },
+    {
+      "name": "facebookresearch/dinov3",
+      "url": "https://github.com/facebookresearch/dinov3",
+      "stars": 11802,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-02",
+      "archived": false,
+      "description": "Reference PyTorch implementation and models for DINOv3",
+      "task": "foundation"
+    },
+    {
+      "name": "QwenLM/Qwen3-VL",
+      "url": "https://github.com/QwenLM/Qwen3-VL",
+      "stars": 20250,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-01-30",
+      "archived": false,
+      "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
+      "task": "foundation"
+    },
+    {
+      "name": "haotian-liu/LLaVA",
+      "url": "https://github.com/haotian-liu/LLaVA",
+      "stars": 25092,
+      "license": "Apache-2.0",
+      "pushedAt": "2024-08-12",
+      "archived": false,
+      "description": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
+      "task": "foundation"
+    },
+    {
+      "name": "huggingface/pytorch-image-models",
+      "url": "https://github.com/huggingface/pytorch-image-models",
+      "stars": 37309,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-21",
+      "archived": false,
+      "description": "The largest collection of PyTorch image encoders / backbones. Including train, eval, inference, export scripts, and pretrained weights -- ResNet, ResNeXT, EfficientNet, NFNet, Vision Transformer (ViT), MobileNetV4, MobileNet-V3 & V2, RegNet, DPN, CSPNet, Swin Transformer, MaxViT, CoAtNet, ConvNeXt, and more",
+      "task": "foundation"
+    },
+    {
+      "name": "pytorch/vision",
+      "url": "https://github.com/pytorch/vision",
+      "stars": 18027,
+      "license": "BSD-3-Clause",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Datasets, Transforms and Models specific to Computer Vision",
+      "task": "foundation"
+    },
+    {
+      "name": "google-ai-edge/mediapipe",
+      "url": "https://github.com/google-ai-edge/mediapipe",
+      "stars": 37825,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Cross-platform, customizable ML solutions for live and streaming media.",
+      "task": "pose-face"
+    },
+    {
+      "name": "CMU-Perceptual-Computing-Lab/openpose",
+      "url": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
+      "stars": 34613,
+      "license": "NOASSERTION",
+      "pushedAt": "2024-08-03",
+      "archived": false,
+      "description": "OpenPose: Real-time multi-person keypoint detection library for body, face, hands, and foot estimation",
+      "task": "pose-face"
+    },
+    {
+      "name": "open-mmlab/mmpose",
+      "url": "https://github.com/open-mmlab/mmpose",
+      "stars": 8079,
+      "license": "Apache-2.0",
+      "pushedAt": "2025-08-04",
+      "archived": false,
+      "description": "OpenMMLab Pose Estimation Toolbox and Benchmark.",
+      "task": "pose-face"
+    },
+    {
+      "name": "deepinsight/insightface",
+      "url": "https://github.com/deepinsight/insightface",
+      "stars": 30293,
+      "license": "NONE",
+      "pushedAt": "2026-10-19",
+      "archived": false,
+      "description": "State-of-the-art 2D and 3D Face Analysis Project",
+      "task": "pose-face"
+    },
+    {
+      "name": "ageitgey/face_recognition",
+      "url": "https://github.com/ageitgey/face_recognition",
+      "stars": 56921,
+      "license": "MIT",
+      "pushedAt": "2026-06-25",
+      "archived": false,
+      "description": "The world's simplest facial recognition api for Python and the command line",
+      "task": "pose-face"
+    },
+    {
+      "name": "serengil/deepface",
+      "url": "https://github.com/serengil/deepface",
+      "stars": 23731,
+      "license": "MIT",
+      "pushedAt": "2026-11-20",
+      "archived": false,
+      "description": "A Lightweight Face Recognition and Facial Attribute Analysis (Age, Gender, Emotion and Race) Library for Python",
+      "task": "pose-face"
+    },
+    {
+      "name": "PaddlePaddle/PaddleOCR",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "stars": 93130,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-09-16",
+      "archived": false,
+      "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+      "task": "ocr"
+    },
+    {
+      "name": "JaidedAI/EasyOCR",
+      "url": "https://github.com/JaidedAI/EasyOCR",
+      "stars": 30165,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-13",
+      "archived": false,
+      "description": "Ready-to-use OCR with 80+ supported languages and all popular writing scripts including Latin, Chinese, Arabic, Devanagari, Cyrillic and etc.",
+      "task": "ocr"
+    },
+    {
+      "name": "tesseract-ocr/tesseract",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "stars": 77643,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Tesseract Open Source OCR Engine (main repository)",
+      "task": "ocr"
+    },
+    {
+      "name": "naptha/tesseract.js",
+      "url": "https://github.com/naptha/tesseract.js",
+      "stars": 38853,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-05-17",
+      "archived": false,
+      "description": "Pure Javascript OCR for more than 100 Languages 📖🎉🖥",
+      "task": "ocr"
+    },
+    {
+      "name": "mindee/doctr",
+      "url": "https://github.com/mindee/doctr",
+      "stars": 6442,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "docTR (Document Text Recognition) - a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning. Ongoing development and maintenance by t2k.",
+      "task": "ocr"
+    },
+    {
+      "name": "opendatalab/MinerU",
+      "url": "https://github.com/opendatalab/MinerU",
+      "stars": 84277,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-22",
+      "archived": false,
+      "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+      "task": "ocr"
+    },
+    {
+      "name": "docling-project/docling",
+      "url": "https://github.com/docling-project/docling",
+      "stars": 70969,
+      "license": "MIT",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Get your documents ready for gen AI",
+      "task": "ocr"
+    },
+    {
+      "name": "microsoft/table-transformer",
+      "url": "https://github.com/microsoft/table-transformer",
+      "stars": 2946,
+      "license": "MIT",
+      "pushedAt": "2024-06-24",
+      "archived": true,
+      "description": "Table Transformer (TATR) is a deep learning model for extracting tables from unstructured documents (PDFs and images). This is also the official repository for the PubTables-1M dataset and GriTS evaluation metric.",
+      "task": "ocr"
+    },
+    {
+      "name": "zxing-cpp/zxing-cpp",
+      "url": "https://github.com/zxing-cpp/zxing-cpp",
+      "stars": 2112,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-23",
+      "archived": false,
+      "description": "C++ port of ZXing",
+      "task": "ocr"
+    },
+    {
+      "name": "ankandrew/fast-plate-ocr",
+      "url": "https://github.com/ankandrew/fast-plate-ocr",
+      "stars": 817,
+      "license": "MIT",
+      "pushedAt": "2026-11-17",
+      "archived": false,
+      "description": "Lightweight & fast OCR models for license plate text recognition.",
+      "task": "ocr"
+    },
+    {
+      "name": "openalpr/openalpr",
+      "url": "https://github.com/openalpr/openalpr",
+      "stars": 11490,
+      "license": "AGPL-3.0",
+      "pushedAt": "2024-01-11",
+      "archived": false,
+      "description": "Automatic License Plate Recognition library",
+      "task": "ocr"
+    },
+    {
+      "name": "roboflow/supervision",
+      "url": "https://github.com/roboflow/supervision",
+      "stars": 51706,
+      "license": "MIT",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "We write your reusable computer vision tools. 💜",
+      "task": "tracking"
+    },
+    {
+      "name": "roboflow/inference",
+      "url": "https://github.com/roboflow/inference",
+      "stars": 2500,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Turn any computer or edge device into a command center for your computer vision projects.",
+      "task": "tracking"
+    },
+    {
+      "name": "roboflow/trackers",
+      "url": "https://github.com/roboflow/trackers",
+      "stars": 4020,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-23",
+      "archived": false,
+      "description": "Trackers gives you clean, modular re-implementations of leading multi-object tracking algorithms released under the permissive Apache 2.0 license. You combine them with any detection model you already use.",
+      "task": "tracking"
+    },
+    {
+      "name": "mikel-brostrom/boxmot",
+      "url": "https://github.com/mikel-brostrom/boxmot",
+      "stars": 8329,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-20",
+      "archived": false,
+      "description": "BoxMOT: Pluggable multi-object tracking in Python and C++ for axis-aligned and oriented boxes, now with Helm deployment for continuous camera tracking on Kubernetes.",
+      "task": "tracking"
+    },
+    {
+      "name": "FoundationVision/ByteTrack",
+      "url": "https://github.com/FoundationVision/ByteTrack",
+      "stars": 6828,
+      "license": "MIT",
+      "pushedAt": "2024-06-19",
+      "archived": false,
+      "description": "[ECCV 2022] ByteTrack: Multi-Object Tracking by Associating Every Detection Box",
+      "task": "tracking"
+    },
+    {
+      "name": "cvat-ai/cvat",
+      "url": "https://github.com/cvat-ai/cvat",
+      "stars": 17200,
+      "license": "MIT",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "CVAT is a leading data annotation platform for image, video, audio, and 3D datasets. It offers open-source, cloud, and enterprise products, as well as labeling services, with AI-assisted labeling, quality assurance, team collaboration, analytics, and developer APIs.",
+      "task": "data"
+    },
+    {
+      "name": "HumanSignal/label-studio",
+      "url": "https://github.com/HumanSignal/label-studio",
+      "stars": 28754,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
+      "task": "data"
+    },
+    {
+      "name": "voxel51/fiftyone",
+      "url": "https://github.com/voxel51/fiftyone",
+      "stars": 11336,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Refine high-quality datasets and visual AI models",
+      "task": "data"
+    },
+    {
+      "name": "albumentations-team/albumentations",
+      "url": "https://github.com/albumentations-team/albumentations",
+      "stars": 15294,
+      "license": "MIT",
+      "pushedAt": "2025-06-25",
+      "archived": true,
+      "description": "Fast and flexible image augmentation library. Paper about the library: https://www.mdpi.com/2078-2489/11/2/125",
+      "task": "data"
+    },
+    {
+      "name": "roboflow/notebooks",
+      "url": "https://github.com/roboflow/notebooks",
+      "stars": 9751,
+      "license": "NONE",
+      "pushedAt": "2026-09-22",
+      "archived": false,
+      "description": "A collection of tutorials on state-of-the-art computer vision models and techniques. Explore everything from foundational architectures like ResNet to cutting-edge models like RF-DETR, YOLO11, SAM 3, and Qwen3-VL.",
+      "task": "data"
+    },
+    {
+      "name": "NVIDIA/TensorRT",
+      "url": "https://github.com/NVIDIA/TensorRT",
+      "stars": 13480,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-18",
+      "archived": false,
+      "description": "NVIDIA® TensorRT™ is an SDK for high-performance deep learning inference on NVIDIA GPUs. This repository contains the open source components of TensorRT.",
+      "task": "deploy"
+    },
+    {
+      "name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "stars": 12395,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "task": "deploy"
+    },
+    {
+      "name": "triton-inference-server/server",
+      "url": "https://github.com/triton-inference-server/server",
+      "stars": 11162,
+      "license": "BSD-3-Clause",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "The Triton Inference Server provides an optimized cloud and edge inferencing solution.",
+      "task": "deploy"
+    },
+    {
+      "name": "tensorflow/tfjs",
+      "url": "https://github.com/tensorflow/tfjs",
+      "stars": 19155,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-06-23",
+      "archived": false,
+      "description": "A WebGL accelerated JavaScript library for training and deploying ML models.",
+      "task": "deploy"
+    },
+    {
+      "name": "huggingface/transformers.js",
+      "url": "https://github.com/huggingface/transformers.js",
+      "stars": 16455,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!",
+      "task": "deploy"
+    },
+    {
+      "name": "opencv/opencv_zoo",
+      "url": "https://github.com/opencv/opencv_zoo",
+      "stars": 1146,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-10-20",
+      "archived": false,
+      "description": "Model Zoo For OpenCV DNN and Benchmarks.",
+      "task": "deploy"
+    },
+    {
+      "name": "opencv/opencv",
+      "url": "https://github.com/opencv/opencv",
+      "stars": 91704,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Open Source Computer Vision Library",
+      "task": "image"
+    },
+    {
+      "name": "xinntao/Real-ESRGAN",
+      "url": "https://github.com/xinntao/Real-ESRGAN",
+      "stars": 37633,
+      "license": "BSD-3-Clause",
+      "pushedAt": "2024-08-06",
+      "archived": false,
+      "description": "Real-ESRGAN aims at developing Practical Algorithms for General Image/Video Restoration.",
+      "task": "image"
+    },
+    {
+      "name": "DepthAnything/Depth-Anything-V2",
+      "url": "https://github.com/DepthAnything/Depth-Anything-V2",
+      "stars": 9213,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-03-24",
+      "archived": false,
+      "description": "[NeurIPS 2024] Depth Anything V2. A More Capable Foundation Model for Monocular Depth Estimation",
+      "task": "image"
+    },
+    {
+      "name": "apple-aiml-research/ml-depth-pro",
+      "url": "https://github.com/apple-aiml-research/ml-depth-pro",
+      "stars": 5804,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-09-11",
+      "archived": false,
+      "description": "Depth Pro: Sharp Monocular Metric Depth in Less Than a Second.",
+      "task": "image"
+    },
+    {
+      "name": "ros2/ros2",
+      "url": "https://github.com/ros2/ros2",
+      "stars": 6347,
+      "license": "NONE",
+      "pushedAt": "2026-11-17",
+      "archived": false,
+      "description": "The Robot Operating System, is a meta operating system for robots.",
+      "task": "robotics"
+    },
+    {
+      "name": "moveit/moveit2",
+      "url": "https://github.com/moveit/moveit2",
+      "stars": 2133,
+      "license": "BSD-3-Clause",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": ":robot: MoveIt for ROS 2",
+      "task": "robotics"
+    },
+    {
+      "name": "isl-org/Open3D",
+      "url": "https://github.com/isl-org/Open3D",
+      "stars": 14248,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-14",
+      "archived": false,
+      "description": "Open3D: A Modern Library for 3D Data Processing",
+      "task": "robotics"
+    },
+    {
+      "name": "PointCloudLibrary/pcl",
+      "url": "https://github.com/PointCloudLibrary/pcl",
+      "stars": 11232,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-14",
+      "archived": false,
+      "description": "Point Cloud Library (PCL)",
+      "task": "robotics"
+    },
+    {
+      "name": "realsenseai/librealsense",
+      "url": "https://github.com/realsenseai/librealsense",
+      "stars": 9111,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "RealSense SDK",
+      "task": "robotics"
+    },
+    {
+      "name": "luxonis/depthai",
+      "url": "https://github.com/luxonis/depthai",
+      "stars": 1070,
+      "license": "NONE",
+      "pushedAt": "2026-10-26",
+      "archived": false,
+      "description": "DepthAI",
+      "task": "robotics"
+    },
+    {
+      "name": "huggingface/lerobot",
+      "url": "https://github.com/huggingface/lerobot",
+      "stars": 29064,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning",
+      "task": "robotics"
+    },
+    {
+      "name": "openvla/openvla",
+      "url": "https://github.com/openvla/openvla",
+      "stars": 7341,
+      "license": "MIT",
+      "pushedAt": "2025-03-23",
+      "archived": false,
+      "description": "OpenVLA: An open-source vision-language-action model for robotic manipulation.",
+      "task": "robotics"
+    },
+    {
+      "name": "Physical-Intelligence/openpi",
+      "url": "https://github.com/Physical-Intelligence/openpi",
+      "stars": 14747,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-08-24",
+      "archived": false,
+      "description": "",
+      "task": "robotics"
+    },
+    {
+      "name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "stars": 18454,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "task": "robotics"
+    },
+    {
+      "name": "isaac-sim/IsaacLab",
+      "url": "https://github.com/isaac-sim/IsaacLab",
+      "stars": 8713,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "Unified framework for robot learning with multi-physics/renderer support",
+      "task": "robotics"
+    },
+    {
+      "name": "NVlabs/FoundationPose",
+      "url": "https://github.com/NVlabs/FoundationPose",
+      "stars": 3716,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-04-29",
+      "archived": false,
+      "description": "[CVPR 2024 Highlight] FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects",
+      "task": "robotics"
+    },
+    {
+      "name": "graspnet/graspnet-baseline",
+      "url": "https://github.com/graspnet/graspnet-baseline",
+      "stars": 1053,
+      "license": "NOASSERTION",
+      "pushedAt": "2025-02-17",
+      "archived": false,
+      "description": "Baseline model for \"GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping\" (CVPR 2020)",
+      "task": "robotics"
+    },
+    {
+      "name": "AprilRobotics/apriltag",
+      "url": "https://github.com/AprilRobotics/apriltag",
+      "stars": 2626,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-08-07",
+      "archived": false,
+      "description": "AprilTag is a visual fiducial system popular for robotics research.",
+      "task": "robotics"
+    },
+    {
+      "name": "colmap/colmap",
+      "url": "https://github.com/colmap/colmap",
+      "stars": 13285,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-11-24",
+      "archived": false,
+      "description": "COLMAP - Structure-from-Motion and Multi-View Stereo",
+      "task": "3d"
+    },
+    {
+      "name": "nerfstudio-project/nerfstudio",
+      "url": "https://github.com/nerfstudio-project/nerfstudio",
+      "stars": 12251,
+      "license": "Apache-2.0",
+      "pushedAt": "2025-07-29",
+      "archived": false,
+      "description": "A collaboration friendly studio for NeRFs",
+      "task": "3d"
+    },
+    {
+      "name": "facebookresearch/vggt",
+      "url": "https://github.com/facebookresearch/vggt",
+      "stars": 14668,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-05-19",
+      "archived": false,
+      "description": "[CVPR 2025 Best Paper Award] VGGT: Visual Geometry Grounded Transformer",
+      "task": "3d"
+    },
+    {
+      "name": "facebookresearch/co-tracker",
+      "url": "https://github.com/facebookresearch/co-tracker",
+      "stars": 5211,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-03-03",
+      "archived": false,
+      "description": "CoTracker is a model for tracking any point (pixel) on a video.",
+      "task": "3d"
+    },
+    {
+      "name": "google-deepmind/tapnet",
+      "url": "https://github.com/google-deepmind/tapnet",
+      "stars": 2273,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-02",
+      "archived": false,
+      "description": "Tracking Any Point (TAP)",
+      "task": "3d"
+    }
+  ]
+}

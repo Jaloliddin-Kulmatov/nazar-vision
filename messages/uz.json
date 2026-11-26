@@ -1,0 +1,1385 @@
+{
+  "meta": {
+    "title": "Nazar Vision — Biznes uchun kompyuter ko‘rish va robot idroki",
+    "description": "Biz sanaydigan, tekshiradigan, o‘qiydigan va robotlarni boshqaradigan kompyuter ko‘rish tizimlarini yaratamiz — ishlab chiqarish, to‘qimachilik, logistika, savdo va boshqa sohalar uchun. Jonli demolarni brauzeringizda sinab ko‘ring."
+  },
+  "nav": {
+    "solutions": "Yechimlar",
+    "services": "Xizmatlar",
+    "demos": "Demolar",
+    "openSource": "Ochiq kod",
+    "pricing": "Narxlar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "cta": "Qo‘ng‘iroq belgilash",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "language": "Til",
+    "useCases": "Qo‘llanilishi"
+  },
+  "common": {
+    "tryIt": "Sinab ko‘ring",
+    "tryLive": "Jonli sinash",
+    "learnMore": "Batafsil",
+    "privacy": "Rasmlar qurilmangizdan chiqmaydi",
+    "exampleScenario": "Namuna stsenariy",
+    "allDemos": "Barcha demolar",
+    "seeSolutions": "Yechimlarni ko‘rish",
+    "talkToUs": "Biz bilan bog‘laning",
+    "backToDemos": "Demo laboratoriyaga qaytish",
+    "home": "Bosh sahifa"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Kompyuter ko‘rish va robot idroki",
+      "title": "Mavjud kameralaringizni ishga soling",
+      "titleAccent": "biznes tahliliga",
+      "subtitle": "Biz zavod, ombor va do‘konlar uchun kompyuter ko‘rishi tizimlarini quramiz: xavf ogohlantirishlari, sanash, sifat nazorati va hujjatlarni o‘qish. Sizning kameralaringiz va serverlaringizda ishlaydi.",
+      "primary": "Shu videoda sinab ko‘ring",
+      "secondary": "Bepul maslahat",
+      "note": "Ro‘yxatdan o‘tish shart emas. Demolar brauzerda ishlaydi, rasmlaringiz qurilmangizda qoladi."
+    },
+    "stats": [
+      {
+        "value": "14",
+        "label": "namuna videolari bilan jonli demo"
+      },
+      {
+        "value": "80+",
+        "label": "ko‘rib chiqilgan ochiq kodli vosita"
+      },
+      {
+        "value": "3",
+        "label": "til: EN · UZ · RU"
+      },
+      {
+        "value": "0",
+        "label": "demolarimiz yuklagan rasmlar"
+      }
+    ],
+    "industries": {
+      "eyebrow": "Sohalar",
+      "title": "Vaqtingizni oladigan ishlar uchun ko‘rish AI",
+      "subtitle": "Sex maydonchasidan ombor darvozasigacha — sizning jarayoningizga moslashtirilgan ko‘nikmalar."
+    },
+    "pipeline": {
+      "eyebrow": "Qanday ishlaydi",
+      "title": "Kamera oqimidan qarorgacha",
+      "subtitle": "Biz yetkazadigan har bir tizim sinalgan bitta zanjir asosida ishlaydi. Har bir blok almashtiriladi — faqat keraklisiga to‘laysiz.",
+      "steps": [
+        {
+          "title": "Tasvirga olish",
+          "text": "Mavjud IP kameralar, telefonlar yoki sanoat kameralari."
+        },
+        {
+          "title": "Aniqlash",
+          "text": "Modellar obyektlar, odamlar, nuqsonlar yoki matnni topadi."
+        },
+        {
+          "title": "Kuzatish",
+          "text": "Obyektlar kadrlar bo‘ylab o‘z ID raqamini saqlaydi."
+        },
+        {
+          "title": "O‘lchash",
+          "text": "Sanash, vaqt, o‘lcham, o‘qish, standart bilan solishtirish."
+        },
+        {
+          "title": "Harakat",
+          "text": "Ogohlantirishlar, dashbordlar, ERP yoki Telegram botlar."
+        }
+      ]
+    },
+    "demos": {
+      "eyebrow": "Demo laboratoriya",
+      "title": "So‘zimizga ishonmang. Sinab ko‘ring.",
+      "subtitle": "Brauzeringizda ishlaydigan haqiqiy modellar — vebkamerangiz yoki o‘z rasmlaringizda."
+    },
+    "services": {
+      "eyebrow": "Xizmatlar",
+      "title": "G‘oyadan ishlab chiqarishgacha, boshidan oxirigacha",
+      "cta": "Barcha xizmatlar"
+    },
+    "process": {
+      "eyebrow": "Jarayon",
+      "title": "Avval pilot. Qaror qilishdan oldin isbot.",
+      "steps": [
+        {
+          "title": "Tanishuv qo‘ng‘irog‘i",
+          "time": "1-kun",
+          "text": "Jarayoningiz, kameralaringiz va avtomatlashtirmoqchi bo‘lgan qaroringizni o‘rganamiz."
+        },
+        {
+          "title": "Pullik pilot",
+          "time": "2–4 hafta",
+          "text": "O‘z videolaringizda ishlaydigan model va o‘lchangan aniqlik hisoboti."
+        },
+        {
+          "title": "Joriy qilish",
+          "time": "1–3 oy",
+          "text": "Edge qurilmalarda yoki serverlaringizda ishlaydigan, tizimlaringizga ulangan tizim."
+        },
+        {
+          "title": "Qo‘llab-quvvatlash",
+          "time": "Doimiy",
+          "text": "Monitoring va mahsulot yoki yoritish o‘zgarganda modelni yangilash."
+        }
+      ]
+    },
+    "oss": {
+      "eyebrow": "Ochiq kod",
+      "title": "Eng yaxshi bepul vositalar asosida quramiz — va qaysilari xavfsiz ekanini aytamiz",
+      "text": "Kutubxonamiz 80 dan ortiq ochiq kodli kompyuter ko‘rish va robototexnika loyihalarini GitHub’dan jonli ma’lumotlar va litsenziya tekshiruvi bilan kuzatadi. Eng mashhur modellarning ba’zilari AGPL litsenziyasida — bu sizni o‘z kodingizni ochishga majbur qilishi mumkin. Biz buni belgilab beramiz.",
+      "cta": "Kutubxonani ochish"
+    },
+    "paths": {
+      "build": {
+        "title": "Jamoangiz bormi? O‘zingiz quring.",
+        "text": "Ochiq kod kutubxonasi va demolarni ko‘rib chiqing. Muhandislaringizga maslahat berishga tayyormiz.",
+        "cta": "Ochiq kod kutubxonasi"
+      },
+      "operate": {
+        "title": "Muammo bormi? Bizga olib keling.",
+        "text": "Nimani ko‘rish, sanash yoki ushlashni xohlayotganingizni ayting. Ko‘rish AI buni uddalay oladimi — rostini aytamiz.",
+        "cta": "Bepul qo‘ng‘iroq belgilash"
+      }
+    },
+    "live": {
+      "badge": "Modelning haqiqiy natijasi",
+      "person": "odam",
+      "people": "{n, plural, =0 {Kadrda hech kim yo‘q} other {Kadrda # kishi}}",
+      "clear": "Yuklagich yo‘lagi bo‘sh",
+      "alert": "Yuklagich yo‘lagida odam",
+      "pause": "Pauza",
+      "play": "Ijro etish",
+      "caption": "Bu videoda odamlarni EfficientDet-Lite2 kadrma-kadr topadi. Yuklagich yo‘lagini biz chizdik; demoda o‘zingiz chizasiz."
+    },
+    "scenes": {
+      "title": "Sahnani tanlang va model ishini ko‘ring",
+      "subtitle": "Har biri shu videoda allaqachon ishlayotgan demoni ochadi. Keyin veb-kamerani yoqing yoki o‘z videongizni yuklang.",
+      "all": "Barcha 14 ta demo",
+      "items": {
+        "safety-zone": "Yuklagichli ombor",
+        "ppe-check": "Planshetli ishchi",
+        "people-counter": "Quyish liniyasidagi shishalar",
+        "fatigue-monitor": "Rul ortidagi haydovchi",
+        "object-detection": "Shahar harakati",
+        "face-anonymizer": "Gavjum ko‘cha"
+      }
+    }
+  },
+  "industries": {
+    "manufacturing": {
+      "name": "Ishlab chiqarish va sifat nazorati",
+      "outcome": "Nuqsonlarni erta aniqlang",
+      "problems": [
+        "Qo‘lda tekshirish sekin va bir xil emas",
+        "Nuqsonni liniya emas, mijoz topadi",
+        "Qo‘lda sanash va o‘lchash"
+      ],
+      "solutions": [
+        "Sirt nuqsonlarini aniqlash (tirnalish, botiq, dog‘)",
+        "Detallarni sanash va o‘lchamini tekshirish",
+        "Yorliq, sana kodi va shtrix-kodni tekshirish"
+      ],
+      "measure": [
+        "O‘tib ketgan nuqsonlar ulushi",
+        "Tekshiruv tezligi",
+        "Brak va qayta ishlash xarajati"
+      ]
+    },
+    "textile": {
+      "name": "To‘qimachilik va yengil sanoat",
+      "outcome": "Nuqsonsiz mato yetkazing",
+      "problems": [
+        "Mato nuqsonlari bichish va tikishdan keyin aniqlanadi",
+        "Paxta va ipni qo‘lda navlash",
+        "Igna va dastgoh bilan bog‘liq xavfsizlik hodisalari"
+      ],
+      "solutions": [
+        "Dastgoh yoki tekshiruv stolida mato nuqsonlarini real vaqtda aniqlash",
+        "Kiyim sifat nazorati: chok, dog‘, yorliq va o‘lcham",
+        "Paxta va ipni rang va aralashmalar bo‘yicha navlash"
+      ],
+      "measure": [
+        "100 m matodagi nuqsonlar",
+        "Ikkinchi nav mahsulot ulushi",
+        "Bir o‘ramni tekshirish vaqti"
+      ]
+    },
+    "robotics": {
+      "name": "Robototexnika va avtomatlashtirish",
+      "outcome": "Robotlarga ko‘z bering",
+      "problems": [
+        "Robotlar detallarni qat’iy joyda va qimmat moslamalarda talab qiladi",
+        "Tartibsiz joylashgan detallarni olib bo‘lmaydi",
+        "Mobil robotlar gavjum yo‘laklarda to‘xtaydi yoki to‘qnashadi"
+      ],
+      "solutions": [
+        "Olish-qo‘yish va qutidan olish uchun 3D ko‘rish",
+        "Qo‘l-ko‘z kalibrlash va detal pozitsiyasini aniqlash",
+        "Manipulyator va mobil robotlar uchun ROS 2 idrok tugunlari"
+      ],
+      "measure": [
+        "Muvaffaqiyatli olish ulushi",
+        "Sikl vaqti",
+        "Yangi detalga o‘tish vaqti"
+      ]
+    },
+    "logistics": {
+      "name": "Ombor va logistika",
+      "outcome": "Har bir qutini kuzating",
+      "problems": [
+        "Inventarizatsiya kunlab davom etadi",
+        "Shikastlangan yuklar o‘tib ketadi",
+        "Rampa va yuklagich xavfsizligi xatarlari"
+      ],
+      "solutions": [
+        "Palleta va qutilarni sanash",
+        "Qabul qilishda shikastni aniqlash",
+        "Yuklagich va piyoda yaqinlashuvi haqida ogohlantirish"
+      ],
+      "measure": [
+        "Inventar aniqligi",
+        "Shikast bo‘yicha da’volar",
+        "Rampada aylanish vaqti"
+      ]
+    },
+    "retail": {
+      "name": "Savdo va savdo markazlari",
+      "outcome": "Xaridorlaringizni tushuning",
+      "problems": [
+        "Soat yoki hudud bo‘yicha ishonchli tashrif raqamlari yo‘q",
+        "Navbatlar hech kim sezmasidan uzayadi",
+        "Bo‘sh javonlar va noto‘g‘ri narx yorliqlari"
+      ],
+      "solutions": [
+        "Eshik va hududlarda odamlarni sanash",
+        "Navbat uzunligi haqida xodimlarga ogohlantirish",
+        "Javon bo‘shliqlari va planogramma nazorati"
+      ],
+      "measure": [
+        "Tashriflar va konversiya",
+        "O‘rtacha navbat kutish vaqti",
+        "Javonda mahsulot mavjudligi"
+      ]
+    },
+    "security": {
+      "name": "Xavfsizlik va mehnat muhofazasi",
+      "outcome": "Odamlarni xavfsiz saqlang",
+      "problems": [
+        "Hech kim ko‘rmaydigan yuzlab soatlik video",
+        "Obyektda shaxsiy himoya vositalari qoidalari buziladi",
+        "Ruxsatsiz kirish kech aniqlanadi"
+      ],
+      "solutions": [
+        "SHHV aniqlash: kaska, jilet, niqob",
+        "Taqiqlangan hudud va ish vaqtidan tashqari ogohlantirishlar",
+        "Maxfiylikni saqlovchi yuzni anonimlashtirish"
+      ],
+      "measure": [
+        "Xavfsizlik hodisalari",
+        "Ogohlantirishga javob vaqti",
+        "SHHV talablariga rioya darajasi"
+      ]
+    },
+    "traffic": {
+      "name": "Transport va avtoturargoh",
+      "outcome": "Har bir avtomobilni ko‘ring",
+      "problems": [
+        "Kun davomida transport oqimi haqida ma’lumot yo‘q",
+        "Turargoh bandligi taxminan aniqlanadi",
+        "Darvozada qo‘lda jurnal yuritish"
+      ],
+      "solutions": [
+        "Avtomobillarni sanash va turlash",
+        "Darvozada davlat raqamini aniqlash",
+        "Turargoh bandligining jonli xaritasi"
+      ],
+      "measure": [
+        "Soatiga avtomobillar soni",
+        "Bandlik darajasi",
+        "Darvozadan o‘tish vaqti"
+      ]
+    },
+    "documents": {
+      "name": "Hujjatlar va OCR",
+      "outcome": "Qog‘ozni qayta yozishni to‘xtating",
+      "problems": [
+        "Xodimlar hisob-faktura va blankalarni qayta yozadi",
+        "Raqamlarni ko‘chirishda xatolar",
+        "Qidirib bo‘lmaydigan qog‘oz arxivlar"
+      ],
+      "solutions": [
+        "O‘zbek, rus va ingliz tillarida OCR",
+        "Hisob-faktura va cheklardan maydonlarni ajratish",
+        "Shtrix-kod va QR kodlarni ommaviy o‘qish"
+      ],
+      "measure": [
+        "Soatiga qayta ishlangan hujjatlar",
+        "Ma’lumot kiritishdagi xatolar",
+        "Bir hujjat narxi"
+      ]
+    },
+    "agriculture": {
+      "name": "Qishloq xo‘jaligi va oziq-ovqat",
+      "outcome": "Yaxshiroq saralang va yetishtiring",
+      "problems": [
+        "Mahsulotni qo‘lda saralash",
+        "O‘simlik kasalligi kech aniqlanadi",
+        "Chorva mollarini qo‘lda sanash"
+      ],
+      "solutions": [
+        "Meva va donni o‘lcham va rang bo‘yicha saralash",
+        "Telefon rasmidan barg kasalligini aniqlash",
+        "Hayvonlarni sanash va faolligini kuzatish"
+      ],
+      "measure": [
+        "Saralash barqarorligi",
+        "Hosil yo‘qotilishi",
+        "Mehnat soatlari"
+      ]
+    },
+    "healthcare": {
+      "name": "Sog‘liqni saqlash operatsiyalari",
+      "outcome": "Klinikalar ishini ravon qiling",
+      "problems": [
+        "Kutish zallari kutilmaganda to‘lib ketadi",
+        "Gigiyena va SHHV talablarini tekshirish qiyin",
+        "Qog‘oz blankalar qabulni sekinlashtiradi"
+      ],
+      "solutions": [
+        "Kutish zali bandligi va oqimi",
+        "SHHV va qo‘l gigiyenasiga rioya (anonim)",
+        "Qabul blankalarini OCR qilish"
+      ],
+      "measure": [
+        "Bemorning kutish vaqti",
+        "Rioya darajasi",
+        "Qabul vaqti"
+      ]
+    }
+  },
+  "solutionsPage": {
+    "eyebrow": "Yechimlar",
+    "title": "Har bir soha uchun nima quramiz",
+    "subtitle": "Har bir yechim — boshlang‘ich nuqta. Pilot davomida uni mahsulotlaringiz, kameralaringiz va ish jarayoningizga moslashtiramiz.",
+    "problems": "Muammo",
+    "weBuild": "Biz nima quramiz",
+    "measure": "Nimani o‘lchaymiz",
+    "tryDemos": "Tegishli demolar",
+    "notListed": "Sohangiz ro‘yxatda yo‘qmi?",
+    "notListedText": "Inson ko‘ra oladigan narsani odatda kamera ham o‘rgana oladi. Jarayoningiz haqida aytib bering.",
+    "disclaimer": "Sog‘liqni saqlashdagi ishimiz faqat operatsiyalarni qamraydi — biz tashxis vositalarini yaratmaymiz."
+  },
+  "services": {
+    "eyebrow": "Xizmatlar",
+    "title": "Faqat laboratoriyada emas, sex sharoitida ishlaydigan ko‘rish tizimlari",
+    "subtitle": "Muammoni telefon videosidan ishlaydigan tizimgacha olib boramiz: imkoniyatni baholash, ma’lumotlar, modellar, kameralar, edge kompyuterlar va integratsiya. Hammasini yoki faqat yetishmayotgan qismini bizga topshiring.",
+    "items": {
+      "discovery": {
+        "title": "Tahlil va imkoniyatni baholash",
+        "text": "Jarayon va videolaringizni o‘rganib, qanday aniqlik real ekanini uskunaga pul sarflashingizdan oldin rostini aytamiz.",
+        "points": [
+          "Joyida yoki masofadan baholash",
+          "Kamera, obyektiv va yoritish bo‘yicha maslahat",
+          "Byudjet oralig‘i bilan aniq «ha / yo‘q» hisoboti"
+        ]
+      },
+      "models": {
+        "title": "Maxsus modellarni o‘qitish",
+        "text": "O‘z rasmlaringizda o‘qitilgan aniqlash, segmentatsiya, tasniflash va OCR modellari.",
+        "points": [
+          "Aniqlash, segmentatsiya, tasniflash, OCR",
+          "Ma’lumotlaringizda o‘lchangan precision va recall",
+          "Tijoratda xavfsiz litsenziyalar; model sizniki"
+        ]
+      },
+      "robotics": {
+        "title": "Robot ko‘rishi va idroki",
+        "text": "Robot qo‘llari va mobil robotlarga kerakli ko‘zni beramiz: 3D kameralar, detallarni aniqlash, pozitsiyani baholash va kalibrlash.",
+        "points": [
+          "ROS 2 idrok paketlari",
+          "Qutidan olish va olish-qo‘yish imkoniyatini baholash",
+          "RealSense, OAK-D, Orbbec, Zivid kameralari"
+        ]
+      },
+      "labeling": {
+        "title": "Ma’lumotlarni belgilash va datasetlar",
+        "text": "Inson tekshiruvidan o‘tadigan AI yordamidagi annotatsiya — modelingiz toza ma’lumotdan o‘rganadi.",
+        "points": [
+          "Ramkalar, poligonlar, nuqtalar, maskalar",
+          "Videoda obyekt kuzatuvi annotatsiyasi",
+          "Ikki bosqichli sifat nazorati"
+        ]
+      },
+      "integration": {
+        "title": "Edge, uskunalar va dashbordlar",
+        "text": "Kamera, yoritish va edge kompyuterlarni tanlaymiz, liniyangizga o‘rnatamiz va natijalarni jamoangiz ishlaydigan joyga yuboramiz.",
+        "points": [
+          "IP / RTSP va sanoat kameralari",
+          "NVIDIA Jetson, sanoat kompyuterlari, oflayn",
+          "Dashbordlar, 1C / ERP, Telegram ogohlantirishlari"
+        ]
+      },
+      "support": {
+        "title": "Qo‘llab-quvvatlash va qayta o‘qitish",
+        "text": "Mahsulot, mavsum yoki yoritish o‘zgarganda modellar aniqligi pasayadi. Biz ularni o‘tkir saqlaymiz.",
+        "points": [
+          "Aniqlik va drift monitoringi",
+          "Yangi ma’lumotlarda rejali qayta o‘qitish",
+          "Javob vaqti bo‘yicha SLA"
+        ]
+      }
+    },
+    "labelTypes": {
+      "title": "Biz bajaradigan annotatsiya turlari",
+      "items": [
+        "Ramkalar (bounding box)",
+        "Poligonlar",
+        "Obyekt maskalari",
+        "Nuqtalar va poza",
+        "Tasnif teglari",
+        "Videoda obyekt kuzatuvi",
+        "OCR matn hududlari",
+        "Burilgan ramkalar"
+      ]
+    },
+    "stack": {
+      "title": "Biz ishlatadigan vositalar",
+      "text": "Ochiq standartlar, bog‘lanib qolish yo‘q. Kod va model sizga topshiriladi."
+    },
+    "linesEyebrow": "Nima qilamiz",
+    "linesTitle": "Olti xizmat, bitta jamoa",
+    "pilotPack": {
+      "eyebrow": "Pilot natijalari",
+      "title": "Demo bilan emas, qaror bilan tugaydigan pilot",
+      "subtitle": "Ko‘plab ko‘rish loyihalari «ishlayapti» nimani anglatishi kelishilmagani uchun muvaffaqiyatsiz bo‘ladi. Har bir pilotimiz bir xil dalillar to‘plamini beradi va u sizga tegishli.",
+      "items": [
+        {
+          "title": "Da’vo varag‘i",
+          "text": "Bir sahifa: savol, kamera, nima nuqson hisoblanadi, o‘tish va to‘xtash chegaralari. Ish boshlanishidan oldin kelishiladi."
+        },
+        {
+          "title": "Muzlatilgan test to‘plami",
+          "text": "Obyektingizdan rasm yoki kliplar, sozlashdan oldin belgilanib ajratib qo‘yiladi — natijani sun’iy oshirib bo‘lmaydi."
+        },
+        {
+          "title": "Bazaviy taqqoslash",
+          "text": "Model joriy usulingiz (nazoratchi, qoida, qo‘lda sanash) bilan bir xil holatlarda taqqoslanadi."
+        },
+        {
+          "title": "Xato holatlar hisoboti",
+          "text": "Har bir o‘tkazib yuborish va soxta signal sabab bo‘yicha guruhlanadi: yoritish, burchak, kam uchraydigan nuqson yoki noaniq qoida."
+        },
+        {
+          "title": "Tezlik va xarajat",
+          "text": "Maqsadli uskunada soniyasiga kadrlar soni va bitta kamera uchun ishlatish xarajati."
+        },
+        {
+          "title": "Model va kod",
+          "text": "O‘qitilgan og‘irliklar, inferens kodi va o‘rnatish bo‘yicha qaydlar. Faqat tijoratda xavfsiz litsenziyalar."
+        },
+        {
+          "title": "Ishlab chiqarishgacha qolganlar ro‘yxati",
+          "text": "To‘liq joriy etish uchun yana nima kerak: integratsiya, kirish huquqi, monitoring, ogohlantirishlarga kim javob beradi."
+        },
+        {
+          "title": "Qaror xulosasi",
+          "text": "To‘rt natijadan biri: joriy etish, hajmni toraytirish, avval shart-sharoitni tuzatish yoki to‘xtatish."
+        }
+      ]
+    },
+    "risks": {
+      "eyebrow": "Halol muhandislik",
+      "title": "Ko‘rish loyihalari nima uchun barbod bo‘ladi va biz nima qilamiz",
+      "items": [
+        {
+          "risk": "Laboratoriyada 98%, sexda 70%",
+          "fix": "Har qanday aniqlikni va’da qilishdan oldin obyektingizda, kunning turli vaqtlarida va turli smenalarda test rasmlarini yig‘amiz."
+        },
+        {
+          "risk": "Asl byudjet — ma’lumotlar",
+          "fix": "Belgilash narxi oldindan aytiladi, inson tekshiruvi bilan AI yordamidagi annotatsiya soatlarni qisqartiradi."
+        },
+        {
+          "risk": "Yaltirash, chang va tebranuvchi kameralar",
+          "fix": "Avval sahnani tuzatamiz. Kamera joyi, obyektiv va yoritish kattaroq modeldan arzonroq."
+        },
+        {
+          "risk": "Xato javob qimmatga tushadi",
+          "fix": "Xavfsizlik va sifat qarorlarida inson ishtirok etadi, ishonch chegaralarini siz tasdiqlaysiz."
+        },
+        {
+          "risk": "Litsenziya kutilmaganliklari",
+          "fix": "Yopiq mahsulotlarga AGPL modellarni qo‘ymaymiz, har bir litsenziya topshiriqda ko‘rsatiladi."
+        }
+      ]
+    },
+    "needs": {
+      "title": "Sizdan nima kerak",
+      "items": [
+        "Haqiqiy sahnaning 20–50 ta namunaviy rasmi yoki qisqa videosi",
+        "Jarayonni biladigan va savollarga javob bera oladigan bitta odam",
+        "Nima yaxshi va nima yomon hisoblanishi bo‘yicha aniq qoida",
+        "Bugungi raqamlar: soatiga mahsulot, nazoratdagi xodimlar, joriy o‘tkazib yuborish darajasi",
+        "Bitta kameraga kirish yoki test kamerasini o‘rnatishga ruxsat"
+      ]
+    },
+    "hardware": {
+      "eyebrow": "Uskuna va integratsiya",
+      "title": "Sizning kameralaringiz, serverlaringiz, vositalaringiz",
+      "subtitle": "Imkon qadar mavjud kameralaringizdan foydalanamiz. Bulut shart emas: hammasi joyida, hatto internetsiz ishlashi mumkin.",
+      "groups": [
+        {
+          "title": "Kameralar",
+          "items": [
+            "Sizda bor IP / RTSP kameralar (Hikvision, Dahua va boshqalar)",
+            "Tez liniyalar uchun sanoat GigE yoki USB3 kameralari",
+            "Robotlar uchun 3D chuqurlik kameralari: RealSense, OAK-D, Orbbec, Zivid"
+          ],
+          "note": "Mavjud kameralar: $0 · yangi: har bir nuqta uchun ~$100–1 500"
+        },
+        {
+          "title": "Hisoblash",
+          "items": [
+            "Liniya yonida NVIDIA Jetson Orin edge kompyuterlari",
+            "Ko‘p kamera uchun GPU’li sanoat kompyuteri",
+            "O‘z serveringiz yoki xususiy bulut"
+          ],
+          "note": "Edge kompyuter ~$250–600 dan"
+        },
+        {
+          "title": "Integratsiyalar",
+          "items": [
+            "Telegram ogohlantirishlari va kunlik hisobotlar",
+            "Tarix va eksportli veb-dashboard",
+            "PLC (Modbus / OPC UA), saralash darvozalari, ogohlantirish chiroqlari",
+            "1C, ERP, MES yoki REST API’ingiz"
+          ],
+          "note": "Joriy etish hajmiga kiradi"
+        }
+      ],
+      "compare": "Taqqoslash uchun: ixtisoslashgan sotuvchilarning “hammasi bittada” AI nazorat kameralari bir dona uchun taxminan $4 500–13 500 turadi. Bitta edge kompyuterga ulangan oddiy kameralar odatda buning bir qismiga tushadi."
+    },
+    "roi": {
+      "eyebrow": "ROI kalkulyatori",
+      "title": "O‘zini oqlaydimi?",
+      "subtitle": "Nazorat yoki monitoring loyihasi uchun tezkor, ehtiyotkor baho. Slayderlarni liniyangizga moslang.",
+      "fields": {
+        "inspectors": "Vizual nazoratdagi xodimlar, har smenada",
+        "shifts": "Kuniga smenalar",
+        "monthlyCost": "Bir xodimning oylik xarajati",
+        "automated": "Avtomatlashtiriladigan nazorat ulushi",
+        "escapes": "Oyiga o‘tkazib yuborilgan nuqson yoki hodisalar",
+        "escapeCost": "Bitta o‘tkazib yuborishning narxi",
+        "caught": "Tizim ushlaydigan ulush",
+        "projectCost": "Bir martalik xarajat: pilot, joriy etish, uskuna",
+        "runningCost": "Oylik xizmat rejasi"
+      },
+      "monthly": "Oyiga sof tejash",
+      "labour": "Bo‘shagan mehnat",
+      "quality": "Oldi olingan xatolar",
+      "firstYear": "Birinchi yildagi sof tejash",
+      "payback": "Qoplanish",
+      "months": "{n} oy",
+      "never": "Bu raqamlarda tizim o‘zini oqlamaydi. Lekin xavfsizlik yoki talablarga rioya uchun foydali bo‘lishi mumkin.",
+      "note": "Bu taxmin, tijorat taklifi emas. Pilotda haqiqiy raqamlarni obyektingizda o‘lchaymiz.",
+      "cta": "Bu raqamlarni biz bilan tekshiring"
+    },
+    "cta": {
+      "title": "Videongiz bormi? Bugun yuboring.",
+      "text": "Bepul imkoniyat tekshiruvidan boshlang. Besh ish kuni ichida yozma javob olasiz, hech qanday majburiyat yo‘q.",
+      "primary": "Bepul tekshiruv so‘rash",
+      "secondary": "30 daqiqalik qo‘ng‘iroq belgilash"
+    }
+  },
+  "demos": {
+    "eyebrow": "Demo laboratoriya",
+    "title": "Brauzeringizda jonli kompyuter ko‘rish",
+    "subtitle": "Har bir demo modelni bir marta yuklab oladi va qurilmangizda ishlatadi. Vebkamera, o‘z rasmingiz yoki namunadan foydalaning.",
+    "sizeLabel": "Model hajmi",
+    "engineLabel": "Ishlaydi",
+    "items": {
+      "object-detection": {
+        "title": "Obyektlarni aniqlash",
+        "short": "80 turdagi kundalik obyektlarni topib belgilaydi. Real vaqt modeli va aniqroq model o‘rtasida almashtiring.",
+        "business": "Mahsulot, transport, asbob yoki odamlarni jonli kamera yoki yozilgan videoda sanash uchun asos."
+      },
+      "people-counter": {
+        "title": "Chiziq orqali sanash",
+        "short": "Chiziq chizing va undan har ikki yo‘nalishda o‘tgan odamlar, mashinalar yoki butilkalarni sanang.",
+        "business": "Do‘kon va ofislarda tashriflar, transport oqimi va konveyerdan o‘tgan mahsulotlar soni."
+      },
+      "face-anonymizer": {
+        "title": "Yuzni anonimlashtirish",
+        "short": "Yuzlarni aniqlab, avtomatik xiralashtiradi — maxfiylik birinchi o‘rinda.",
+        "business": "Maxfiylik talablariga mos tahlil va video ulashish."
+      },
+      "pose-estimation": {
+        "title": "Pozani aniqlash",
+        "short": "Holat va harakatni tushunish uchun tanadagi 33 nuqtani kuzatadi.",
+        "business": "Ergonomika, yiqilishni aniqlash, fitnes va sport."
+      },
+      "hand-gestures": {
+        "title": "Qo‘l imo-ishoralari",
+        "short": "Imo-ishoralarni taniydi va har bir qo‘lda 21 nuqtani kuzatadi.",
+        "business": "Kontaktsiz kiosklar va gigiyenik boshqaruv."
+      },
+      "ocr": {
+        "title": "Matnni tanish (OCR)",
+        "short": "Rasmlardagi bosma matnni ingliz, o‘zbek va rus tillarida o‘qiydi.",
+        "business": "Hisob-fakturalar, cheklar, blankalar va yorliqlar."
+      },
+      "barcode-scanner": {
+        "title": "Shtrix-kod va QR skaner",
+        "short": "QR, EAN, Code 128, DataMatrix va boshqalarni o‘qiydi.",
+        "business": "Inventar, logistika va mahsulotni kuzatish."
+      },
+      "background-removal": {
+        "title": "Fonni olib tashlash",
+        "short": "Katalog uchun odam va mahsulotlarni toza qirqib oladi.",
+        "business": "Internet-do‘kon uchun ko‘plab mahsulot rasmlari."
+      },
+      "defect-check": {
+        "title": "Zero-shot sifat tekshiruvi",
+        "short": "O‘z yorliqlaringizni yozing — masalan, «tirnalgan» va «toza» — model rasmni baholaydi.",
+        "business": "Maxsus o‘qitishdan oldin tekshiruv imkoniyatini tez sinash."
+      },
+      "depth-estimation": {
+        "title": "Chuqurlikni aniqlash",
+        "short": "Bitta rasmdan har bir pikselning kameradan qanchalik uzoqligini baholaydi.",
+        "business": "Hajmni baholash, robototexnika va fazoviy tahlil."
+      },
+      "safety-zone": {
+        "title": "Xavfli zona ogohlantirishi",
+        "short": "Dastgoh yoki yuklagich yo‘lagi yonidagi hududni belgilang. Odam unga qadam qo‘yishi bilan signal chalinadi.",
+        "business": "Press, robot, konveyer va yuklagich yo‘laklari yonida ishchilar xavfsizligi. Har bir buzilish davomiyligi bilan qayd etiladi."
+      },
+      "ppe-check": {
+        "title": "SHHV nazorati",
+        "short": "Ishchilar nima kiyishi kerakligini yozing: kaska, nimcha, qo‘lqop. Model har birini topadi va kimda yetishmasligini ko‘rsatadi.",
+        "business": "Zavod, qurilish maydoni va omborlarda xavfsizlik talablariga rioya qilish — birinchi pilot uchun maxsus o‘qitishsiz."
+      },
+      "fatigue-monitor": {
+        "title": "Operator charchog‘i",
+        "short": "Yuzda ko‘z yumilishi, ko‘z qisish va esnashni kuzatadi, mudroq va mikrouyqu haqida ogohlantiradi.",
+        "business": "Yuk mashinasi, avtobus va yuklagich haydovchilari, kran va boshqaruv xonasi operatorlari uzoq smenalarda."
+      },
+      "segment-anything": {
+        "title": "Istalgan obyektni ajratish",
+        "short": "Istalgan obyektni bosing — u pikselgacha aniq niqob bilan ajratiladi, so‘ng uni o‘lchang yoki yuklab oling.",
+        "business": "Detal va nuqsonlarni o‘lchash, bir necha daqiqada o‘qitish ma’lumotlarini tayyorlash, robot ushlashi."
+      }
+    },
+    "ui": {
+      "webcam": "Vebkamera",
+      "upload": "Rasm yuklash",
+      "sample": "Namuna",
+      "stop": "To‘xtatish",
+      "loadModel": "Modelni yuklash",
+      "loading": "Model yuklanmoqda…",
+      "downloading": "Model yuklab olinmoqda",
+      "ready": "Tayyor",
+      "running": "Ishlamoqda",
+      "retry": "Qayta urinish",
+      "error": "Nimadir noto‘g‘ri ketdi",
+      "cameraDenied": "Kameraga ruxsat berilmadi yoki kamera topilmadi. Rasm yuklashingiz yoki namunadan foydalanishingiz mumkin.",
+      "modelFailed": "Modelni yuklab bo‘lmadi. Internetni tekshirib, qayta urinib ko‘ring.",
+      "dropHint": "Rasm yoki videoni shu yerga tashlang yoki tanlash uchun bosing",
+      "pickSource": "Boshlash uchun manbani tanlang",
+      "results": "Natijalar",
+      "noResults": "Hali hech narsa aniqlanmadi",
+      "fps": "FPS",
+      "threshold": "Ishonch chegarasi",
+      "count": "Soni",
+      "firstLoad": "Birinchi marta taxminan {size} yuklab olinadi. Keyin keshda saqlanadi.",
+      "howItWorks": "Qanday ishlaydi",
+      "businessUse": "Biznesda qo‘llanishi",
+      "inside": "Ichkarida",
+      "outside": "Tashqarida",
+      "crossIn": "Kirdi",
+      "crossOut": "Chiqdi",
+      "drawLine": "Sanash chizig‘ini qayta chizish uchun rasmda ikki nuqtani bosing.",
+      "resetCount": "Hisobni nollash",
+      "people": "Kadrdagi odamlar",
+      "blur": "Xiralashtirish",
+      "pixelate": "Pikselizatsiya",
+      "box": "Faqat ramka",
+      "faces": "Yuzlar",
+      "bodies": "Tanalar",
+      "hands": "Qo‘llar",
+      "gesture": "Imo-ishora",
+      "language": "Til",
+      "recognize": "Matnni o‘qish",
+      "progress": "Jarayon",
+      "copy": "Nusxalash",
+      "copied": "Nusxalandi",
+      "confidence": "Ishonch",
+      "generateSample": "Namuna kodlar yaratish",
+      "scanning": "Skanerlanmoqda…",
+      "codesFound": "Topilgan kodlar",
+      "noCodes": "Kod topilmadi. Aniqroq va yaqinroq rasm bilan urinib ko‘ring.",
+      "quality": "Sifat",
+      "fast": "Tez (6 MB)",
+      "best": "Eng yaxshi (109 MB)",
+      "download": "PNG yuklab olish",
+      "labels": "Yorliqlar (vergul bilan)",
+      "classify": "Rasmni tekshirish",
+      "near": "Yaqin",
+      "far": "Uzoq",
+      "processing": "Qayta ishlanmoqda…",
+      "webgpu": "GPU (WebGPU)",
+      "wasm": "CPU (WebAssembly)",
+      "torsoAngle": "Tana egilishi",
+      "upright": "Tik",
+      "bending": "Egilgan / yiqilish ehtimoli",
+      "qualityNote": "Eng yaxshi sifat uchun WebGPU’li brauzer kerak (yangi Chrome yoki Edge).",
+      "labelsHint": "Har bir sinfni oddiy ingliz tilida yozing, masalan: “fresh bread, burnt bread, moldy bread”.",
+      "topMatch": "Eng mos",
+      "blend": "Rasm ↔ chuqurlik",
+      "imageFailed": "Rasmni yuklab bo‘lmadi. Boshqa fayl tanlang.",
+      "handsUp": "Qo‘llar tepada",
+      "samples": {
+        "street": "Ko‘cha",
+        "football": "Futbol o‘yini",
+        "portrait": "Portret",
+        "manCar": "Odam va mashina",
+        "invoice": "Hisob-faktura",
+        "receipt": "Chek",
+        "bread": "Non",
+        "house": "Uy",
+        "cats": "Mushuklar",
+        "trilingual": "EN · UZ · RU matn",
+        "codes": "QR + EAN-13",
+        "trafficVideo": "Transport videosi",
+        "warehouseVideo": "Ombor videosi",
+        "crowdVideo": "Ko‘cha videosi",
+        "conveyorVideo": "Quyish liniyasi videosi",
+        "workersVideo": "Ishchilar videosi",
+        "squatVideo": "O‘tirib-turish videosi",
+        "handsVideo": "Qo‘llar videosi",
+        "driverVideo": "Mudroq haydovchi videosi",
+        "tiredVideo": "Charchagan xodim videosi",
+        "hardhatFrame": "Kaskadagi ishchi",
+        "warehouseFrame": "Ombor",
+        "workersFrame": "Ombor ishchilari",
+        "bottlesFrame": "Liniyadagi butilkalar"
+      },
+      "style": "Uslub",
+      "uploadMedia": "Rasm yoki video yuklash",
+      "videoFailed": "Bu videoni ijro etib bo‘lmadi. MP4 yoki WebM faylni sinab ko‘ring.",
+      "play": "Ijro",
+      "pause": "Pauza",
+      "model": "Model",
+      "engines": {
+        "fast": "Real vaqt",
+        "accurate": "Yuqori aniqlik"
+      },
+      "enginesNote": "Real vaqt modeli ko‘pchilik qurilmalarda video tezligida ishlaydi. Yuqori aniqlik (RT-DETR) kichik va zich obyektlarni ko‘proq topadi, lekin videoda kamroq yangilanadi.",
+      "countWhat": "Nimani sanash",
+      "classes": {
+        "person": "Odamlar",
+        "car": "Avtomobillar",
+        "truck": "Yuk mashinalari",
+        "bus": "Avtobuslar",
+        "bicycle": "Velosipedlar",
+        "motorcycle": "Mototsikllar",
+        "bottle": "Butilkalar"
+      },
+      "inView": "Kadrda",
+      "zoneStatus": "Zona holati",
+      "zoneAlert": "Xavfli zonada odam bor",
+      "zoneClear": "Zona bo‘sh",
+      "inZone": "Zonada",
+      "breaches": "Buzilishlar",
+      "occupiedFor": "{s} soniyadan beri band",
+      "zone": "Xavfli zona",
+      "zoneDrawing": "Zonani tugatish uchun yana {n} nuqtani bosing.",
+      "zoneHint": "O‘z zonangizni chizish uchun rasmda 4 nuqtani bosing. Odamning oyog‘i zona ichida bo‘lsa, u ichkarida hisoblanadi.",
+      "zoneReset": "Zonani tiklash",
+      "ppeOk": "barcha SHHV",
+      "ppeItems": "Nimani qidirish (vergul bilan)",
+      "apply": "Qo‘llash",
+      "ppeHint": "Har bir ishchini tekshirish uchun “person” so‘zini qo‘shing. Bosh buyumlari (helmet) va tana buyumlari (vest, jacket) ularni kiygan odamga bog‘lanadi. Model inglizcha so‘zlarni tushunadi va so‘z tanlash muhim: “helmet” “hard hat”dan yaxshiroq ishlaydi. Zero-shot modellar o‘xshash buyumlarni adashtirishi mumkin; ishlab chiqarish tizimi sizning rasmlaringizda qo‘shimcha o‘qitiladi.",
+      "ppeWearing": "{item}: {total} kishidan {ok} tasida",
+      "fatigueStatus": "Haydovchi holati",
+      "fatigue": {
+        "none": "Hushyor va diqqatli",
+        "drowsy": "Mudroq belgilari",
+        "microsleep": "Ko‘zlar yumuq: mikrouyqu xavfi"
+      },
+      "fatigueLiveOnly": "Charchoq vaqt davomida o‘lchanadi: videoni ijro eting yoki veb-kamerani yoqing. Rasmda faqat ko‘z va og‘iz ochiqligi ko‘rinadi.",
+      "noFace": "Yuz topilmadi. Kameraga butun yuzingiz ko‘rinadigan qilib qarang.",
+      "eyeClosure": "Ko‘z yumilishi",
+      "jawOpen": "Og‘iz ochiq",
+      "blinks": "Ko‘z qisish",
+      "yawns": "Esnash",
+      "perclosNote": "PERCLOS — so‘nggi 30 soniyada ko‘zlar yumuq bo‘lgan vaqt ulushi, mudroqlikning standart o‘lchovi. Haqiqiy tizim har bir kamera va odamga moslab sozlanadi.",
+      "clickMode": "Bosish rejimi",
+      "include": "Qo‘shish",
+      "exclude": "Chiqarish",
+      "samHint": "Obyektni tanlash uchun uni bosing. Niqobni kengaytirish uchun yana nuqtalar qo‘shing yoki qismlarni olib tashlash uchun “Chiqarish”ga o‘ting.",
+      "clearPoints": "Nuqtalarni tozalash",
+      "samEmpty": "Obyektni ajratish uchun rasmni bosing.",
+      "maskArea": "Rasm maydonidan",
+      "maskSize": "Chegaraviy to‘rtburchak",
+      "maskScore": "Niqob sifati",
+      "downloadPng": "Kesib olinganini yuklash",
+      "pickScene": "Sinash uchun sahnani tanlang",
+      "pickSceneHint": "Modelni ishga tushirish uchun rasmni bosing. Birinchi marta {size} yuklanadi, keyin darhol ishlaydi.",
+      "useWebcam": "Veb-kamerani yoqish",
+      "useOwnFile": "O‘z rasm yoki videomni yuklash",
+      "allScenes": "Boshqa sahnalar",
+      "liveBadge": "Jonli",
+      "videoBadge": "Video"
+    },
+    "card": {
+      "video": "Video va veb-kamera",
+      "photo": "Rasmlar",
+      "download": "Brauzerda ishlaydi. {size} bir marta yuklanadi."
+    },
+    "groups": {
+      "all": "Hammasi",
+      "safety": "Xavfsizlik",
+      "counting": "Sanash va kuzatish",
+      "quality": "Sifat va o‘lchash",
+      "documents": "Hujjatlar va kodlar",
+      "privacy": "Odamlar va maxfiylik"
+    },
+    "moreDemos": "Yana sinab ko‘ring"
+  },
+  "oss": {
+    "eyebrow": "Ochiq kod kutubxonasi",
+    "title": "Bepul kompyuter ko‘rish vositalari — biznes uchun tekshirilgan",
+    "subtitle": "Yulduzlar va faollik to‘g‘ridan-to‘g‘ri GitHub’dan olinadi. Litsenziya belgilari loyihani tijorat mahsulotida ishlatish xavfsizmi yoki yo‘qligini ko‘rsatadi.",
+    "updated": "Ma’lumot yangilangan",
+    "search": "Qidirish, masalan «ocr», «tracking», «yolo»",
+    "allTasks": "Barcha vazifalar",
+    "commercialOnly": "Faqat tijorat uchun xavfsiz",
+    "sort": "Saralash",
+    "sortStars": "Ko‘p yulduzli",
+    "sortUpdated": "Yaqinda yangilangan",
+    "sortName": "Nomi",
+    "results": "{count} ta repozitoriy",
+    "none": "Bu filtrlarga mos repozitoriy yo‘q.",
+    "reset": "Filtrlarni tozalash",
+    "stars": "yulduz",
+    "lastPush": "oxirgi yangilanish",
+    "archived": "Arxivlangan",
+    "stale": "1 yildan beri faol emas",
+    "license": {
+      "permissive": "Tijorat uchun xavfsiz",
+      "copyleft": "Kopileft — ishlatishdan oldin tekshiring",
+      "unknown": "Litsenziya noaniq — tekshiring"
+    },
+    "licenseNote": {
+      "title": "Litsenziyalar nega muhim",
+      "text": "Erkin litsenziyalar (MIT, Apache-2.0, BSD) loyihani yopiq kodli mahsulotda ishlatishga ruxsat beradi. AGPL va GPL o‘z kodingizni e’lon qilishni talab qilishi mumkin — eng mashhur detektor Ultralytics YOLO korporativ litsenziya sotib olinmasa AGPL-3.0 ostida. «Noaniq» deb belgilangan loyihalar maxsus yoki faqat tadqiqot uchun shartlardan foydalanadi."
+    },
+    "tasks": {
+      "detection": "Obyektlarni aniqlash",
+      "segmentation": "Segmentatsiya",
+      "foundation": "Asosiy va vizual-til modellari",
+      "pose-face": "Poza va yuz",
+      "ocr": "OCR va hujjatlar",
+      "tracking": "Kuzatish va tahlil",
+      "data": "Belgilash va datasetlar",
+      "deploy": "Joriy qilish va runtime’lar",
+      "image": "Tasvirni qayta ishlash",
+      "robotics": "Robototexnika va 3D idrok",
+      "3d": "3D va video"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Narxlar",
+    "title": "Kichikdan boshlang. Ishlasa, kengaytiring.",
+    "subtitle": "Har bir hamkorlik qat’iy narxli pilotdan boshlanadi — katta majburiyatdan oldin o‘z ma’lumotlaringizda haqiqiy natijani ko‘rasiz.",
+    "from": "dan",
+    "popular": "Ko‘p tanlanadi",
+    "plans": {
+      "feasibility": {
+        "name": "Imkoniyatni baholash",
+        "price": "Bepul",
+        "desc": "Ko‘rish AI buni hal qila oladimi — bilib oling.",
+        "features": [
+          "20–50 ta rasm yoki qisqa video yuboring",
+          "Muhandislarimiz ularda mavjud modellarni sinaydi",
+          "5 ish kunida yozma hisobot",
+          "Halol «ha / yo‘q» va taxminiy byudjet",
+          "Hech qanday majburiyatsiz"
+        ],
+        "cta": "Bepul baholashni so‘rash"
+      },
+      "pilot": {
+        "name": "Pilot",
+        "price": "qat’iy narx",
+        "desc": "Videolaringizda ishlashini isbotlash.",
+        "features": [
+          "O‘tish va to‘xtash mezonlari bilan da’vo varag‘i",
+          "Obyektingizdan belgilangan test to‘plami (1 000 tagacha rasm)",
+          "Videolaringizda konsepsiya isboti modeli",
+          "Joriy jarayonga nisbatan aniqlik va xato holatlar",
+          "Sizga tegishli «ha / yo‘q» xulosasi · 2–4 hafta"
+        ],
+        "cta": "Pilotni boshlash"
+      },
+      "deployment": {
+        "name": "Joriy qilish",
+        "price": "loyiha uchun",
+        "desc": "Obyektingizda ishlaydigan tizim.",
+        "features": [
+          "Ishlab chiqarish darajasidagi model",
+          "Edge yoki bulutda joriy qilish",
+          "Dashbord va ogohlantirishlar",
+          "API, ERP yoki Telegram integratsiyasi",
+          "3 oylik qo‘llab-quvvatlash"
+        ],
+        "cta": "Joriy qilishni rejalash"
+      },
+      "enterprise": {
+        "name": "Korporativ",
+        "price": "Kelishilgan",
+        "desc": "Ko‘p obyektli va muhim tizimlar.",
+        "features": [
+          "Bir nechta obyekt va kameralar",
+          "O‘z serveringizda, internetdan ajratilgan variant",
+          "SLA va maxsus muhandis",
+          "Doimiy qayta o‘qitish",
+          "Xavfsizlik tekshiruvi va NDA"
+        ],
+        "cta": "Savdo bo‘limiga murojaat"
+      }
+    },
+    "note": "Narxlar AQSh dollarida boshlang‘ich qiymat bo‘lib, uskunalarsiz ko‘rsatilgan. Ma’lumot belgilash loyihaga qarab hisoblanadi. So‘mda hisob-faktura berishimiz mumkin.",
+    "faqTitle": "Ko‘p beriladigan savollar",
+    "care": {
+      "name": "Xizmat ko‘rsatish rejasi",
+      "price": "{price} / oy dan",
+      "desc": "Joriy etilgandan keyin: aniqlik monitoringi, yangi ma’lumotlarda qayta o‘qitish va kelishilgan javob vaqtida tuzatishlar."
+    },
+    "roiLink": "Qoplanish muddatini hisoblang"
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Yangi kameralar sotib olishimiz kerakmi?",
+        "a": "Ko‘pincha yo‘q. RTSP oqimi bor ko‘pchilik IP kameralar ishlaydi. Aniq tekshiruv uchun sanoat kamerasi va yoritishni tavsiya qilishimiz mumkin — buni tahlil bosqichida aytamiz."
+      },
+      {
+        "q": "Video va ma’lumotlarimiz qayerga boradi?",
+        "a": "Siz qaror qilgan joyga. Hammasini o‘z serveringizda yoki internetsiz edge qurilmalarda ishlata olamiz. Videolaringizni ko‘rishdan oldin NDA imzolaymiz."
+      },
+      {
+        "q": "Aniqlik qanday bo‘ladi?",
+        "a": "Pilot davomida o‘z ma’lumotlaringizda o‘lchaymiz va to‘liq joriy qilishdan oldin precision va recall haqida hisobot beramiz."
+      },
+      {
+        "q": "Loyiha qancha vaqt oladi?",
+        "a": "Pilot 2–4 hafta davom etadi. To‘liq joriy qilish obyektlar va integratsiyalarga qarab odatda 1–3 oy."
+      },
+      {
+        "q": "Ochiq kodli modellardan foydalanasizmi? Bu xavfsizmi?",
+        "a": "Ha, va har bir litsenziyani tekshiramiz. Tijorat uchun erkin modellarni (Apache-2.0, MIT) afzal ko‘ramiz va model pullik litsenziya talab qilsa, aytamiz."
+      },
+      {
+        "q": "O‘zbekistondan tashqarida ishlaysizmi?",
+        "a": "Ha. Butun dunyo bo‘ylab mijozlar bilan masofadan ingliz, o‘zbek va rus tillarida ishlaymiz, o‘rnatish uchun joyiga borishimiz mumkin."
+      },
+      {
+        "q": "Robotlarimiz bilan ishlay olasizmi?",
+        "a": "Ha. Biz ROS 2 idrok tizimlarini quramiz va yirik robot brendlari bilan ularning SDK yoki PLC kirish-chiqishlari orqali integratsiya qilamiz. Haqiqiy detallaringizda bepul baholashdan boshlaymiz."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Biz haqimizda",
+    "title": "Amaliy ko‘rish AI’ga berilgan kichik jamoa",
+    "subtitle": "Biz laboratoriyadan chiqmaydigan tadqiqot demolarini emas, haqiqiy biznes muammosini hal qiladigan kompyuter ko‘rish tizimlarini quramiz.",
+    "principles": {
+      "title": "Qanday ishlaymiz",
+      "items": [
+        {
+          "title": "Va’dadan oldin isbot",
+          "text": "Har bir loyiha ma’lumotlaringizdagi pilot va o‘lchangan natijadan boshlanadi."
+        },
+        {
+          "title": "Maxfiylik birinchi o‘rinda",
+          "text": "O‘z serveringizda ishlash, yuzni anonimlashtirish va minimal ma’lumot yig‘ish."
+        },
+        {
+          "title": "Bog‘lanib qolish yo‘q",
+          "text": "Model va kod sizniki. Ochiq standartlar, aniq litsenziyalar."
+        },
+        {
+          "title": "Haqiqiy sharoit uchun",
+          "text": "Chang, yaltirash, tungi smenalar va arzon kameralar — barchasini sinaymiz."
+        }
+      ]
+    },
+    "stack": {
+      "title": "Vositalarimiz",
+      "text": "PyTorch, OpenCV, ONNX Runtime, TensorRT, OpenVINO, MediaPipe, RF-DETR, SAM, PaddleOCR, Tesseract, ROS 2, MoveIt 2, Open3D, FastAPI, Next.js, Docker, NVIDIA Jetson."
+    },
+    "honesty": "Biz yosh kompaniyamiz, shuning uchun bu yerda hali mijozlar logotiplari devori yo‘q. Buning o‘rniga ishlaydigan demolarni ko‘rasiz — va o‘zimizni isbotlash uchun pilot o‘tkazishga tayyormiz."
+  },
+  "contact": {
+    "eyebrow": "Aloqa",
+    "title": "Kameralaringiz nimani ko‘rishini xohlayotganingizni ayting",
+    "subtitle": "Bir ish kuni ichida javob beramiz. Birinchi maslahat bepul.",
+    "form": {
+      "name": "Ismingiz",
+      "company": "Kompaniya",
+      "email": "Ish emaili",
+      "phone": "Telefon yoki Telegram (ixtiyoriy)",
+      "industry": "Soha",
+      "industryPlaceholder": "Tanlang…",
+      "other": "Boshqa",
+      "message": "Nimani aniqlash, sanash yoki tekshirishni xohlaysiz?",
+      "messagePlaceholder": "Masalan: 3 ta do‘kon kirishida xaridorlarni sanab, eng gavjum soatlarni ko‘rmoqchimiz.",
+      "submit": "Xabar yuborish",
+      "sending": "Yuborilmoqda…",
+      "success": "Rahmat! Bir ish kuni ichida siz bilan bog‘lanamiz.",
+      "error": "Kechirasiz, xabarni yuborib bo‘lmadi. Iltimos, email yoki Telegram orqali yozing.",
+      "invalid": "Iltimos, ismingiz, to‘g‘ri email va xabarni kiriting.",
+      "consent": "Ma’lumotlaringizdan faqat sizga javob berish uchun foydalanamiz.",
+      "need": "Sizga nima kerak?",
+      "needs": {
+        "check": "Bepul imkoniyat tekshiruvi",
+        "pilot": "Videolarimizda pilot",
+        "deploy": "To‘liq joriy etish",
+        "care": "Mavjud tizimga xizmat",
+        "labeling": "Faqat ma’lumotlarni belgilash",
+        "robotics": "Robot ko‘rishi",
+        "other": "Hali aniq emas"
+      },
+      "cameras": "Kameralar, liniyalar yoki obyektlar",
+      "camerasPlaceholder": "masalan, 2 liniya, 6 kamera",
+      "timeline": "Qachon boshlamoqchisiz?",
+      "timelines": {
+        "now": "Imkon qadar tezroq",
+        "quarter": "1–3 oy ichida",
+        "later": "Shu yil oxirida",
+        "exploring": "Hozircha o‘rganyapman"
+      },
+      "budget": "Byudjet (USD)",
+      "budgets": {
+        "b1": "$2 000 dan kam",
+        "b2": "$2 000–10 000",
+        "b3": "$10 000–50 000",
+        "b4": "$50 000 dan ko‘p",
+        "unknown": "Hali aniq emas"
+      },
+      "filesHint": "Rasm yoki video bormi? Xabarga havola qo‘ying (Google Drive, Telegram, Dropbox)."
+    },
+    "channels": {
+      "title": "To‘g‘ridan-to‘g‘ri bog‘lanmoqchimisiz?",
+      "call": "30 daqiqalik qo‘ng‘iroq belgilash",
+      "telegram": "Telegram’da yozish",
+      "whatsapp": "WhatsApp’da yozish",
+      "email": "Email yozish"
+    }
+  },
+  "footer": {
+    "tagline": "Biznes uchun kompyuter ko‘rish ilovalari.",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "privacy": "Demolarimiz rasmlarni brauzeringizda qayta ishlaydi. Biz ularni saqlamaymiz.",
+    "company": "Kompaniya",
+    "explore": "Ko‘rib chiqish"
+  },
+  "notFound": {
+    "title": "Bu yerda hech narsa aniqlanmadi",
+    "text": "Bunday sahifa mavjud emas. Modellarimiz hamma joyni qidirdi.",
+    "home": "Bosh sahifaga"
+  },
+  "offers": {
+    "eyebrow": "Biz bilan qanday ishlash",
+    "title": "To‘rt bosqich. Istalganidan keyin to‘xtashingiz mumkin.",
+    "subtitle": "Bepul javobdan boshlang, o‘z videolaringizda isbotlang, keyin joriy qiling va aniqligini saqlang. Har bir bosqichning hajmi va narxi qat’iy belgilangan.",
+    "check": {
+      "name": "Bepul imkoniyat tekshiruvi",
+      "time": "5 ish kuni",
+      "price": "Bepul",
+      "outcome": "Aniq javob: kameralar buni hal qila oladimi, qanchalik yaxshi va taxminan qancha turadi.",
+      "points": [
+        "20–50 ta rasm yoki 1 daqiqalik video yuboring",
+        "Mavjud modellarni videolaringizda sinaymiz",
+        "Byudjet oralig‘i bilan yozma «ha / yo‘q» javobi"
+      ],
+      "cta": "Tekshiruv so‘rash"
+    },
+    "pilot": {
+      "name": "Konsepsiya isboti (pilot)",
+      "time": "2–4 hafta",
+      "price": "{price} dan",
+      "outcome": "O‘z videolaringizdagi dalil — muvaffaqiyat va to‘xtash mezonlari boshidan kelishiladi.",
+      "points": [
+        "Bitta aniq savol, yozma kelishilgan",
+        "Sizning obyektingizdan test to‘plami, sozlashdan oldin muzlatiladi",
+        "Joriy jarayoningizga nisbatan aniqlik va har bir xato holat",
+        "Sizga tegishli «ha / yo‘q» xulosasi"
+      ],
+      "cta": "Pilotni boshlash"
+    },
+    "deploy": {
+      "name": "Joriy etish",
+      "time": "4–10 hafta",
+      "price": "{price} dan",
+      "outcome": "Liniya yoki obyektingizda ishlaydigan tizim — jamoangiz foydalanadigan vositalarga ulangan.",
+      "points": [
+        "Kameralar, yoritish va edge kompyuter joyida o‘rnatiladi",
+        "Telegram ogohlantirishlari, dashboardlar, PLC yoki 1C / ERP",
+        "Haqiqiy ishlab chiqarishda qabul sinovi",
+        "Operatorlarni o‘qitish va topshirish hujjatlari"
+      ],
+      "cta": "Joriy etishni rejalash"
+    },
+    "care": {
+      "name": "Xizmat ko‘rsatish rejasi",
+      "time": "Har oy",
+      "price": "{price}/oy dan",
+      "outcome": "Mahsulot, yoritish va mavsum o‘zgarsa ham aniqlik yuqori qoladi.",
+      "points": [
+        "Aniqlik va ishlash monitoringi",
+        "Yangi ma’lumotlarda qayta o‘qitish",
+        "Kelishilgan javob vaqtida tuzatishlar"
+      ],
+      "cta": "Xizmat haqida so‘rash"
+    }
+  },
+  "useCases": {
+    "eyebrow": "Qo‘llanilishi",
+    "title": "Kameralar biznesingiz uchun bajara oladigan 36 ta ish",
+    "subtitle": "Zavod, ombor, do‘kon va yo‘llarda uchraydigan aniq muammolar, ko‘rish tizimi ular bilan nima qiladi va nimani o‘lchash kerak. Ko‘pchiligi 2–4 haftalik pilotdan boshlanadi.",
+    "all": "Hammasi",
+    "count": "{n} ta holat ko‘rsatilmoqda",
+    "problem": "Bugun",
+    "how": "Ko‘rish tizimi bilan",
+    "kpi": "O‘lchov",
+    "tryDemo": "Demoni sinash",
+    "effort": {
+      "1": "Tez natija",
+      "2": "Standart",
+      "3": "Murakkab"
+    },
+    "effortNote": "Tez natija: odatda standart modellar va mavjud kameralar bilan ishlaydi. Standart: rasmlaringizda maxsus o‘qitish kerak. Murakkab: maxsus kamera, yoritish yoki 3D va uzoqroq pilot kerak.",
+    "ctaTitle": "Muammongizni topdingizmi? Mana qanday boshlaymiz.",
+    "items": {
+      "assembly": {
+        "title": "Yig‘ishni tekshirish",
+        "problem": "Yetishmayotgan vint, qisqich yoki kabel faqat yakuniy sinovda yoki mijozda aniqlanadi.",
+        "how": "Kamera har bir mahsulotni postda tekshiradi va barcha qismlar joyida ekanini tasdiqlaydi.",
+        "kpi": "qism yetishmasligi darajasi, qayta ishlash soatlari"
+      },
+      "surface": {
+        "title": "Sirt nuqsonlarini nazorat qilish",
+        "problem": "Tirnalish, botiq va dog‘larni charchagan ko‘z baholaydi, har smenada har xil.",
+        "how": "Yaxshi va yomon detallaringizda o‘qitilgan model nuqsonlarni liniya tezligida belgilaydi va har birining rasmini saqlaydi.",
+        "kpi": "o‘tkazib yuborish darajasi, soxta brak, soatiga tekshiruvlar"
+      },
+      "fillLevel": {
+        "title": "To‘ldirish darajasi va qopqoq nazorati",
+        "problem": "Kam to‘ldirilgan butilkalar va bo‘sh qopqoqlar o‘tib ketib, shikoyat bo‘lib qaytadi.",
+        "how": "Har bir idish o‘tayotganda o‘lchanadi; me’yordan tashqarilari saralash darvozasiga yo‘naltiriladi.",
+        "kpi": "kam to‘ldirish ulushi, ortiqcha sarf"
+      },
+      "labelCheck": {
+        "title": "Yorliq, sana va partiya kodini tekshirish",
+        "problem": "Noto‘g‘ri yorliq yoki o‘qib bo‘lmaydigan yaroqlilik muddati mahsulotni qaytarib olishga olib keladi.",
+        "how": "OCR bosilgan matnni o‘qiydi va ishlab chiqarish buyurtmasidagi partiya bilan solishtiradi.",
+        "kpi": "noto‘g‘ri yorliqlar, qaytarib olish xavfi"
+      },
+      "weld": {
+        "title": "Payvand chok nazorati",
+        "problem": "Payvand sifati tanlab tekshiriladi, shuning uchun yomon choklar yig‘uvga yetib boradi.",
+        "how": "Har bir chok suratga olinib tasniflanadi; shubhalilari odamga yuboriladi.",
+        "kpi": "1 000 chokka nuqsonlar, qayta ishlash xarajati"
+      },
+      "dimensions": {
+        "title": "O‘lchamlarni o‘lchash",
+        "problem": "Detallar kichik tanlovda shtangensirkul bilan qo‘lda o‘lchanadi.",
+        "how": "Kalibrlangan kamera har bir detalning uzunligi, diametri yoki tirqishini kontaktsiz o‘lchaydi.",
+        "kpi": "o‘lchash vaqti, chegaradan chiqqanlar"
+      },
+      "packaging": {
+        "title": "Qadoq butunligi",
+        "problem": "Ezilgan qutilar, yirtilgan plyonka va ochiq qopqoqlar zavoddan chiqib ketadi.",
+        "how": "Liniya oxiridagi kameralar paletlashdan oldin har bir qadoqni tekshiradi.",
+        "kpi": "shikastlangan qadoq ulushi, mijoz da’volari"
+      },
+      "conveyorCount": {
+        "title": "Konveyerda sanash",
+        "problem": "Ishlab chiqarish qo‘lda yoki bir-biriga tegib turgan mahsulotlarni o‘tkazib yuboradigan datchiklar bilan sanaladi.",
+        "how": "Ko‘rish tizimi chiziqdan o‘tgan mahsulotlarni turi bo‘yicha sanaydi va soatlik hajmni xabar qiladi.",
+        "kpi": "sanash aniqligi, OEE uchun ma’lumotlar"
+      },
+      "machineZone": {
+        "title": "Dastgohlar atrofidagi xavfli zonalar",
+        "problem": "Dastgohlar ishlayotganda odamlar press, robot yoki konveyer hududiga kirib qoladi.",
+        "how": "Dastgoh atrofida zona chiziladi; kirish signal beradi yoki PLC orqali dastgohni sekinlashtiradi.",
+        "kpi": "haftasiga zona buzilishlari, xavfli vaziyatlar"
+      },
+      "ppe": {
+        "title": "SHHVga rioya qilish",
+        "problem": "Kaska, nimcha va qo‘lqoplar faqat audit paytida tekshiriladi.",
+        "how": "Kirish va ish joylaridagi kameralar SHHV yo‘qligini aniqlab, smena boshlig‘iga rasm yuboradi.",
+        "kpi": "hudud va smena bo‘yicha rioya darajasi"
+      },
+      "gauges": {
+        "title": "Analog manometr va hisoblagichlarni o‘qish",
+        "problem": "Kimdir zavod bo‘ylab yurib bosim, harorat va hisoblagich ko‘rsatkichlarini yozib chiqadi.",
+        "how": "Arzon kameralar shkala va hisoblagichlarni o‘qiydi, qiymatlarni avtomatik yozadi, chegaradan chiqsa ogohlantiradi.",
+        "kpi": "tejalgan aylanishlar, chegaradan chiqish ogohlantirishlari"
+      },
+      "fabric": {
+        "title": "Mato nuqsonlarini aniqlash",
+        "problem": "Teshik, dog‘ va uzilgan iplar kech, bichishdan keyin seziladi.",
+        "how": "Dastgoh yoki nazorat stoli ustidagi kameralar nuqsonlarni belgilaydi va o‘ramdagi joyini yozadi.",
+        "kpi": "100 m ga nuqsonlar, mato chiqindisi"
+      },
+      "seams": {
+        "title": "Chok va tikuv nazorati",
+        "problem": "Tushib qolgan qadamlar va qiyshiq choklar yakuniy nazoratda aniqlanadi yoki umuman aniqlanmaydi.",
+        "how": "Kiyimlar postda suratga olinadi; nosoz choklar keyingi operatsiyadan oldin belgilanadi.",
+        "kpi": "ikkinchi nav ulushi, qayta ishlash"
+      },
+      "shade": {
+        "title": "Rang va tusni moslash",
+        "problem": "Partiyalar orasidagi tus farqi sex chiroqlari ostida ko‘z bilan baholanadi.",
+        "how": "Nazoratli yoritishdagi kamera har bir partiyani tasdiqlangan namuna bilan solishtiradi.",
+        "kpi": "tus bo‘yicha shikoyatlar, qayta bo‘yash partiyalari"
+      },
+      "garmentCount": {
+        "title": "Dona va to‘plamlarni sanash",
+        "problem": "Ishbay hisob-kitoblar bahsli bo‘ladi va qo‘lda tekshiriladi.",
+        "how": "Kameralar har bir postda tayyor donalarni sanab, ish haqi hisobotiga uzatadi.",
+        "kpi": "sanash bo‘yicha bahslar, ma’muriy soatlar"
+      },
+      "binPicking": {
+        "title": "Idishdan detal olish (bin picking)",
+        "problem": "Robotlar idishda tartibsiz yotgan detallarni ola olmaydi, shuning uchun liniyani odam ta’minlaydi.",
+        "how": "3D ko‘rish har bir detal va uning holatini topib, robotga xavfsiz ushlash nuqtasini beradi.",
+        "kpi": "soatiga olishlar, muvaffaqiyatli olish ulushi"
+      },
+      "cobotSafety": {
+        "title": "Kollaborativ robot yacheykasi xavfsizligi",
+        "problem": "To‘siqlar ishni sekinlashtiradi, ularsiz esa odamlar robotlarga juda yaqinlashadi.",
+        "how": "Ko‘rish tizimi yacheyka atrofidagi odamlarni kuzatadi va kimdir yaqinlashsa robotni sekinlashtiradi yoki to‘xtatadi.",
+        "kpi": "to‘xtashlar, sikl vaqti"
+      },
+      "partPose": {
+        "title": "Olib-qo‘yish uchun detal holati",
+        "problem": "Moslamalar har bir detalni aynan bir xil joyda ushlab turishi kerak.",
+        "how": "Kamera har bir detalni topib, robot yo‘lini tuzatadi — moslamalar soddaroq bo‘lishi mumkin.",
+        "kpi": "qayta sozlash vaqti, moslama narxi"
+      },
+      "dock": {
+        "title": "Rampa va palletlar monitoringi",
+        "problem": "Yuk mashinalari qancha kutishi yoki qancha pallet yuklangani hech kimga ma’lum emas.",
+        "how": "Kameralar kirgan-chiqqan palletlarni sanaydi va har bir mashinaning rampadagi vaqtini o‘lchaydi.",
+        "kpi": "rampadagi vaqt, yuklash xatolari"
+      },
+      "forkliftProximity": {
+        "title": "Yuklagich va piyoda ogohlantirishlari",
+        "problem": "Yuklagich va odamlar o‘rtasidagi xavfli vaziyatlar kimdir jarohat olmaguncha qayd etilmaydi.",
+        "how": "Ko‘rish tizimi yuklagich yo‘laklaridagi odamlarni aniqlab, haydovchi va rahbarni ogohlantiradi.",
+        "kpi": "zonalar bo‘yicha haftalik xavfli vaziyatlar"
+      },
+      "parcelSize": {
+        "title": "Posilkalar o‘lchamini aniqlash",
+        "problem": "Posilka o‘lchamlari qo‘lda kiritiladi, shuning uchun yetkazish noto‘g‘ri hisoblanadi.",
+        "how": "Chuqurlik kamerasi konveyer yoki stoldagi har bir posilka o‘lchamini o‘lchaydi.",
+        "kpi": "hisob xatolari, posilkaga soniyalar"
+      },
+      "scanTunnel": {
+        "title": "Shtrix-kod skanerlash tunneli",
+        "problem": "Ishchilar har bir qutini qo‘lda skanerlaydi, shikastlangan yorliqlar liniyani to‘xtatadi.",
+        "how": "Bir nechta kamera harakatlanayotgan qutidagi har bir shtrix-kodni istalgan tomondan o‘qiydi.",
+        "kpi": "o‘qish darajasi, qo‘lda skanerlashlar"
+      },
+      "damage": {
+        "title": "Qabulda shikastlangan yuk",
+        "problem": "Shikast yetkazib beruvchining haydovchisi ketgandan keyin seziladi.",
+        "how": "Kelgan har bir pallet suratga olinib shikastga tekshiriladi, rasmlar dalil sifatida saqlanadi.",
+        "kpi": "yutilgan da’volar, qabul vaqti"
+      },
+      "footfall": {
+        "title": "Tashriflar va konversiya",
+        "problem": "Do‘konlar savdosini biladi, lekin necha kishi kirganini bilmaydi.",
+        "how": "Kirish kameralari tashrif buyuruvchilarni soatlar bo‘yicha sanaydi, yuzlarni saqlamaydi.",
+        "kpi": "tashriflar, konversiya, soatiga xodimlar"
+      },
+      "queues": {
+        "title": "Navbat uzunligi ogohlantirishlari",
+        "problem": "Mijozlar boshqa kassa ochilishidan oldin uzun navbatdan ketib qoladi.",
+        "how": "Ko‘rish tizimi kutayotganlarni sanaydi va navbat chegaradan oshsa xodimlarga xabar beradi.",
+        "kpi": "o‘rtacha kutish, tashlab ketilgan navbatlar"
+      },
+      "shelves": {
+        "title": "Javonlardagi mavjudlik",
+        "problem": "Bo‘sh javonlar kuniga bir necha marta aylanib chiqib aniqlanadi.",
+        "how": "Kameralar yoki telefon rasmlari bo‘shliqlar va noto‘g‘ri joylashuvni topib, to‘ldirish vazifasini yaratadi.",
+        "kpi": "tovar yo‘qligi soatlari, planogrammaga rioya"
+      },
+      "perimeter": {
+        "title": "Perimetr va ishdan keyingi kirishlar",
+        "problem": "Qo‘riqchilar o‘nlab ekranni kuzatadi, signallar mushuk va soyalarga ham chalinadi.",
+        "how": "Signal faqat belgilangan zonaga odam yoki transport kirganda chalinadi.",
+        "kpi": "tunda soxta signallar, javob vaqti"
+      },
+      "privacy": {
+        "title": "Maxfiylikni saqlaydigan video",
+        "problem": "Videoda yuzlar ko‘ringani uchun uni ulashib yoki saqlab bo‘lmaydi.",
+        "how": "Video obyektdan chiqishidan oldin yuzlar avtomatik xiralashtiriladi.",
+        "kpi": "ma’lumotlar qoidalariga rioya"
+      },
+      "vehicleCount": {
+        "title": "Transportni sanash va tasniflash",
+        "problem": "Transport va avtoturargoh hisobi yiliga bir necha kun qo‘lda olinadi.",
+        "how": "Kameralar avtomobil, yuk mashinasi va avtobuslarni yo‘nalish va soat bo‘yicha yil bo‘yi sanaydi.",
+        "kpi": "tur bo‘yicha soatiga transport"
+      },
+      "plates": {
+        "title": "Davlat raqamini aniqlash",
+        "problem": "Darvoza xodimlari raqamlarni yozib, ruxsatnomalarni ko‘z bilan tekshiradi.",
+        "how": "Raqamlar darvozada o‘qiladi va ruxsat ro‘yxati bilan avtomatik solishtiriladi.",
+        "kpi": "bitta mashinaga darvoza vaqti, ruxsatsiz kirishlar"
+      },
+      "driverFatigue": {
+        "title": "Haydovchi va operator charchog‘i",
+        "problem": "Yuk mashinasi, avtobus va yuklagichdagi uzoq smenalar mikrouyqu tufayli avariyalarga olib keladi.",
+        "how": "Kabinadagi kamera ko‘z yumilishi va esnashni kuzatib, haydovchi va dispetcherni ogohlantiradi.",
+        "kpi": "1 000 km ga charchoq ogohlantirishlari, hodisalar"
+      },
+      "waybills": {
+        "title": "Yo‘l varaqasi va hisob-fakturalarni kiritish",
+        "problem": "Xodimlar o‘zbek, rus va ingliz tillaridagi hisob-faktura va yo‘l varaqalarini qayta teradi.",
+        "how": "OCR hujjatlarni o‘qib, 1C yoki ERP’dagi maydonlarni to‘ldiradi, odam esa tasdiqlaydi.",
+        "kpi": "hujjatga daqiqalar, terish xatolari"
+      },
+      "grading": {
+        "title": "Meva va sabzavotlarni navlash",
+        "problem": "Mahsulot qo‘lda saralanadi, shuning uchun navlar smenadan smenaga farq qiladi.",
+        "how": "Kameralar har bir donani o‘lcham, rang va dog‘lar bo‘yicha navlab, kerakli yo‘lakka yo‘naltiradi.",
+        "kpi": "navlash aniqligi, saralash unumdorligi"
+      },
+      "livestock": {
+        "title": "Chorva mollarini sanash",
+        "problem": "Hayvonlar darvoza va qo‘ralarda qo‘lda sanaladi.",
+        "how": "Kameralar darvozadan o‘tgan hayvonlarni sanaydi va har bir qo‘radagi bosh sonini kuzatadi.",
+        "kpi": "sanash aniqligi, mehnat soatlari"
+      },
+      "bakery": {
+        "title": "Non mahsulotlari sifati",
+        "problem": "Kuygan yoki chala pishgan mahsulotlar pech oxirida ko‘z bilan ajratiladi.",
+        "how": "Kamera pechdan chiqayotgan har bir mahsulotni rang va shakli bo‘yicha baholaydi.",
+        "kpi": "chiqindi ulushi, shikoyatlar"
+      },
+      "falls": {
+        "title": "Parvarish muassasalarida yiqilishni aniqlash",
+        "problem": "Tunda yiqilish soatlab sezilmay qolishi mumkin.",
+        "how": "Poza baholash yiqilishni aniqlab, shaxsni aniqlash mumkin bo‘lgan videoni yozmasdan xodimlarni ogohlantiradi.",
+        "kpi": "yordam yetib kelish vaqti"
+      }
+    }
+  }
+}
