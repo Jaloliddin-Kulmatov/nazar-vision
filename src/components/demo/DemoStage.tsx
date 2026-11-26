@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { fitWithin, loadImage, loadVideoFrame } from "@/lib/demo/image";
 import { thumbFor } from "@/lib/content";
+import { demoFromPath, track } from "@/lib/track";
 import type { ModelState } from "@/lib/demo/useModel";
 
 export type Sample = {
@@ -110,6 +111,11 @@ export default function DemoStage({
   }, []);
 
   useEffect(() => stop, [stop]);
+
+  // Tell the owner's dashboard when a demo fails (model download, camera, file).
+  useEffect(() => {
+    if (error) track("demo_error", { demo: demoFromPath(), source: error });
+  }, [error]);
 
   const ensureModel = useCallback(async () => {
     try {
@@ -257,6 +263,7 @@ export default function DemoStage({
 
   /** A user file: videos play live where the demo supports it, otherwise one frame is analysed. */
   const openFile = (f: File) => {
+    track("demo_run", { demo: demoFromPath(), source: "upload" });
     if (f.type.startsWith("video/")) {
       if (webcam) void startLive(f);
       else void loadStill({ src: f, frameAt: 1 });
@@ -282,7 +289,8 @@ export default function DemoStage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [restartKey]);
 
-  const pickSample = async (s: Sample) => {
+  const pickSample = async (s: Sample, how: "sample" | "auto" | "link" = "sample") => {
+    track("demo_run", { demo: demoFromPath(), source: how });
     s.onSelect?.();
     const url = typeof s.url === "function" ? await s.url() : s.url;
     if (s.kind === "video") void startLive(url);
@@ -302,7 +310,7 @@ export default function DemoStage({
     // A timer, not an animation frame: frames don't run in background tabs, timers do.
     const id = window.setTimeout(() => {
       started.current = true;
-      void pickSample(pick);
+      void pickSample(pick, wanted ? "link" : "auto");
     }, 0);
     return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -332,7 +340,10 @@ export default function DemoStage({
           {webcam && (
             <button
               type="button"
-              onClick={() => void startLive("webcam")}
+              onClick={() => {
+                track("demo_run", { demo: demoFromPath(), source: "webcam" });
+                void startLive("webcam");
+              }}
               disabled={busy}
               className={`${btn} ${source === "webcam" ? "border-cyan bg-cyan/15 text-cyan" : "border-line-strong hover:border-text"}`}
             >
@@ -371,7 +382,7 @@ export default function DemoStage({
                 >
                   {thumb ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={thumb} alt="" className="h-7 w-10 rounded object-cover" loading="lazy" />
+                    <img src={thumb} alt="" className="h-7 w-10 shrink-0 rounded bg-panel-2 object-cover" />
                   ) : (
                     <span className="grid h-7 w-10 place-items-center rounded bg-panel-2">
                       <Images className="size-4" aria-hidden="true" />
@@ -477,7 +488,10 @@ export default function DemoStage({
                   <li>
                     <button
                       type="button"
-                      onClick={() => void startLive("webcam")}
+                      onClick={() => {
+                track("demo_run", { demo: demoFromPath(), source: "webcam" });
+                void startLive("webcam");
+              }}
                       className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line-strong p-3 text-sm font-medium text-muted transition-colors hover:border-cyan hover:text-text"
                     >
                       <Camera className="size-6 text-cyan" aria-hidden="true" />

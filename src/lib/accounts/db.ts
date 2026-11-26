@@ -45,6 +45,24 @@ async function migrate(db: postgres.Sql) {
       created_at timestamptz not null default now()
     );
     create index if not exists code_downloads_signup_idx on nazar_vision.code_downloads (signup_id);
+    create table if not exists nazar_vision.events (
+      id bigint generated always as identity primary key,
+      at timestamptz not null default now(),
+      type text not null,
+      path text not null default '',
+      locale text not null default '',
+      demo text not null default '',
+      source text not null default '',
+      referrer text not null default '',
+      country text not null default '',
+      device text not null default '',
+      visitor text not null default ''
+    );
+    create index if not exists events_at_idx on nazar_vision.events (at);
+    create table if not exists nazar_vision.settings (
+      key text primary key,
+      value text not null
+    );
   `);
   // On Supabase, keep the API roles out even if someone exposes the schema later.
   await db.unsafe(`
@@ -90,4 +108,43 @@ export async function logDownload(signupId: string, kit: string) {
 export function isUnreachable(e: unknown): boolean {
   const code = (e as { code?: string })?.code ?? "";
   return ["ENOTFOUND", "ENETUNREACH", "EHOSTUNREACH", "ECONNREFUSED", "ETIMEDOUT", "CONNECT_TIMEOUT", "EAI_AGAIN"].includes(code);
+}
+
+export type EventRow = {
+  type: string;
+  path?: string;
+  locale?: string;
+  demo?: string;
+  source?: string;
+  referrer?: string;
+  country?: string;
+  device?: string;
+  visitor?: string;
+};
+
+export async function recordEvent(e: EventRow) {
+  const s = await db();
+  await s`insert into nazar_vision.events (type, path, locale, demo, source, referrer, country, device, visitor)
+    values (${e.type}, ${e.path ?? ""}, ${e.locale ?? ""}, ${e.demo ?? ""}, ${e.source ?? ""}, ${e.referrer ?? ""},
+            ${e.country ?? ""}, ${e.device ?? ""}, ${e.visitor ?? ""})`;
+}
+
+/** Owner-controlled switches, e.g. whether new sign-ups are accepted. */
+export async function getSetting(key: string, fallback: string): Promise<string> {
+  const s = await db();
+  const [row] = await s<{ value: string }[]>`select value from nazar_vision.settings where key = ${key}`;
+  return row?.value ?? fallback;
+}
+
+export async function setSetting(key: string, value: string) {
+  const s = await db();
+  await s`insert into nazar_vision.settings (key, value) values (${key}, ${value})
+    on conflict (key) do update set value = excluded.value`;
+}
+
+export async function findSignupByEmail(email: string): Promise<{ id: string; email: string } | null> {
+  const s = await db();
+  const [row] = await s<{ id: string; email: string }[]>`select id, email from nazar_vision.signups where email = ${email}`;
+  if (row) await s`update nazar_vision.signups set last_seen_at = now() where id = ${row.id}`;
+  return row ?? null;
 }

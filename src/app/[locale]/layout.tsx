@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { site } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageViews from "@/components/PageViews";
 import "../globals.css";
 
 const geologica = Geologica({
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <PageViews />
         </NextIntlClientProvider>
       </body>
     </html>

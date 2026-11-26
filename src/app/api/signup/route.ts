@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { accountsEnabled, isUnreachable, upsertSignup } from "@/lib/accounts/db";
+import { accountsEnabled, getSetting, isUnreachable, recordEvent, upsertSignup } from "@/lib/accounts/db";
 import { setSessionCookie } from "@/lib/accounts/cookies";
 import { notifyNewSignup } from "@/lib/accounts/notify";
 import { encodeSession } from "@/lib/accounts/session";
@@ -20,8 +20,14 @@ export async function POST(request: NextRequest) {
   if (!v.ok) return NextResponse.json({ ok: false, error: v.error }, { status: 400 });
 
   try {
+    if ((await getSetting("signups_open", "yes")) !== "yes") {
+      return NextResponse.json({ ok: false, error: "closed" }, { status: 403 });
+    }
     const { id, isNew } = await upsertSignup(v.data);
-    if (isNew) await notifyNewSignup(v.data);
+    if (isNew) {
+      await notifyNewSignup(v.data);
+      await recordEvent({ type: "signup", path: "/code", country: (request.headers.get("x-vercel-ip-country") ?? "").slice(0, 2) }).catch(() => undefined);
+    }
     const res = NextResponse.json({ ok: true, email: v.data.email });
     setSessionCookie(res, encodeSession(id, v.data.email), new URL(request.url).protocol === "https:");
     return res;

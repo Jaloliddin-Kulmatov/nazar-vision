@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import Logo from "./Logo";
 import LangSwitch from "./LangSwitch";
+import AccountLink from "./AccountLink";
 import { footerItems, navItems } from "./nav";
 
 export default function Header() {
@@ -50,6 +51,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <AccountLink className="hidden sm:inline-flex" />
           <LangSwitch />
           <Link
             href="/contact"
@@ -83,6 +85,7 @@ export default function Header() {
               {t(item.key)}
             </Link>
           ))}
+          <AccountLink className="mt-1 w-full px-3 py-3 text-base sm:hidden" onNavigate={() => setOpen(false)} />
           <Link
             href="/contact"
             onClick={() => setOpen(false)}

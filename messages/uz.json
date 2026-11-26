@@ -16,7 +16,9 @@
     "close": "Yopish",
     "language": "Til",
     "useCases": "Qo‘llanilishi",
-    "code": "Bepul kod"
+    "code": "Bepul kod",
+    "signIn": "Kirish",
+    "account": "Akkaunt"
   },
   "common": {
     "tryIt": "Sinab ko‘ring",
@@ -1519,7 +1521,23 @@
       "soonText": "Kodni yuklab olish uchun akkauntlarni ulamoqdamiz. Hozircha bizga yozing, kodni to‘g‘ridan-to‘g‘ri yuboramiz.",
       "soonCta": "Kodni so‘rash",
       "emailInvalid": "Pochta manzilida xato bor shekilli.",
-      "nameRequired": "Iltimos, ismingizni yozing."
+      "nameRequired": "Iltimos, ismingizni yozing.",
+      "signinTitle": "Kirish",
+      "signinText": "Ro‘yxatdan o‘tgan pochtangizni kiriting.",
+      "signinSubmit": "Kirish",
+      "notFound": "Bu pochta bizda hali yo‘q. Quyida ro‘yxatdan o‘ting, o‘n soniya oladi.",
+      "closed": "Yangi ro‘yxatdan o‘tish hozircha to‘xtatilgan. Oldin ro‘yxatdan o‘tgan bo‘lsangiz, pochtangiz bilan kiring.",
+      "haveAccount": "Ro‘yxatdan o‘tganmisiz?",
+      "noAccount": "Yangimisiz?",
+      "switchSignin": "Kirish",
+      "switchSignup": "Bepul ro‘yxatdan o‘tish"
     }
+  },
+  "account": {
+    "eyebrow": "Akkaunt",
+    "title": "Akkauntingiz",
+    "subtitle": "Shu qurilmada manba kodini yuklab olish uchun ro‘yxatdan o‘tgan pochtangiz bilan kiring.",
+    "whatIsIt": "Yangimisiz? Ro‘yxatdan o‘tish bepul va barcha demolar kodini ochadi.",
+    "seeCode": "Nimalar olasiz"
   }
 }

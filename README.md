@@ -60,7 +60,21 @@ IPv6-only and Vercel can't reach it. Put the real database password in it, URL-e
 characters. Optional: `SESSION_SECRET` (otherwise derived from `DATABASE_URL`), and the Resend
 variables from the contact form to get an email for each new sign-up.
 
-To see who signed up, open the database (Supabase → Table editor → schema `nazar_vision`).
+People who signed up can sign in again with their email at `/[locale]/account` (the "Sign in" link
+in the header appears once the database is connected).
+
+## Owner dashboard and analytics
+
+`/en/admin` (not linked anywhere, not indexed) shows visits, page views, demo runs by demo and by
+how they were started (auto-start, scene link, sample, own webcam, own file), demo errors, sign-ups,
+code downloads, contact messages, countries, referrers, devices and site language, for the last 7, 30
+or 90 days. It also lists everyone who signed up, exports them as CSV, deletes a person, and has a
+switch to pause new sign-ups.
+
+Set `ADMIN_PASSWORD` in Vercel to open it (a long random string; changing it signs everyone out).
+Analytics need `DATABASE_URL` too. Visits are counted without cookies: each visitor gets an anonymous
+id that changes daily (a hash of IP, browser and date), IP addresses are never stored, and bots are
+skipped. The standalone code download keeps a no-op `track()` so it sends nothing anywhere.
 Until `DATABASE_URL` is set the code page says sign-up opens shortly and points to the contact form.
 
 ## Docs

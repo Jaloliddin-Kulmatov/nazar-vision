@@ -1,5 +1,6 @@
 import { contactEmailHtml, validateContact } from "@/lib/contact";
 import { site } from "@/config/site";
+import { accountsEnabled, recordEvent } from "@/lib/accounts/db";
 
 /**
  * Sends contact-form messages through Resend (https://resend.com).
@@ -38,5 +39,6 @@ export async function POST(request: Request) {
   } catch {
     return Response.json({ ok: false, error: "send_failed" }, { status: 502 });
   }
+  if (accountsEnabled()) await recordEvent({ type: "contact", path: "/contact" }).catch(() => undefined);
   return Response.json({ ok: true });
 }

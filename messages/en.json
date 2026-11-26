@@ -16,7 +16,9 @@
     "close": "Close",
     "language": "Language",
     "useCases": "Use cases",
-    "code": "Free code"
+    "code": "Free code",
+    "signIn": "Sign in",
+    "account": "Account"
   },
   "common": {
     "tryIt": "Try it",
@@ -1519,7 +1521,23 @@
       "soonText": "We are switching on accounts for code downloads. Until then, write to us and we’ll send you the code directly.",
       "soonCta": "Ask for the code",
       "emailInvalid": "That email address doesn’t look right.",
-      "nameRequired": "Please add your name."
+      "nameRequired": "Please add your name.",
+      "signinTitle": "Sign in",
+      "signinText": "Enter the email you signed up with.",
+      "signinSubmit": "Sign in",
+      "notFound": "We don’t have that email yet. Sign up below; it takes ten seconds.",
+      "closed": "New sign-ups are paused for now. If you signed up before, sign in with your email.",
+      "haveAccount": "Already signed up?",
+      "noAccount": "New here?",
+      "switchSignin": "Sign in",
+      "switchSignup": "Sign up free"
     }
+  },
+  "account": {
+    "eyebrow": "Account",
+    "title": "Your account",
+    "subtitle": "Sign in with the email you signed up with to download the source code on this device.",
+    "whatIsIt": "New here? Signing up is free and unlocks the code for every demo.",
+    "seeCode": "See what you get"
   }
 }

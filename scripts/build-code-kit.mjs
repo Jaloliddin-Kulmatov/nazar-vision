@@ -32,6 +32,15 @@ copyDir("src/components/demo");
 copyDir("src/components/demos");
 copyDir("src/lib/demo");
 copy("src/lib/content.ts");
+// The website counts demo runs; the standalone project has no server for that, so tracking is a no-op.
+add(
+  "src/lib/track.ts",
+  `/** Analytics hook used by the website. Send events to your own analytics here if you want them. */
+export function track(_type: "pageview" | "demo_run" | "demo_error", _extra: { demo?: string; source?: string } = {}) {}
+
+export const demoFromPath = () => (typeof window === "undefined" ? "" : window.location.pathname.split("/demos/")[1]?.split(/[/?#]/)[0] ?? "");
+`,
+);
 copy("src/app/globals.css");
 
 // Only the English text the demos use.
