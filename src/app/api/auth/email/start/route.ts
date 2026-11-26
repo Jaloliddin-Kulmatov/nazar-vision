@@ -6,6 +6,7 @@ import { codeEmail } from "@/lib/accounts/codeEmail";
 import { finishSignup, signIn } from "@/lib/accounts/signin";
 import { validateSignup } from "@/lib/accounts/signup";
 import { mailEnabled, sendMail } from "@/lib/mail";
+import { allow, LIMITS } from "@/lib/rateLimit";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,8 @@ const fail = (error: string, status = 400, extra: Record<string, unknown> = {}) 
  */
 export async function POST(request: NextRequest) {
   if (!accountsEnabled()) return fail("not_configured", 503);
+  // Each address already has a daily cap; this stops one visitor cycling through many addresses.
+  if (!(await allow(request, LIMITS.emailStart))) return fail("too_many", 429);
   const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body) return fail("invalid_json");
   const mode = body.mode === "signin" ? "signin" : "signup";

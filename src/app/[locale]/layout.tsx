@@ -8,6 +8,7 @@ import { site } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageViews from "@/components/PageViews";
+import TelegramButton from "@/components/TelegramButton";
 import "../globals.css";
 
 const geologica = Geologica({
@@ -40,16 +41,31 @@ export async function generateMetadata({
     metadataBase: new URL(site.url),
     title: { default: t("title"), template: `%s · ${site.name}` },
     description: t("description"),
-    alternates: {
-      languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
-    },
+    // Language versions of every page are listed in /sitemap.xml (per page, not just the home page).
     openGraph: {
       title: t("title"),
       description: t("description"),
       siteName: site.name,
       type: "website",
-      locale,
+      locale: { en: "en_US", uz: "uz_UZ", ru: "ru_RU" }[locale] ?? "en_US",
     },
+    twitter: { card: "summary_large_image", title: t("title"), description: t("description") },
+    robots: { index: true, follow: true },
+  };
+}
+
+function organizationLd(locale: string) {
+  const sameAs = [site.telegram, site.github].filter(Boolean);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: `${site.url}/${locale}`,
+    description: "Computer vision systems for factories, warehouses, shops and sites: safety alerts, counting, number plates, quality checks.",
+    areaServed: "UZ",
+    knowsLanguage: ["uz", "ru", "en"],
+    ...(sameAs.length ? { sameAs } : {}),
+    ...(site.email ? { email: site.email, contactPoint: { "@type": "ContactPoint", contactType: "sales", email: site.email, availableLanguage: ["Uzbek", "Russian", "English"] } } : {}),
   };
 }
 
@@ -67,11 +83,17 @@ export default async function LocaleLayout({
       className={`${geologica.variable} ${jetbrains.variable}`}
     >
       <body className="min-h-dvh flex flex-col">
+        <script
+          type="application/ld+json"
+          // Company details for search engines (name, site, languages, contact channels that are set up).
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd(locale)).replace(/</g, "\\u003c") }}
+        />
         <NextIntlClientProvider>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
           <PageViews />
+          <TelegramButton />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -31,6 +31,11 @@ const demos: Record<DemoSlug, React.ComponentType> = {
   "vehicle-speed": dynamic(() => import("@/components/demos/VehicleSpeed"), { ssr: false, loading: Loading }),
   "image-enhance": dynamic(() => import("@/components/demos/ImageEnhance"), { ssr: false, loading: Loading }),
   "scene-describe": dynamic(() => import("@/components/demos/SceneDescribe"), { ssr: false, loading: Loading }),
+  "plate-reader": dynamic(() => import("@/components/demos/PlateReader"), { ssr: false, loading: Loading }),
+  "fire-smoke": dynamic(() => import("@/components/demos/FireSmoke"), { ssr: false, loading: Loading }),
+  "fall-detection": dynamic(() => import("@/components/demos/FallDetection"), { ssr: false, loading: Loading }),
+  "video-search": dynamic(() => import("@/components/demos/VideoSearch"), { ssr: false, loading: Loading }),
+  "left-behind": dynamic(() => import("@/components/demos/LeftBehind"), { ssr: false, loading: Loading }),
 };
 
 export default function DemoLoader({ slug }: { slug: DemoSlug }) {

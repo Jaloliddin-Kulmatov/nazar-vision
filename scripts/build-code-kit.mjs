@@ -32,6 +32,7 @@ copyDir("src/components/demo");
 copyDir("src/components/demos");
 copyDir("src/lib/demo");
 copy("src/lib/content.ts");
+copy("src/lib/csv.ts");
 // The website counts demo runs; the standalone project has no server for that, so tracking is a no-op.
 add(
   "src/lib/track.ts",
@@ -223,15 +224,17 @@ export default function DemoPage({ params }: { params: Promise<{ slug: string }>
 add(
   "scripts/fetch-samples.mjs",
   `#!/usr/bin/env node
-// Downloads the sample videos and their still frames into public/ (about 20 MB).
+// Downloads the sample videos and their still frames into public/ (about 32 MB).
 // They are free Pexels clips; sources are listed in public/videos/CREDITS.md.
 import { mkdir, writeFile } from "node:fs/promises";
 
 const SITE = process.env.SAMPLES_FROM ?? "${SITE}";
 const names = ${JSON.stringify(readdirSync(path.join(root, "public/videos")).filter((f) => f.endsWith(".mp4")).map((f) => f.replace(/\.mp4$/, "")))};
+const photos = ${JSON.stringify(readdirSync(path.join(root, "public/samples")).filter((f) => f.endsWith(".jpg")))};
 
 await mkdir("public/videos", { recursive: true });
 await mkdir("public/posters", { recursive: true });
+await mkdir("public/samples", { recursive: true });
 for (const [dir, ext] of [["videos", "mp4"], ["posters", "jpg"]]) {
   for (const n of names) {
     const res = await fetch(\`\${SITE}/\${dir}/\${n}.\${ext}\`);
@@ -240,9 +243,16 @@ for (const [dir, ext] of [["videos", "mp4"], ["posters", "jpg"]]) {
     console.log(\`saved public/\${dir}/\${n}.\${ext}\`);
   }
 }
+for (const f of photos) {
+  const res = await fetch(\`\${SITE}/samples/\${f}\`);
+  if (!res.ok) throw new Error(\`samples/\${f}: HTTP \${res.status}\`);
+  await writeFile(\`public/samples/\${f}\`, Buffer.from(await res.arrayBuffer()));
+  console.log(\`saved public/samples/\${f}\`);
+}
 `,
 );
 copy("public/videos/CREDITS.md");
+copy("public/samples/CREDITS.md");
 
 add(
   ".gitignore",
@@ -252,6 +262,7 @@ next-env.d.ts
 *.tsbuildinfo
 public/videos/*.mp4
 public/posters
+public/samples/*.jpg
 `,
 );
 
@@ -309,7 +320,7 @@ You need Node.js 20 or newer.
 
 \`\`\`bash
 npm install
-npm run samples   # downloads the sample videos (about 20 MB)
+npm run samples   # downloads the sample videos (about 32 MB)
 npm run dev       # open http://localhost:3000
 \`\`\`
 

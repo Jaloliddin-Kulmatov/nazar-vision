@@ -1,6 +1,6 @@
 # Nazar Vision — computer vision & robot perception website
 
-Marketing site for a computer-vision firm, in English, Uzbek and Russian. It has 19 live in-browser demos (with sample videos), free downloadable source code for all of them (behind a free sign-up), a services section, 36 use cases and a licence-aware open-source library. The site shows no prices: every project is quoted after a free check.
+Marketing site for a computer-vision firm, in English, Uzbek and Russian. It has 24 live in-browser demos (with sample videos), free downloadable source code for all of them (behind a free sign-up), a services section, 36 use cases and a licence-aware open-source library. The site shows no prices: every project is quoted after a free check.
 
 ## Run
 
@@ -15,7 +15,8 @@ npm run build
 
 | What | Where |
 |---|---|
-| Brand name, email, Telegram, WhatsApp, booking link | `src/config/site.ts` |
+| Brand name | `src/config/site.ts` |
+| Email, Telegram, WhatsApp, booking link | Vercel env vars `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_TELEGRAM` (username or t.me link), `NEXT_PUBLIC_WHATSAPP` (number), `NEXT_PUBLIC_BOOK_CALL_URL`. A channel that isn't set is hidden; the floating Telegram button appears once `NEXT_PUBLIC_TELEGRAM` is set |
 | All copy (EN / UZ / RU) | `messages/{en,uz,ru}.json`. `npm test` fails if a key is missing in one language |
 | Industries, demos, services, use cases, sample videos | `src/lib/content.ts` |
 | Open-source repo list | `scripts/catalog.mjs`, then `npm run repos:update` (uses `gh auth token` or `GITHUB_TOKEN`) |
@@ -23,13 +24,15 @@ npm run build
 
 ## Contact form
 
-It sends email through [Resend](https://resend.com). Set these in Vercel → Project → Environment Variables:
+Every message is saved in the database and listed on the owner dashboard (`/admin`), where you can reply, mark it answered or delete it. With [Resend](https://resend.com) set up it is also emailed to you:
 
 - `RESEND_API_KEY`
 - `CONTACT_TO_EMAIL`: where inquiries go
 - `CONTACT_FROM_EMAIL` (optional): a sender on your verified domain
 
-Without a key, the form tells visitors to use Telegram or email instead.
+With neither a database nor Resend, the form tells visitors to use Telegram or email instead. Each visitor can send 5 messages an hour (10 sign-up code requests, 30 code checks); the limit uses a salted hash of the IP, never the IP itself.
+
+`/contact?need=pilot` (or `check`, `deploy`, …) opens the form with that option chosen.
 
 ## Demos
 
@@ -37,9 +40,13 @@ All demos run client-side. Models download on first use from Google (MediaPipe),
 
 Sample images are hot-linked from the public `Xenova/transformers.js-docs` dataset on Hugging Face. Replace them with your own photos in `src/lib/content.ts` before launch.
 
-Sample videos live in `public/videos/` (about 20 MB, Pexels licence; sources in `public/videos/CREDITS.md`). They are served from the site itself because browsers block frame analysis on videos from other domains. Your own factory footage will sell better: drop MP4s in the same folder and update `videos` in `src/lib/content.ts`.
+Sample videos live in `public/videos/` (about 28 MB, Pexels licence; sources in `public/videos/CREDITS.md`). The Uzbek car and plate photos in `public/samples/` are from Wikimedia Commons under CC BY-SA 4.0 (credits in `public/samples/CREDITS.md` and on the plate demo). They are served from the site itself because browsers block frame analysis on videos from other domains. Your own factory footage will sell better: drop MP4s in the same folder and update `videos` in `src/lib/content.ts`.
 
-The PPE demo downloads OWLv2 (163 MB) and "Ask about a photo" downloads Florence-2 (about 270 MB) on first use, so they wait for a click. Demos with small models (7 MB or less) start a sample video as soon as the page opens. Add `?sample=<key>` to a demo URL to open it on a given sample.
+The PPE demo downloads OWLv2 (163 MB), "Ask about a photo" and the plate reader download Florence-2 (about 270 MB), and the defect check, fire/smoke and video search download CLIP ViT-B/32 (153 MB) on first use, so they wait for a click.
+
+Every model has a licence that allows commercial use, shown on its demo page (`licence` in `src/lib/content.ts`). Apple's MobileCLIP was replaced by OpenAI CLIP because MobileCLIP's weights are licensed for research only.
+
+The alert demos (safety zone, people counter, speed, plate reader, fire/smoke, fall, left-behind) keep an event log that downloads as CSV. Their rules are plain, tested code in `src/lib/demo/` (`plates.ts`, `fall.ts`, `leftBehind.ts`). Demos with small models (7 MB or less) start a sample video as soon as the page opens. Add `?sample=<key>` to a demo URL to open it on a given sample.
 
 ## Free source code and sign-up
 
@@ -86,7 +93,11 @@ how they were started (auto-start, scene link, sample, own webcam, own file), de
 code downloads, contact messages, countries, referrers, devices and site language, for the last 7, 30
 or 90 days. It also lists everyone who signed up (with Google or email, and whether the email is
 confirmed), exports them as CSV, deletes a person, and has a
-switch to pause new sign-ups.
+switch to pause new sign-ups. Contact-form messages appear there too.
+
+People can delete their own account on the account page; `/privacy` and `/terms` describe what is
+collected. Have both pages checked by a lawyer before relying on them (Uzbekistan's personal-data
+law has rules on where citizens' data is stored).
 
 Set `ADMIN_PASSWORD` in Vercel to open it (a long random string; changing it signs everyone out).
 Analytics need `DATABASE_URL` too. Visits are counted without cookies: each visitor gets an anonymous

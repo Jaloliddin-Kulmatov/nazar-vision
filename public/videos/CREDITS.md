@@ -17,3 +17,11 @@ All clips are from [Pexels](https://www.pexels.com) under the [Pexels licence](h
 | hardhat.mp4 | https://www.pexels.com/video/a-man-using-a-modern-electronic-note-pad-3195703/ |
 
 People shown in stock footage did not consent to being featured in a vision-AI demo specifically; if that matters for your brand, replace these with footage you shot yourself.
+| fire-field.mp4 | https://www.pexels.com/video/aerial-view-on-burning-building-on-field-10029955/ |
+| fire-smoke.mp4 | https://www.pexels.com/video/drone-footage-of-fire-and-emergency-services-11584959/ |
+| sunset.mp4 | https://www.pexels.com/video/a-yellow-suitcase-on-the-road-5434560/ |
+| person-down.mp4 | https://www.pexels.com/video/paramedic-helping-a-man-on-the-floor-6520238/ |
+| suitcase-platform.mp4 | https://www.pexels.com/video/suitcase-with-train-station-background-5434562/ |
+| luggage-floor.mp4 | https://www.pexels.com/video/black-luggage-on-the-floor-4458921/ |
+| luggage-owner.mp4 | https://www.pexels.com/video/person-holding-his-luggage-4458815/ |
+| man-lying.mp4 | https://www.pexels.com/video/a-medium-shot-of-a-man-lying-down-on-the-floor-8526604/ |

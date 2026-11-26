@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Download, Loader2, LogOut, MailCheck } from "lucide-react";
+import { Download, Loader2, LogOut, MailCheck, Trash2 } from "lucide-react";
 import { ButtonLink } from "./ui";
 
 type Me = { enabled: boolean; signupOpen: boolean; google: boolean; emailCodes: boolean; email: string | null };
@@ -159,6 +159,24 @@ export default function CodeAccess({ kitSize, initialMode = "signup" }: { kitSiz
             <LogOut className="size-4" aria-hidden="true" /> {t("signOut")}
           </button>
         </div>
+        <button
+          type="button"
+          onClick={async () => {
+            if (!window.confirm(t("deleteConfirm"))) return;
+            const res = await fetch("/api/account/delete", { method: "POST" }).catch(() => null);
+            if (!res?.ok) return setError(t("failed"));
+            window.dispatchEvent(new Event("nv-account"));
+            setMode("signup");
+            setNotice(t("deleted"));
+            setState({ status: "checking" });
+            const me = (await fetch("/api/me", { cache: "no-store" }).then((r) => r.json())) as Me;
+            setState({ status: "form", me });
+          }}
+          className="mt-5 inline-flex items-center gap-1.5 text-xs text-dim underline-offset-2 hover:text-danger hover:underline"
+        >
+          <Trash2 className="size-3.5" aria-hidden="true" /> {t("deleteAccount")}
+        </button>
+        {error && <p className="mt-2 text-sm text-danger" role="alert">{error}</p>}
       </div>
     );
   }

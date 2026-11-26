@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, Cpu, HardDriveDownload, Briefcase, ExternalLink, Code2 } from "lucide-react";
+import { ArrowLeft, Cpu, HardDriveDownload, Briefcase, ExternalLink, Code2, BadgeCheck } from "lucide-react";
 import { Container, ButtonLink } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -59,6 +59,9 @@ export default function DemoPage({ params }: PageProps<"/[locale]/demos/[slug]">
             </li>
             <li className="flex items-center gap-1.5">
               <HardDriveDownload className="size-4" aria-hidden="true" /> {t("sizeLabel")}: {meta.size}
+            </li>
+            <li className="flex items-center gap-1.5" title={t("licenceHint")}>
+              <BadgeCheck className="size-4 text-lime" aria-hidden="true" /> {t("licenceLabel", { licence: meta.licence })}
             </li>
           </ul>
         </div>

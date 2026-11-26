@@ -37,21 +37,27 @@ export default function Footer() {
         <div>
           <h2 className="mb-3 text-sm font-semibold text-text">{nav("contact")}</h2>
           <ul className="space-y-2 text-sm">
-            <li>
-              <a href={`mailto:${site.email}`} className="flex items-center gap-2 text-muted hover:text-text">
-                <Mail className="size-4" aria-hidden="true" /> {site.email}
-              </a>
-            </li>
-            <li>
-              <a href={site.telegram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-text">
-                <Send className="size-4" aria-hidden="true" /> {contact("telegram")}
-              </a>
-            </li>
-            <li>
-              <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-text">
-                <MessageCircle className="size-4" aria-hidden="true" /> {contact("whatsapp")}
-              </a>
-            </li>
+            {site.telegram && (
+              <li>
+                <a href={site.telegram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-text">
+                  <Send className="size-4" aria-hidden="true" /> {contact("telegram")}
+                </a>
+              </li>
+            )}
+            {site.whatsapp && (
+              <li>
+                <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted hover:text-text">
+                  <MessageCircle className="size-4" aria-hidden="true" /> {contact("whatsapp")}
+                </a>
+              </li>
+            )}
+            {site.email && (
+              <li>
+                <a href={`mailto:${site.email}`} className="flex items-center gap-2 text-muted hover:text-text">
+                  <Mail className="size-4" aria-hidden="true" /> {site.email}
+                </a>
+              </li>
+            )}
             <li>
               <Link href="/contact" className="font-semibold text-cyan hover:text-cyan-hi">
                 {nav("cta")}
@@ -61,9 +67,19 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-line">
-        <p className="mx-auto max-w-7xl px-4 py-5 text-xs text-dim sm:px-6">
-          © {year} {site.name}. {t("rights")}
-        </p>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-dim sm:px-6">
+          <p>
+            © {year} {site.name}. {t("rights")}
+          </p>
+          <p className="flex gap-4">
+            <Link href="/privacy" className="hover:text-text">
+              {nav("privacy")}
+            </Link>
+            <Link href="/terms" className="hover:text-text">
+              {nav("terms")}
+            </Link>
+          </p>
+        </div>
       </div>
     </footer>
   );

@@ -1,3 +1,4 @@
+import type { ContactData } from "@/lib/contact";
 import postgres from "postgres";
 
 /**
@@ -74,6 +75,28 @@ async function migrate(db: postgres.Sql) {
       sent_at timestamptz not null default now(),
       sends_today int not null default 1,
       day date not null default current_date
+    );
+    create table if not exists nazar_vision.inquiries (
+      id uuid primary key default gen_random_uuid(),
+      created_at timestamptz not null default now(),
+      name text not null,
+      email text not null,
+      company text not null default '',
+      phone text not null default '',
+      industry text not null default '',
+      need text not null default '',
+      cameras text not null default '',
+      timeline text not null default '',
+      budget text not null default '',
+      message text not null,
+      emailed boolean not null default false,
+      handled boolean not null default false
+    );
+    create index if not exists inquiries_created_idx on nazar_vision.inquiries (created_at);
+    create table if not exists nazar_vision.rate_limits (
+      key text primary key,
+      window_start timestamptz not null default now(),
+      hits int not null default 0
     );
   `);
   // On Supabase, keep the API roles out even if someone exposes the schema later.
@@ -173,4 +196,27 @@ export async function findSignupByEmail(email: string, markVerified = false): Pr
       email_verified = email_verified or ${markVerified} where id = ${row.id}`;
   }
   return row ?? null;
+}
+
+/** Keeps every contact-form message, so none is lost when email isn't set up or fails. */
+export async function saveInquiry(d: ContactData, emailed: boolean) {
+  const s = await db();
+  await s`insert into nazar_vision.inquiries (name, email, company, phone, industry, need, cameras, timeline, budget, message, emailed)
+    values (${d.name}, ${d.email}, ${d.company}, ${d.phone}, ${d.industry}, ${d.need}, ${d.cameras}, ${d.timeline}, ${d.budget}, ${d.message}, ${emailed})`;
+}
+
+/**
+ * Counts one hit for `key` in a fixed window and returns the count so far (1 on the first hit).
+ * Old windows are swept now and then so the table stays tiny.
+ */
+export async function countHit(key: string, windowSec: number): Promise<number> {
+  const s = await db();
+  const [row] = await s<{ hits: number }[]>`
+    insert into nazar_vision.rate_limits (key, window_start, hits) values (${key}, now(), 1)
+    on conflict (key) do update set
+      hits = case when nazar_vision.rate_limits.window_start < now() - make_interval(secs => ${windowSec}) then 1 else nazar_vision.rate_limits.hits + 1 end,
+      window_start = case when nazar_vision.rate_limits.window_start < now() - make_interval(secs => ${windowSec}) then now() else nazar_vision.rate_limits.window_start end
+    returning hits`;
+  if (Math.random() < 0.02) await s`delete from nazar_vision.rate_limits where window_start < now() - interval '2 days'`;
+  return row.hits;
 }

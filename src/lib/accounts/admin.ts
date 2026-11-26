@@ -1,6 +1,7 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import type { NextRequest, NextResponse } from "next/server";
 import { db, databaseUrl } from "./db";
+import { toCsvText } from "@/lib/csv";
 
 export const ADMIN_COOKIE = "nv_admin";
 const ADMIN_HOURS = 12;
@@ -127,6 +128,38 @@ export async function listSignups(limit = 500): Promise<SignupListRow[]> {
     group by u.id order by u.created_at desc limit ${limit}`;
 }
 
+export type InquiryRow = {
+  id: string;
+  created_at: string;
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  industry: string;
+  need: string;
+  cameras: string;
+  timeline: string;
+  budget: string;
+  message: string;
+  emailed: boolean;
+  handled: boolean;
+};
+
+export async function listInquiries(limit = 200): Promise<InquiryRow[]> {
+  const s = await db();
+  return s<InquiryRow[]>`select * from nazar_vision.inquiries order by created_at desc limit ${limit}`;
+}
+
+export async function setInquiryHandled(id: string, handled: boolean) {
+  const s = await db();
+  await s`update nazar_vision.inquiries set handled = ${handled} where id = ${id}`;
+}
+
+export async function deleteInquiry(id: string) {
+  const s = await db();
+  await s`delete from nazar_vision.inquiries where id = ${id}`;
+}
+
 export async function deleteSignup(id: string) {
   const s = await db();
   await s`delete from nazar_vision.signups where id = ${id}`;
@@ -134,12 +167,9 @@ export async function deleteSignup(id: string) {
 
 /** CSV with every field quoted; formula-like cells are prefixed so spreadsheets don't run them. */
 export function toCsv(rows: SignupListRow[]): string {
-  const cell = (v: unknown) => {
-    let t = String(v ?? "");
-    if (/^[=+\-@]/.test(t)) t = `'${t}`;
-    return `"${t.replace(/"/g, '""')}"`;
-  };
   const head = ["name", "email", "company", "signed_up_with", "email_confirmed", "signed_up", "last_seen", "downloads"];
-  const body = rows.map((r) => [r.name, r.email, r.company, r.provider, r.email_verified ? "yes" : "no", new Date(r.created_at).toISOString(), new Date(r.last_seen_at).toISOString(), r.downloads].map(cell).join(","));
-  return [head.join(","), ...body].join("\n") + "\n";
+  return toCsvText(
+    head,
+    rows.map((r) => [r.name, r.email, r.company, r.provider, r.email_verified ? "yes" : "no", new Date(r.created_at).toISOString(), new Date(r.last_seen_at).toISOString(), r.downloads]),
+  );
 }

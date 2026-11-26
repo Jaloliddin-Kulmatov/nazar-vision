@@ -18,7 +18,10 @@
     "useCases": "Qo‘llanilishi",
     "code": "Bepul kod",
     "signIn": "Kirish",
-    "account": "Akkaunt"
+    "account": "Akkaunt",
+    "pilot": "Pilot",
+    "privacy": "Maxfiylik",
+    "terms": "Shartlar"
   },
   "common": {
     "tryIt": "Sinab ko‘ring",
@@ -44,7 +47,7 @@
     },
     "stats": [
       {
-        "value": "19",
+        "value": "24",
         "label": "namuna videolari bilan jonli demo"
       },
       {
@@ -159,7 +162,7 @@
     "scenes": {
       "title": "Sahnani tanlang va model ishini ko‘ring",
       "subtitle": "Har biri shu videoda allaqachon ishlayotgan demoni ochadi. Keyin veb-kamerani yoqing yoki o‘z videongizni yuklang.",
-      "all": "Barcha 19 ta demo",
+      "all": "Barcha 24 ta demo",
       "items": {
         "safety-zone": "Yuklagichli ombor",
         "ppe-check": "Planshetli ishchi",
@@ -697,6 +700,31 @@
         "title": "Rasm haqida so‘rang",
         "short": "Bitta model sahnani so‘z bilan tasvirlaydi, undagi narsalarni sanaydi, siz yozgan narsani topadi va matnni o‘qiydi.",
         "business": "Kamera arxivida qidiruv, hodisalar haqida avtomatik yozuvlar, xodimlar yuborgan rasmlarni tekshirish, detektor o‘rgatilmagan narsalarni topish."
+      },
+      "plate-reader": {
+        "title": "Davlat raqamini o‘qish (O‘zbekiston)",
+        "short": "Rasmdagi avtomobil raqamlarini topadi va o‘qiydi, O‘zbekiston formatini tekshiradi, viloyatni ko‘rsatadi va ro‘yxatingizdagi raqamlarni belgilaydi.",
+        "business": "Omborlar, avtoturargohlar va yoqilg‘i shoxobchalaridagi shlagbaumlar, yuk mashinalarining kirib-chiqishini hisobga olish, qo‘riqchi yozib o‘tirmasdan ruxsat va taqiq ro‘yxatlari."
+      },
+      "fire-smoke": {
+        "title": "Olov va tutun ogohlantirishi",
+        "short": "Kamerada olov va tutunni kuzatadi. Ketma-ket bir nechta tekshiruv rozi bo‘lgandagina signal chalinadi, shuning uchun quyosh botishi yoki chiroq yolg‘on signal bermaydi.",
+        "business": "Omborlar, sexlar, avtoturargohlar va ochiq maydonlarda, o‘rnatilgan kameralar orqali, baland shiftdagi tutun datchigidan oldin erta ogohlantirish."
+      },
+      "fall-detection": {
+        "title": "Yiqilish va polda yotgan odam",
+        "short": "Har bir odamning tana holatini kuzatadi. Kimdir yiqilsa signal beradi, polda yotib turmayotgan odam uchun esa yumshoqroq ogohlantirish.",
+        "business": "Qariyalar uylari, shifoxonalar, ombor va zavodlarda yolg‘iz ishlovchilar, tungi smenalar: yordam tasodifan kimdir o‘tib qolganda emas, bir necha daqiqada keladi."
+      },
+      "video-search": {
+        "title": "Videodan matn bilan qidirish",
+        "short": "Nima qidirayotganingizni yozing, masalan «oq furgon» yoki «quti ko‘tarib ketayotgan odam», va mos lahzalarga darhol o‘ting.",
+        "business": "Soatlab yozuvdan hodisani soniyalarda topish: yetkazib berish, mashina, qizil kurtkali odam. Hech kim arxivni aylantirib o‘tirmaydi."
+      },
+      "left-behind": {
+        "title": "Qoldirilgan buyum",
+        "short": "Qo‘yib ketilgan, yonida hech kim yo‘q sumka, ryukzak yoki chamadonni sezadi va siz tanlagan vaqtdan keyin signal beradi.",
+        "business": "Vokzallar, aeroportlar, savdo markazlari va bank zallari: har bir ekran oldida operator o‘tirmasdan egasiz sumkalar va yo‘qolgan buyumlarni tez topish."
       }
     },
     "ui": {
@@ -793,7 +821,18 @@
         "workersFrame": "Ombor ishchilari",
         "bottlesFrame": "Liniyadagi butilkalar",
         "trafficFrame": "Yo‘l harakati",
-        "crowdFrame": "Gavjum ko‘cha"
+        "crowdFrame": "Gavjum ko‘cha",
+        "carGreen": "Yashil «Jiguli», Toshkent",
+        "carRed": "Qizil «Jiguli», Toshkent",
+        "plateClose": "Raqam yaqindan",
+        "fireSmokeVideo": "Binodagi yong‘in (dron)",
+        "fireFieldVideo": "Daladagi yong‘in",
+        "sunsetVideo": "Quyosh botishi (signal bo‘lmasligi kerak)",
+        "personDownVideo": "Yerda yotgan odam",
+        "suitcasePlatformVideo": "Perrondagi chamadon",
+        "luggageFloorVideo": "Poldagi chamadon",
+        "luggageOwnerVideo": "Chamadoni bilan egasi",
+        "manLyingVideo": "Polda yotgan erkak"
       },
       "style": "Uslub",
       "uploadMedia": "Rasm yoki video yuklash",
@@ -908,7 +947,119 @@
       "askFind": "Topish",
       "askNote": "Javoblar ingliz tilida, so‘rovlarni ham inglizcha yozing. Zamonaviy videokartasiz kompyuterda har bir javob 10–40 soniya oladi.",
       "askNothing": "Hech narsa topilmadi. Boshqa so‘zlarni sinab ko‘ring.",
-      "askTime": "{s} soniyada javob berdi"
+      "askTime": "{s} soniyada javob berdi",
+      "eventLog": "Hodisalar jurnali ({n})",
+      "eventLogEmpty": "Hozircha bo‘sh. Demo nimanidir sezsa, shu yerda paydo bo‘ladi.",
+      "eventLogCsv": "CSV yuklab olish",
+      "eventLogClear": "Jurnalni tozalash",
+      "eventLogNote": "Haqiqiy tizimda bu hisobotga, panelga yoki Telegramga boradi, videoni hech kim kuzatib o‘tirmaydi.",
+      "evZoneEntry": "Zonaga kirish",
+      "evZoneDetail": "Zonada {n} kishi",
+      "evSpeed": "Tezlik o‘lchandi",
+      "plateRead": "Raqam o‘qildi",
+      "plateUnsure": "O‘zbekiston formatiga mos kelmadi:",
+      "plateNone": "Raqam topilmadi. Raqam kamida 100 piksel kenglikda ko‘rinadigan yaqinroq rasm bilan sinab ko‘ring.",
+      "plateOnList": "Ro‘yxatda bor",
+      "plateRegions": {
+        "tashkentCity": "Toshkent shahri",
+        "tashkentRegion": "Toshkent viloyati",
+        "sirdaryo": "Sirdaryo viloyati",
+        "jizzakh": "Jizzax viloyati",
+        "samarkand": "Samarqand viloyati",
+        "fergana": "Farg‘ona viloyati",
+        "namangan": "Namangan viloyati",
+        "andijan": "Andijon viloyati",
+        "kashkadarya": "Qashqadaryo viloyati",
+        "surkhandarya": "Surxondaryo viloyati",
+        "bukhara": "Buxoro viloyati",
+        "navoi": "Navoiy viloyati",
+        "khorezm": "Xorazm viloyati",
+        "karakalpakstan": "Qoraqalpog‘iston"
+      },
+      "plateKinds": {
+        "private": "shaxsiy avtomobil",
+        "company": "tashkilot avtomobili"
+      },
+      "plateFixes": "O‘xshash belgilar tuzatildi: {n} («{raw}» deb o‘qilgan)",
+      "plateList": "Belgilanadigan raqamlar",
+      "plateListHint": "Raqamlarni vergul bilan ajrating. Belgilanganlari qizil bo‘ladi: darvozada taqiq yoki ruxsat ro‘yxati sifatida ishlating.",
+      "plateCredit": "Rasmlar: Jamshid Nurkulov va Dickelbers, Wikimedia Commons, CC BY-SA 4.0.",
+      "fireStatus": "Olov va tutun",
+      "fireStates": {
+        "clear": "Hammasi joyida",
+        "suspect": "Olovga o‘xshaydi, tekshirilmoqda…",
+        "alarm": "SIGNAL: olov yoki tutun tasdiqlandi"
+      },
+      "fireAlarm": "Yong‘in signali",
+      "fireLabel": "Olov",
+      "smokeLabel": "Tutun",
+      "fireChecks": "Tekshiruvlar",
+      "fireRaw": "Bitta kadr bo‘yicha signallar",
+      "fireConfirmed": "Tasdiqlangan signallar",
+      "fireSpeed": "Har tekshiruvga {ms} ms",
+      "fireTuning": "Sezgirlik",
+      "fireThreshold": "Kerakli ball",
+      "fireNeed": "Nechta tekshiruv rozi bo‘lishi kerak",
+      "fireNeedValue": "{of} tadan {n}",
+      "fireNote": "«Bitta kadr bo‘yicha signallar» — bitta kadrga ishonadigan tizim necha marta signal chalgan bo‘lardi. Uning qanchalik asabiyligini ko‘rish uchun kerakli ballni pasaytirib, tekshiruvni 1 ga qo‘ying.",
+      "fallStatus": "Odamlar",
+      "fallStates": {
+        "upright": "OK",
+        "pending": "polda",
+        "down": "Odam polda",
+        "fallen": "YIQILDI"
+      },
+      "fallBanner": {
+        "fall": "Yiqilish aniqlandi: odamni tekshiring",
+        "down": "Kimdir polda yotibdi",
+        "ok": "Kadrda {n} kishi, hamma oyoqda"
+      },
+      "fallEvent": "Yiqilish",
+      "downEvent": "Odam polda",
+      "downDetail": "#{id} {s} s yotibdi",
+      "fallCount": "Yiqilishlar",
+      "downCount": "Polda yotish signallari",
+      "fallSettings": "Qoidalar",
+      "fallLying": "Shuncha vaqtdan ko‘p yotsa signal",
+      "fallTry": "Veb-kamerada sinab ko‘ring: butun tanangiz ko‘rinadigan qilib uzoqlashing, keyin polga o‘tiring yoki yoting.",
+      "fallNote": "Yiqilish — tik turgan holatdan tez yotgan holatga o‘tish va bel pastga tushishi. O‘tirib-turish va engashish hisoblanmaydi.",
+      "leftStatus": "Sumkalar va egalari",
+      "leftStates": {
+        "moving": "harakatda",
+        "attended": "egasi bilan",
+        "unattended": "yolg‘iz",
+        "alert": "QOLDIRILGAN",
+        "noOwner": "yonida hech kim yo‘q"
+      },
+      "leftBanner": {
+        "alert": "Qoldirilgan buyumlar: {n}",
+        "watch": "Egasiz sumkalar: {n}, vaqt hisoblanmoqda",
+        "ok": "Egasiz sumka yo‘q"
+      },
+      "leftEvent": "Qoldirilgan buyum",
+      "leftDetail": "#{id} sumka {s} s yolg‘iz",
+      "leftBags": "Sumkalar",
+      "leftPeople": "Odamlar",
+      "leftAlerts": "Signallar",
+      "leftSettings": "Qoidalar",
+      "leftLimit": "Sumka shuncha vaqt yolg‘iz qolsa signal",
+      "leftLegend": {
+        "moving": "Harakatda yoki ko‘tarib ketilmoqda",
+        "attended": "Qo‘yilgan, egasi yonida",
+        "unattended": "Qo‘yilgan, yonida hech kim yo‘q: hisoblanmoqda",
+        "alert": "Chegaradan ko‘p yolg‘iz"
+      },
+      "leftNote": "Sumka harakatdan to‘xtasa va yonida odam bo‘lmasa, qoldirilgan hisoblanadi. Obyektda signal surat bilan birga qo‘riqlash postiga boradi.",
+      "searchPickHint": "Videoni tanlang. Har bir kadr bir marta raqamlarga aylantiriladi (birinchi yuklashda taxminan 150 MB), keyin har bir qidiruv bir lahzada.",
+      "searchOwnVideo": "O‘z videomdan qidirish",
+      "searchIndexing": "Video o‘qilmoqda… {p}%",
+      "searchTimeline": "Har bir lahza qanchalik mos (o‘tish uchun ustunni bosing)",
+      "searchAsk": "Nima qidiryapsiz?",
+      "searchPlaceholder": "masalan, a white van",
+      "searchNote": "Bir necha so‘z bilan inglizcha yozing. Video kompyuteringizdan chiqmaydi.",
+      "searchMoments": "Eng mos lahzalar",
+      "searchEmpty": "Nima qidirishni yozing.",
+      "searchIndexed": "{n} ta kadr {s} s da o‘qildi"
     },
     "card": {
       "video": "Video va veb-kamera",
@@ -929,7 +1080,9 @@
     "codeBand": {
       "title": "Bu yerdagi barcha demolar bepul va ochiq kodli",
       "text": "To‘liq ishlaydigan kodni (MIT litsenziyasi) yuklab olish va rivojlantirish uchun bir marta ro‘yxatdan o‘ting."
-    }
+    },
+    "licenceLabel": "Litsenziya: {licence}",
+    "licenceHint": "Model litsenziyasi tijoriy foydalanishga ruxsat beradi: uni o‘z mahsulotingizga qo‘shishingiz mumkin."
   },
   "oss": {
     "eyebrow": "Ochiq kod kutubxonasi",
@@ -1152,14 +1305,16 @@
         "b4": "$50 000 dan ko‘p",
         "unknown": "Hali aniq emas"
       },
-      "filesHint": "Rasm yoki video bormi? Xabarga havola qo‘ying (Google Drive, Telegram, Dropbox)."
+      "filesHint": "Rasm yoki video bormi? Xabarga havola qo‘ying (Google Drive, Telegram, Dropbox).",
+      "limited": "Ulanishingizdan juda ko‘p xabar keldi. Bir soatdan keyin qayta urinib ko‘ring yoki bizga Telegramda yozing."
     },
     "channels": {
       "title": "To‘g‘ridan-to‘g‘ri bog‘lanmoqchimisiz?",
       "call": "30 daqiqalik qo‘ng‘iroq belgilash",
       "telegram": "Telegram’da yozish",
       "whatsapp": "WhatsApp’da yozish",
-      "email": "Email yozish"
+      "email": "Email yozish",
+      "telegramShort": "Telegramda yozish"
     }
   },
   "footer": {
@@ -1556,7 +1711,10 @@
         "expired": "Kod muddati tugagan. Yangisini yuboring.",
         "too_many_attempts": "Juda ko‘p noto‘g‘ri urinish. Yangi kod yuboring."
       },
-      "formTextCode": "Bepul. Google orqali kiring yoki pochtangizni 6 xonali kod bilan tasdiqlang."
+      "formTextCode": "Bepul. Google orqali kiring yoki pochtangizni 6 xonali kod bilan tasdiqlang.",
+      "deleteAccount": "Hisobimni o‘chirish",
+      "deleteConfirm": "Hisobingiz va yuklab olishlar tarixi o‘chirilsinmi? Buni qaytarib bo‘lmaydi.",
+      "deleted": "Hisobingiz o‘chirildi."
     }
   },
   "account": {
@@ -1565,5 +1723,218 @@
     "subtitle": "Shu qurilmada manba kodini yuklab olish uchun ro‘yxatdan o‘tgan pochtangiz bilan kiring.",
     "whatIsIt": "Yangimisiz? Ro‘yxatdan o‘tish bepul va barcha demolar kodini ochadi.",
     "seeCode": "Nimalar olasiz"
+  },
+  "why": {
+    "eyebrow": "Nega Nazar",
+    "title": "Ko‘pchilik videoanalitika takliflarida yo‘q, bizda bor narsalar",
+    "subtitle": "Bozordagi odatiy amaliyot va biz qanday ishlashimiz yonma-yon. Har bir qatorni demolarda tekshirishingiz mumkin.",
+    "colTopic": "Nima",
+    "colUs": "Nazar Vision",
+    "colThem": "Odatiy taklif",
+    "note": "Videoanalitika bozoridagi odatiy amaliyot bilan solishtirilgan, biror bitta kompaniya bilan emas.",
+    "ctaPilot": "Ikki haftalik pilot qanday o‘tadi",
+    "ctaDemos": "Demolarni sinash",
+    "ctaPilotPlan": "Pilotning kunma-kun rejasi",
+    "rows": [
+      {
+        "topic": "Sinab ko‘rish",
+        "us": "Brauzeringizda 24 ta jonli demo, namunalar yoki o‘z kamerangizda, hech qanday qo‘ng‘iroqsiz.",
+        "them": "Demo faqat sotuvchilar bilan uchrashuvdan keyin, ko‘pincha yozib olingan video.",
+        "mark": "no"
+      },
+      {
+        "topic": "Videongiz",
+        "us": "Demolar qurilmangizda ishlaydi. Biz quradigan tizimlar o‘z serveringiz yoki edge-kompyuteringizda ishlaydi.",
+        "them": "Video ko‘pincha yetkazib beruvchining bulutiga yuboriladi.",
+        "mark": "partly"
+      },
+      {
+        "topic": "Narx",
+        "us": "Loyiha uchun qat’iy smeta. Har bir kamera uchun tugamaydigan to‘lov yo‘q.",
+        "them": "Foydalanayotgan vaqtingizcha har bir kamera uchun oylik obuna.",
+        "mark": "no"
+      },
+      {
+        "topic": "Egalik",
+        "us": "Manba kodi va o‘qitilgan model sizniki, xohlagan paytda ketishingiz mumkin.",
+        "them": "Tizim faqat ularning platformasi ichida ishlaydi.",
+        "mark": "no"
+      },
+      {
+        "topic": "Litsenziyalar",
+        "us": "Faqat tijoriy foydalanishga ruxsat beruvchi modellar (Apache-2.0, MIT). Litsenziya har bir demoda ko‘rsatilgan.",
+        "them": "Mashhur detektorlar AGPL litsenziyasida: yopiq mahsulot uchun pullik litsenziya kerak, bu ko‘pincha unutiladi.",
+        "mark": "partly"
+      },
+      {
+        "topic": "Yolg‘on signallar",
+        "us": "Signal bir nechta kadr bo‘yicha tasdiqlanadi, aniqlik esa joriy etishga to‘lashdan oldin sizning videongizda o‘lchanadi.",
+        "them": "Begona ma’lumotlarda o‘lchangan «99% aniqlik» va’dalari.",
+        "mark": "partly"
+      },
+      {
+        "topic": "Til va ogohlantirishlar",
+        "us": "O‘zbek, rus va ingliz tillari. Ogohlantirishlar Telegramda, CSV hisobotlarda yoki to‘g‘ridan-to‘g‘ri 1C / ERP ga.",
+        "them": "Ko‘pincha faqat rus yoki ingliz tilida, ogohlantirishlar esa faqat ularning ilovasida.",
+        "mark": "partly"
+      }
+    ]
+  },
+  "pilot": {
+    "eyebrow": "Pilot",
+    "title": "O‘z kameralaringizda ikki haftalik pilot",
+    "subtitle": "Bitta savol, sizning videongiz va oxirida aniq «ha» yoki «yo‘q». Tayyor modellar bajaradigan vazifalar ikki haftaga sig‘adi, maxsus nuqson modellari to‘rt haftagacha.",
+    "planTitle": "Kunma-kun",
+    "planSubtitle": "Sanash, zonalar, himoya vositalari, davlat raqamlari, olov va tutun, yiqilish yoki qoldirilgan buyumlar uchun standart pilot.",
+    "facts": [
+      "Jamoangizdan jami taxminan ikki soat vaqt",
+      "Mavjud IP-kameralaringiz (RTSP) yoki yozib olingan videolar bilan ishlaydi",
+      "Video obyektingizda yoki biz joyida qoldiradigan kichik kompyuterda qoladi",
+      "Pilotdan oldingi imkoniyat tekshiruvi bepul"
+    ],
+    "cta": "Pilot so‘rash",
+    "days": [
+      {
+        "when": "1-kun",
+        "title": "Boshlanish va talablar varag‘i",
+        "text": "Bitta savol, kamera, nima hodisa hisoblanishi hamda «o‘tdi» va «to‘xtatish» chegaralarini yozma kelishib olamiz."
+      },
+      {
+        "when": "2–3-kunlar",
+        "title": "Video",
+        "text": "Kameralarga kirish berasiz yoki yozuvlarni yuborasiz: taxminan bir soatlik oddiy ish, gavjum vaqtlar bilan."
+      },
+      {
+        "when": "4–5-kunlar",
+        "title": "Test to‘plami",
+        "text": "Namunani belgilaymiz va har qanday sozlashdan oldin chetga qo‘yamiz, shunda natijani moslab bo‘lmaydi."
+      },
+      {
+        "when": "6–8-kunlar",
+        "title": "Sozlash va jonli ishga tushirish",
+        "text": "Zonalar, chegaralar va ogohlantirish qoidalari obyektingizga moslanadi. Tizim jonli ishlaydi va siz tanlagan Telegram chatiga ogohlantirish yuboradi."
+      },
+      {
+        "when": "9-kun",
+        "title": "Natijalar",
+        "text": "Muzlatilgan test to‘plamidagi va hozirgi jarayoningizga nisbatan aniqlik, har bir o‘tkazib yuborilgan va yolg‘on signal bilan."
+      },
+      {
+        "when": "10-kun",
+        "title": "Qaror",
+        "text": "Qisqa uchrashuv va sizda qoladigan xulosa: joriy etish, rejani o‘zgartirish yoki to‘xtatish. Uchalasi ham yaxshi natija."
+      }
+    ],
+    "fitTitle": "Sizdan nima kerak",
+    "fitSubtitle": "Ko‘pchilik pilotlar uchun faqat kameraga kirish va jarayonni biladigan bitta odam kerak. Bu vazifalar tayyor modellarda ishlaydi:",
+    "whyTitle": "Nega pilotni biz bilan"
+  },
+  "privacy": {
+    "eyebrow": "Maxfiylik",
+    "title": "Maxfiylik siyosati",
+    "subtitle": "Nimani to‘playmiz, nima uchun, qayerda saqlanadi va qanday o‘chiriladi.",
+    "updated": "Yangilangan: 2026-yil 26-noyabr",
+    "sections": [
+      {
+        "title": "Qisqacha",
+        "items": [
+          "Demolar to‘liq brauzeringizda ishlaydi. Demoda foydalangan rasm, video va veb-kamera tasvirlaringiz qurilmangizdan chiqmaydi.",
+          "Tashriflarni cookie-siz hisoblaymiz va IP-manzillarni hech qachon saqlamaymiz.",
+          "Bepul kod uchun ro‘yxatdan o‘tsangiz, kirib, uni yuklab olishingiz uchun ism, email va kompaniyangizni saqlaymiz. Hisobni istalgan vaqtda o‘chirishingiz mumkin."
+        ]
+      },
+      {
+        "title": "Nimani to‘playmiz",
+        "items": [
+          "Hisob (faqat ro‘yxatdan o‘tsangiz): ism, email, kompaniya, Google yoki email orqali kirganingiz, email tasdiqlangani, ro‘yxatdan o‘tish va oxirgi tashrif sanalari, kod necha marta yuklab olingani.",
+          "Aloqa formasi: sizga javob berishimiz uchun yozganlaringiz va kiritgan ma’lumotlaringiz.",
+          "Tashrif statistikasi: sahifa, til, mamlakat (xosting IP-manzil orqali aniqlaydi, biz uni saqlamaymiz), qurilma turi, sizni yuborgan sayt va qaysi demolar ishga tushirilgani. Tashrifchilar har kuni o‘zgaradigan anonim ID bo‘yicha guruhlanadi.",
+          "Suiiste’moldan himoya: takroriy kirish va xabar so‘rovlarini cheklash uchun ularni IP-manzilning qaytarib bo‘lmaydigan shifrlangan ko‘rinishi bo‘yicha sanaymiz va ikki kungacha saqlaymiz."
+        ]
+      },
+      {
+        "title": "Cookie",
+        "items": [
+          "nv_session tizimga kirganingizni saqlaydi (bir yilgacha). Faqat kirganingizda qo‘yiladi.",
+          "nv_oauth Google orqali kirishda jarayonni himoya qilish uchun o‘n daqiqa ishlatiladi.",
+          "nv_admin faqat sayt egasining panelida ishlatiladi.",
+          "Reklama yoki kuzatuv cookie-lari va uchinchi tomon analitikasi yo‘q."
+        ]
+      },
+      {
+        "title": "Ma’lumotlarni kim qayta ishlaydi",
+        "items": [
+          "Vercel — sayt xostingi.",
+          "Supabase — ma’lumotlar bazasi.",
+          "Resend — tasdiqlash kodlari va email javoblarini yuborish.",
+          "Google — faqat Google orqali kirishni tanlasangiz: ismingiz va email manzilingizni olamiz.",
+          "Demolardagi sun’iy intellekt modellari brauzeringizga Hugging Face va Google’dan yuklanadi. Ular rasmlaringizni olmaydi."
+        ]
+      },
+      {
+        "title": "Qancha saqlaymiz",
+        "items": [
+          "Hisoblar: o‘zingiz o‘chirguningizcha yoki bizdan so‘raguningizcha.",
+          "Aloqa xabarlari: yozishma tugaguncha yoki so‘rov bo‘yicha undan oldin.",
+          "Tashrif statistikasi: anonim, sayt qanday ishlatilishini tushunish uchun saqlanadi."
+        ]
+      },
+      {
+        "title": "Sizning tanlovingiz",
+        "items": [
+          "Hisobingizni «Hisob» sahifasida o‘zingiz o‘chiring: kiring va «Hisobimni o‘chirish» tugmasini bosing. Yuklab olishlar tarixi ham o‘chiriladi.",
+          "Siz haqingizdagi boshqa har qanday ma’lumotni ko‘rsatish, tuzatish yoki o‘chirishni aloqa sahifasi orqali so‘rang.",
+          "Barcha demolardan ro‘yxatdan o‘tmasdan foydalanish mumkin."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "eyebrow": "Shartlar",
+    "title": "Foydalanish shartlari",
+    "subtitle": "Demolar, bepul kod va hisobingizdan foydalanish qoidalari.",
+    "updated": "Yangilangan: 2026-yil 26-noyabr",
+    "sections": [
+      {
+        "title": "Demolar",
+        "items": [
+          "Demolar bepul va kompyuter ko‘rishi imkoniyatlarini ko‘rsatish uchun «boricha» taqdim etiladi. Bu xavfsizlik tizimi emas: odamlar yoki mulkni himoya qilishda ularga tayanmang.",
+          "Faqat huquqingiz bor rasm va videolardan foydalaning, odamlarni suratga olishdan oldin ulardan so‘rang."
+        ]
+      },
+      {
+        "title": "Bepul manba kodi",
+        "items": [
+          "Demo kodi MIT litsenziyasi bilan tarqatiladi: uni ishlatish, o‘zgartirish va unga asoslangan mahsulotlarni sotish mumkin.",
+          "Har bir sun’iy intellekt modelining o‘z litsenziyasi bor, u demo sahifasida ko‘rsatilgan. Barcha modellar tijoriy foydalanishga ruxsat beradi.",
+          "Namuna videolar Pexels’dan, mashina rasmlari Wikimedia Commons’dan (CC BY-SA 4.0). Mualliflar kod bilan birga ko‘rsatilgan."
+        ]
+      },
+      {
+        "title": "Hisoblar",
+        "items": [
+          "Haqiqiy email manzildan foydalaning. Spam yoki suiiste’mol uchun ishlatilgan hisoblarni o‘chirishimiz mumkin.",
+          "Yangi ro‘yxatdan o‘tishni istalgan vaqtda yopishimiz mumkin."
+        ]
+      },
+      {
+        "title": "Loyihalar va pilotlar",
+        "items": [
+          "Pullik ishlar (pilotlar, joriy etish va qo‘llab-quvvatlash) alohida yozma shartnoma bilan rasmiylashtiriladi va u ushbu shartlardan ustun turadi."
+        ]
+      },
+      {
+        "title": "Javobgarlik",
+        "items": [
+          "Sayt va demolar ishlashi uchun harakat qilamiz, lekin buni har doim kafolatlay olmaymiz. Qonun ruxsat bergan doirada bepul demolar yoki koddan foydalanishdan kelgan zararlar uchun javobgar emasmiz."
+        ]
+      },
+      {
+        "title": "O‘zgarishlar",
+        "items": [
+          "Ushbu shartlarni yangilashimiz mumkin. Yuqoridagi sana joriy versiyani ko‘rsatadi."
+        ]
+      }
+    ]
   }
 }

@@ -43,6 +43,7 @@ export const catalog = {
     "deepinsight/insightface",
     "ageitgey/face_recognition",
     "serengil/deepface",
+    "taufeeque9/HumanFallDetection",
   ],
   ocr: [
     "PaddlePaddle/PaddleOCR",
@@ -56,6 +57,7 @@ export const catalog = {
     "zxing-cpp/zxing-cpp",
     "ankandrew/fast-plate-ocr",
     "openalpr/openalpr",
+    "RapidAI/RapidOCR",
   ],
   tracking: [
     "roboflow/supervision",
@@ -70,6 +72,7 @@ export const catalog = {
     "voxel51/fiftyone",
     "albumentations-team/albumentations",
     "roboflow/notebooks",
+    "gaia-solutions-on-demand/DFireDataset",
   ],
   deploy: [
     "NVIDIA/TensorRT",
@@ -78,6 +81,8 @@ export const catalog = {
     "tensorflow/tfjs",
     "huggingface/transformers.js",
     "opencv/opencv_zoo",
+    "blakeblackshear/frigate",
+    "NVIDIA-AI-Blueprints/video-search-and-summarization",
   ],
   image: [
     "opencv/opencv",

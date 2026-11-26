@@ -4,6 +4,7 @@ import {
   ScanLine, Users, ScanFace, PersonStanding, Hand, ScanText, ScanBarcode, Eraser,
   SearchCheck, Layers, Radar, Cpu, Tag, LifeBuoy, Gauge, Bot, Shirt,
   Siren, HardHat, Eye, MousePointerClick, Flame, Timer, ZoomIn, MessageSquareText,
+  CarFront, FlameKindling, HeartPulse, TextSearch, Luggage,
 } from "lucide-react";
 
 /** Public sample images (CORS-enabled) from the Transformers.js docs dataset on Hugging Face. */
@@ -18,6 +19,10 @@ export const samples = {
   bread: `${HF}/bread.png`,
   house: `${HF}/house.jpg`,
   cats: `${HF}/cats.jpg`,
+  /** Uzbek cars and plates from Wikimedia Commons (CC BY-SA 4.0; credits in public/samples/CREDITS.md). */
+  carGreen: "/samples/car-vaz2106.jpg",
+  carRed: "/samples/car-vaz2102.jpg",
+  plateClose: "/samples/plate-01.jpg",
 } as const;
 
 /** Sample clips served from /public/videos (free Pexels licence; sources in public/videos/CREDITS.md). */
@@ -33,6 +38,14 @@ export const videos = {
   driver: "/videos/driver.mp4",
   tired: "/videos/tired.mp4",
   hardhat: "/videos/hardhat.mp4",
+  fireField: "/videos/fire-field.mp4",
+  fireSmoke: "/videos/fire-smoke.mp4",
+  sunset: "/videos/sunset.mp4",
+  personDown: "/videos/person-down.mp4",
+  manLying: "/videos/man-lying.mp4",
+  suitcasePlatform: "/videos/suitcase-platform.mp4",
+  luggageFloor: "/videos/luggage-floor.mp4",
+  luggageOwner: "/videos/luggage-owner.mp4",
 } as const;
 
 export const demoSlugs = [
@@ -55,6 +68,11 @@ export const demoSlugs = [
   "vehicle-speed",
   "image-enhance",
   "scene-describe",
+  "plate-reader",
+  "fire-smoke",
+  "fall-detection",
+  "video-search",
+  "left-behind",
 ] as const;
 export type DemoSlug = (typeof demoSlugs)[number];
 
@@ -67,6 +85,8 @@ export type DemoMeta = {
   webcam: boolean;
   /** Repos in the library this demo is built on (owner/name). */
   repos: string[];
+  /** Licence of the model weights (all allow commercial use). */
+  licence: string;
   /** What the demo is for, used to filter the Demo Lab. */
   group: DemoGroup;
   /** Cover image for cards: a still from one of its samples. */
@@ -81,28 +101,34 @@ export const posterFor = (videoUrl: string) => videoUrl.replace("/videos/", "/po
 
 /** Small hosted sample images that are light enough to use as thumbnails. */
 const lightSamples = new Set<string>([samples.street, samples.football, samples.manCar, samples.invoice, samples.house]);
-export const thumbFor = (url: string) => (url.endsWith(".mp4") ? posterFor(url) : lightSamples.has(url) ? url : undefined);
+export const thumbFor = (url: string) =>
+  url.endsWith(".mp4") ? posterFor(url) : lightSamples.has(url) || url.startsWith("/samples/") ? url : undefined;
 
 export const demos: DemoMeta[] = [
-  { slug: "object-detection", icon: ScanLine, engine: "MediaPipe · Transformers.js", model: "EfficientDet-Lite0 / RT-DETR R18 (COCO)", size: "7–22 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "lyuwenyu/RT-DETR"], group: "counting", cover: "/posters/traffic.jpg" },
-  { slug: "safety-zone", icon: Siren, engine: "MediaPipe", model: "EfficientDet-Lite0 + zone logic", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "safety", cover: "/posters/warehouse.jpg" },
-  { slug: "ppe-check", icon: HardHat, engine: "Transformers.js", model: "OWLv2 B/16 (open-vocabulary)", size: "163 MB", webcam: false, repos: ["huggingface/transformers.js", "google-research/scenic"], group: "safety", cover: "/posters/hardhat.jpg" },
-  { slug: "people-counter", icon: Users, engine: "MediaPipe", model: "EfficientDet-Lite0 + line-crossing tracker", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/crowd.jpg" },
-  { slug: "face-anonymizer", icon: ScanFace, engine: "MediaPipe", model: "BlazeFace short-range", size: "0.2 MB", webcam: true, repos: ["google-ai-edge/mediapipe"], group: "privacy", cover: "/posters/workers.jpg" },
-  { slug: "pose-estimation", icon: PersonStanding, engine: "MediaPipe", model: "Pose Landmarker Lite", size: "6 MB", webcam: true, repos: ["google-ai-edge/mediapipe"], group: "safety", cover: "/posters/squat.jpg" },
-  { slug: "hand-gestures", icon: Hand, engine: "MediaPipe", model: "Gesture Recognizer", size: "8 MB", webcam: true, repos: ["google-ai-edge/mediapipe"], group: "privacy", cover: "/posters/hands.jpg" },
-  { slug: "ocr", icon: ScanText, engine: "Tesseract.js", model: "Tesseract LSTM (eng · uzb · rus)", size: "~10 MB", webcam: false, repos: ["naptha/tesseract.js", "tesseract-ocr/tesseract"], group: "documents", cover: samples.invoice },
-  { slug: "barcode-scanner", icon: ScanBarcode, engine: "zxing-wasm", model: "ZXing-C++", size: "1 MB", webcam: true, repos: ["zxing-cpp/zxing-cpp"], group: "documents" },
-  { slug: "background-removal", icon: Eraser, engine: "Transformers.js", model: "MODNet / BiRefNet-lite", size: "6–109 MB", webcam: false, repos: ["huggingface/transformers.js", "ZhengPeng7/BiRefNet"], group: "quality", cover: samples.manCar },
-  { slug: "defect-check", icon: SearchCheck, engine: "Transformers.js", model: "MobileCLIP-S0 (zero-shot)", size: "51 MB", webcam: false, repos: ["huggingface/transformers.js", "mlfoundations/open_clip"], group: "quality", cover: "/posters/conveyor-b.jpg" },
-  { slug: "depth-estimation", icon: Layers, engine: "Transformers.js", model: "Depth Anything V2 Small", size: "25 MB", webcam: false, repos: ["huggingface/transformers.js", "DepthAnything/Depth-Anything-V2"], group: "quality", cover: samples.house },
-  { slug: "fatigue-monitor", icon: Eye, engine: "MediaPipe", model: "Face Landmarker + blendshapes", size: "4 MB", webcam: true, repos: ["google-ai-edge/mediapipe"], group: "safety", cover: "/posters/driver.jpg" },
-  { slug: "segment-anything", icon: MousePointerClick, engine: "Transformers.js", model: "SlimSAM-77 (Segment Anything)", size: "14 MB", webcam: false, repos: ["huggingface/transformers.js", "facebookresearch/segment-anything"], group: "quality", cover: "/posters/conveyor.jpg" },
-  { slug: "movement-heatmap", icon: Flame, engine: "MediaPipe", model: "EfficientDet-Lite0 + heatmap", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/crowd.jpg" },
-  { slug: "queue-dwell", icon: Timer, engine: "MediaPipe", model: "EfficientDet-Lite0 + tracker", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/workers.jpg" },
-  { slug: "vehicle-speed", icon: Gauge, engine: "MediaPipe", model: "EfficientDet-Lite0 + two-line speed trap", size: "7 MB", webcam: true, repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/traffic.jpg" },
-  { slug: "image-enhance", icon: ZoomIn, engine: "Transformers.js", model: "Swin2SR ×2 (Apache-2.0)", size: "21 MB", webcam: false, repos: ["huggingface/transformers.js", "mv-lab/swin2sr"], group: "quality", cover: "/posters/hardhat.jpg" },
-  { slug: "scene-describe", icon: MessageSquareText, engine: "Transformers.js", model: "Florence-2 base (MIT)", size: "270 MB", webcam: false, repos: ["huggingface/transformers.js"], group: "understanding", cover: "/posters/warehouse.jpg" },
+  { slug: "object-detection", icon: ScanLine, engine: "MediaPipe · Transformers.js", model: "EfficientDet-Lite0 / RT-DETR R18 (COCO)", size: "7–22 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "lyuwenyu/RT-DETR"], group: "counting", cover: "/posters/traffic.jpg" },
+  { slug: "safety-zone", icon: Siren, engine: "MediaPipe", model: "EfficientDet-Lite0 + zone logic", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "safety", cover: "/posters/warehouse.jpg" },
+  { slug: "ppe-check", icon: HardHat, engine: "Transformers.js", model: "OWLv2 B/16 (open-vocabulary)", size: "163 MB", webcam: false, licence: "Apache-2.0", repos: ["huggingface/transformers.js", "google-research/scenic"], group: "safety", cover: "/posters/hardhat.jpg" },
+  { slug: "people-counter", icon: Users, engine: "MediaPipe", model: "EfficientDet-Lite0 + line-crossing tracker", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/crowd.jpg" },
+  { slug: "face-anonymizer", icon: ScanFace, engine: "MediaPipe", model: "BlazeFace short-range", size: "0.2 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe"], group: "privacy", cover: "/posters/workers.jpg" },
+  { slug: "pose-estimation", icon: PersonStanding, engine: "MediaPipe", model: "Pose Landmarker Lite", size: "6 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe"], group: "safety", cover: "/posters/squat.jpg" },
+  { slug: "hand-gestures", icon: Hand, engine: "MediaPipe", model: "Gesture Recognizer", size: "8 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe"], group: "privacy", cover: "/posters/hands.jpg" },
+  { slug: "ocr", icon: ScanText, engine: "Tesseract.js", model: "Tesseract LSTM (eng · uzb · rus)", size: "~10 MB", webcam: false, licence: "Apache-2.0", repos: ["naptha/tesseract.js", "tesseract-ocr/tesseract"], group: "documents", cover: samples.invoice },
+  { slug: "barcode-scanner", icon: ScanBarcode, engine: "zxing-wasm", model: "ZXing-C++", size: "1 MB", webcam: true, licence: "Apache-2.0", repos: ["zxing-cpp/zxing-cpp"], group: "documents" },
+  { slug: "background-removal", icon: Eraser, engine: "Transformers.js", model: "MODNet / BiRefNet-lite", size: "6–109 MB", webcam: false, licence: "Apache-2.0 / MIT", repos: ["huggingface/transformers.js", "ZhengPeng7/BiRefNet"], group: "quality", cover: samples.manCar },
+  { slug: "defect-check", icon: SearchCheck, engine: "Transformers.js", model: "CLIP ViT-B/32 (zero-shot, MIT)", size: "153 MB", webcam: false, licence: "MIT", repos: ["huggingface/transformers.js", "openai/CLIP"], group: "quality", cover: "/posters/conveyor-b.jpg" },
+  { slug: "depth-estimation", icon: Layers, engine: "Transformers.js", model: "Depth Anything V2 Small", size: "25 MB", webcam: false, licence: "Apache-2.0", repos: ["huggingface/transformers.js", "DepthAnything/Depth-Anything-V2"], group: "quality", cover: samples.house },
+  { slug: "fatigue-monitor", icon: Eye, engine: "MediaPipe", model: "Face Landmarker + blendshapes", size: "4 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe"], group: "safety", cover: "/posters/driver.jpg" },
+  { slug: "segment-anything", icon: MousePointerClick, engine: "Transformers.js", model: "SlimSAM-77 (Segment Anything)", size: "14 MB", webcam: false, licence: "Apache-2.0", repos: ["huggingface/transformers.js", "facebookresearch/segment-anything"], group: "quality", cover: "/posters/conveyor.jpg" },
+  { slug: "movement-heatmap", icon: Flame, engine: "MediaPipe", model: "EfficientDet-Lite0 + heatmap", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/crowd.jpg" },
+  { slug: "queue-dwell", icon: Timer, engine: "MediaPipe", model: "EfficientDet-Lite0 + tracker", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/workers.jpg" },
+  { slug: "vehicle-speed", icon: Gauge, engine: "MediaPipe", model: "EfficientDet-Lite0 + two-line speed trap", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "counting", cover: "/posters/traffic.jpg" },
+  { slug: "image-enhance", icon: ZoomIn, engine: "Transformers.js", model: "Swin2SR ×2 (Apache-2.0)", size: "21 MB", webcam: false, licence: "Apache-2.0", repos: ["huggingface/transformers.js", "mv-lab/swin2sr"], group: "quality", cover: "/posters/hardhat.jpg" },
+  { slug: "scene-describe", icon: MessageSquareText, engine: "Transformers.js", model: "Florence-2 base (MIT)", size: "270 MB", webcam: false, licence: "MIT", repos: ["huggingface/transformers.js"], group: "understanding", cover: "/posters/warehouse.jpg" },
+  { slug: "plate-reader", icon: CarFront, engine: "Transformers.js", model: "Florence-2 base + Uzbek plate rules", size: "270 MB", webcam: false, licence: "MIT", repos: ["huggingface/transformers.js", "PaddlePaddle/PaddleOCR"], group: "documents", cover: "/samples/car-vaz2106.jpg" },
+  { slug: "fire-smoke", icon: FlameKindling, engine: "Transformers.js", model: "CLIP ViT-B/32 + multi-frame check", size: "153 MB", webcam: true, licence: "MIT", repos: ["huggingface/transformers.js", "openai/CLIP", "gaia-solutions-on-demand/DFireDataset"], group: "safety", cover: "/posters/fire-smoke.jpg" },
+  { slug: "fall-detection", icon: HeartPulse, engine: "MediaPipe", model: "Pose Landmarker Lite + fall rules", size: "6 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "taufeeque9/HumanFallDetection"], group: "safety", cover: "/posters/person-down.jpg" },
+  { slug: "video-search", icon: TextSearch, engine: "Transformers.js", model: "CLIP ViT-B/32 (text-to-frame search)", size: "153 MB", webcam: false, licence: "MIT", repos: ["huggingface/transformers.js", "openai/CLIP", "NVIDIA-AI-Blueprints/video-search-and-summarization"], group: "understanding", cover: "/posters/traffic.jpg" },
+  { slug: "left-behind", icon: Luggage, engine: "MediaPipe", model: "EfficientDet-Lite0 + tracker", size: "7 MB", webcam: true, licence: "Apache-2.0", repos: ["google-ai-edge/mediapipe", "roboflow/supervision"], group: "safety", cover: "/posters/luggage-floor.jpg" },
 ];
 
 export const getDemo = (slug: string) => demos.find((d) => d.slug === slug);
@@ -114,16 +140,16 @@ export const industryIds = [
 export type IndustryId = (typeof industryIds)[number];
 
 export const industries: { id: IndustryId; icon: LucideIcon; demos: DemoSlug[] }[] = [
-  { id: "manufacturing", icon: Factory, demos: ["defect-check", "safety-zone", "ppe-check", "people-counter", "barcode-scanner"] },
+  { id: "manufacturing", icon: Factory, demos: ["defect-check", "safety-zone", "ppe-check", "fire-smoke", "people-counter", "barcode-scanner"] },
   { id: "textile", icon: Shirt, demos: ["defect-check", "segment-anything", "ocr", "barcode-scanner"] },
   { id: "robotics", icon: Bot, demos: ["segment-anything", "depth-estimation", "object-detection", "pose-estimation", "hand-gestures"] },
-  { id: "logistics", icon: Warehouse, demos: ["safety-zone", "movement-heatmap", "barcode-scanner", "object-detection", "fatigue-monitor"] },
-  { id: "retail", icon: ShoppingBag, demos: ["queue-dwell", "movement-heatmap", "people-counter", "scene-describe", "face-anonymizer"] },
-  { id: "security", icon: ShieldCheck, demos: ["safety-zone", "image-enhance", "face-anonymizer", "scene-describe", "object-detection"] },
-  { id: "traffic", icon: Car, demos: ["vehicle-speed", "people-counter", "object-detection", "fatigue-monitor", "image-enhance"] },
+  { id: "logistics", icon: Warehouse, demos: ["safety-zone", "fire-smoke", "plate-reader", "movement-heatmap", "barcode-scanner", "object-detection", "fatigue-monitor"] },
+  { id: "retail", icon: ShoppingBag, demos: ["queue-dwell", "movement-heatmap", "people-counter", "video-search", "scene-describe", "face-anonymizer"] },
+  { id: "security", icon: ShieldCheck, demos: ["left-behind", "video-search", "plate-reader", "safety-zone", "fire-smoke", "image-enhance", "face-anonymizer"] },
+  { id: "traffic", icon: Car, demos: ["plate-reader", "vehicle-speed", "people-counter", "video-search", "fatigue-monitor", "image-enhance"] },
   { id: "documents", icon: FileText, demos: ["ocr", "scene-describe", "barcode-scanner"] },
   { id: "agriculture", icon: Wheat, demos: ["defect-check", "object-detection", "background-removal"] },
-  { id: "healthcare", icon: Stethoscope, demos: ["queue-dwell", "people-counter", "face-anonymizer", "ocr"] },
+  { id: "healthcare", icon: Stethoscope, demos: ["fall-detection", "queue-dwell", "people-counter", "face-anonymizer", "ocr"] },
 ];
 
 export const serviceIds = ["discovery", "models", "robotics", "labeling", "integration", "support"] as const;
@@ -142,7 +168,7 @@ export const serviceDemos: Record<(typeof serviceIds)[number], DemoSlug[]> = {
   models: ["ppe-check", "object-detection", "ocr"],
   robotics: ["segment-anything", "depth-estimation", "pose-estimation"],
   labeling: ["segment-anything", "background-removal"],
-  integration: ["safety-zone", "people-counter", "fatigue-monitor"],
+  integration: ["safety-zone", "fire-smoke", "people-counter", "fatigue-monitor"],
   support: [],
 };
 
@@ -178,11 +204,11 @@ export const useCases: UseCase[] = [
   { id: "perimeter", industry: "security", demo: "safety-zone", effort: 1 },
   { id: "privacy", industry: "security", demo: "face-anonymizer", effort: 1 },
   { id: "vehicleCount", industry: "traffic", demo: "people-counter", effort: 1 },
-  { id: "plates", industry: "traffic", demo: "ocr", effort: 2 },
+  { id: "plates", industry: "traffic", demo: "plate-reader", effort: 2 },
   { id: "driverFatigue", industry: "traffic", demo: "fatigue-monitor", effort: 2 },
   { id: "waybills", industry: "documents", demo: "ocr", effort: 1 },
   { id: "grading", industry: "agriculture", demo: "defect-check", effort: 2 },
   { id: "livestock", industry: "agriculture", demo: "object-detection", effort: 2 },
   { id: "bakery", industry: "agriculture", demo: "defect-check", effort: 1 },
-  { id: "falls", industry: "healthcare", demo: "pose-estimation", effort: 2 },
+  { id: "falls", industry: "healthcare", demo: "fall-detection", effort: 2 },
 ];

@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-26",
   "repos": [
     {
       "name": "ultralytics/ultralytics",
       "url": "https://github.com/ultralytics/ultralytics",
-      "stars": 63711,
+      "stars": 63773,
       "license": "AGPL-3.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Ultralytics YOLO27, YOLO26, YOLO11, YOLOv8 — object detection, instance segmentation, semantic segmentation, image classification, pose estimation, object tracking",
       "task": "detection"
@@ -14,7 +14,7 @@
     {
       "name": "ultralytics/yolov5",
       "url": "https://github.com/ultralytics/yolov5",
-      "stars": 58304,
+      "stars": 58314,
       "license": "AGPL-3.0",
       "pushedAt": "2026-11-23",
       "archived": false,
@@ -24,7 +24,7 @@
     {
       "name": "WongKinYiu/yolov9",
       "url": "https://github.com/WongKinYiu/yolov9",
-      "stars": 9574,
+      "stars": 9572,
       "license": "GPL-3.0",
       "pushedAt": "2024-08-09",
       "archived": false,
@@ -44,9 +44,9 @@
     {
       "name": "roboflow/rf-detr",
       "url": "https://github.com/roboflow/rf-detr",
-      "stars": 10154,
+      "stars": 10175,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "RF-DETR is a real-time object detection and segmentation model architecture developed by Roboflow, SOTA on COCO, designed for fine-tuning. [ICLR 2026]",
       "task": "detection"
@@ -54,7 +54,7 @@
     {
       "name": "lyuwenyu/RT-DETR",
       "url": "https://github.com/lyuwenyu/RT-DETR",
-      "stars": 5686,
+      "stars": 5691,
       "license": "Apache-2.0",
       "pushedAt": "2026-10-09",
       "archived": false,
@@ -64,7 +64,7 @@
     {
       "name": "Peterande/D-FINE",
       "url": "https://github.com/Peterande/D-FINE",
-      "stars": 3425,
+      "stars": 3428,
       "license": "Apache-2.0",
       "pushedAt": "2026-10-05",
       "archived": false,
@@ -74,7 +74,7 @@
     {
       "name": "Megvii-BaseDetection/YOLOX",
       "url": "https://github.com/Megvii-BaseDetection/YOLOX",
-      "stars": 10720,
+      "stars": 10722,
       "license": "Apache-2.0",
       "pushedAt": "2025-06-08",
       "archived": false,
@@ -84,7 +84,7 @@
     {
       "name": "facebookresearch/detectron2",
       "url": "https://github.com/facebookresearch/detectron2",
-      "stars": 35007,
+      "stars": 35013,
       "license": "Apache-2.0",
       "pushedAt": "2026-10-27",
       "archived": false,
@@ -94,7 +94,7 @@
     {
       "name": "open-mmlab/mmdetection",
       "url": "https://github.com/open-mmlab/mmdetection",
-      "stars": 33053,
+      "stars": 33054,
       "license": "Apache-2.0",
       "pushedAt": "2024-08-21",
       "archived": false,
@@ -104,7 +104,7 @@
     {
       "name": "PaddlePaddle/PaddleDetection",
       "url": "https://github.com/PaddlePaddle/PaddleDetection",
-      "stars": 14487,
+      "stars": 14494,
       "license": "Apache-2.0",
       "pushedAt": "2026-05-28",
       "archived": false,
@@ -114,7 +114,7 @@
     {
       "name": "IDEA-Research/GroundingDINO",
       "url": "https://github.com/IDEA-Research/GroundingDINO",
-      "stars": 10771,
+      "stars": 10776,
       "license": "Apache-2.0",
       "pushedAt": "2024-08-12",
       "archived": false,
@@ -124,9 +124,9 @@
     {
       "name": "open-edge-platform/anomalib",
       "url": "https://github.com/open-edge-platform/anomalib",
-      "stars": 6422,
+      "stars": 6434,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "An anomaly detection library comprising state-of-the-art algorithms and features such as experiment management, hyper-parameter optimization, and edge inference.",
       "task": "detection"
@@ -134,7 +134,7 @@
     {
       "name": "facebookresearch/segment-anything",
       "url": "https://github.com/facebookresearch/segment-anything",
-      "stars": 55176,
+      "stars": 55183,
       "license": "Apache-2.0",
       "pushedAt": "2024-09-18",
       "archived": false,
@@ -144,7 +144,7 @@
     {
       "name": "facebookresearch/sam2",
       "url": "https://github.com/facebookresearch/sam2",
-      "stars": 20217,
+      "stars": 20246,
       "license": "Apache-2.0",
       "pushedAt": "2026-05-30",
       "archived": false,
@@ -154,7 +154,7 @@
     {
       "name": "facebookresearch/sam3",
       "url": "https://github.com/facebookresearch/sam3",
-      "stars": 12401,
+      "stars": 12414,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-17",
       "archived": false,
@@ -164,7 +164,7 @@
     {
       "name": "IDEA-Research/Grounded-Segment-Anything",
       "url": "https://github.com/IDEA-Research/Grounded-Segment-Anything",
-      "stars": 17795,
+      "stars": 17799,
       "license": "Apache-2.0",
       "pushedAt": "2024-09-05",
       "archived": false,
@@ -174,7 +174,7 @@
     {
       "name": "open-mmlab/mmsegmentation",
       "url": "https://github.com/open-mmlab/mmsegmentation",
-      "stars": 9988,
+      "stars": 9987,
       "license": "Apache-2.0",
       "pushedAt": "2024-08-13",
       "archived": false,
@@ -184,7 +184,7 @@
     {
       "name": "PaddlePaddle/PaddleSeg",
       "url": "https://github.com/PaddlePaddle/PaddleSeg",
-      "stars": 9417,
+      "stars": 9419,
       "license": "Apache-2.0",
       "pushedAt": "2026-02-05",
       "archived": false,
@@ -194,7 +194,7 @@
     {
       "name": "ZhengPeng7/BiRefNet",
       "url": "https://github.com/ZhengPeng7/BiRefNet",
-      "stars": 4449,
+      "stars": 4458,
       "license": "MIT",
       "pushedAt": "2026-10-25",
       "archived": false,
@@ -204,7 +204,7 @@
     {
       "name": "danielgatis/rembg",
       "url": "https://github.com/danielgatis/rembg",
-      "stars": 25660,
+      "stars": 25685,
       "license": "MIT",
       "pushedAt": "2026-11-24",
       "archived": false,
@@ -214,7 +214,7 @@
     {
       "name": "openai/CLIP",
       "url": "https://github.com/openai/CLIP",
-      "stars": 34654,
+      "stars": 34665,
       "license": "MIT",
       "pushedAt": "2026-03-25",
       "archived": false,
@@ -224,7 +224,7 @@
     {
       "name": "mlfoundations/open_clip",
       "url": "https://github.com/mlfoundations/open_clip",
-      "stars": 14285,
+      "stars": 14292,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-21",
       "archived": false,
@@ -234,7 +234,7 @@
     {
       "name": "facebookresearch/dinov2",
       "url": "https://github.com/facebookresearch/dinov2",
-      "stars": 13568,
+      "stars": 13570,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-05",
       "archived": false,
@@ -244,7 +244,7 @@
     {
       "name": "facebookresearch/dinov3",
       "url": "https://github.com/facebookresearch/dinov3",
-      "stars": 11802,
+      "stars": 11812,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-02",
       "archived": false,
@@ -254,7 +254,7 @@
     {
       "name": "QwenLM/Qwen3-VL",
       "url": "https://github.com/QwenLM/Qwen3-VL",
-      "stars": 20250,
+      "stars": 20264,
       "license": "Apache-2.0",
       "pushedAt": "2026-01-30",
       "archived": false,
@@ -264,7 +264,7 @@
     {
       "name": "haotian-liu/LLaVA",
       "url": "https://github.com/haotian-liu/LLaVA",
-      "stars": 25092,
+      "stars": 25093,
       "license": "Apache-2.0",
       "pushedAt": "2024-08-12",
       "archived": false,
@@ -274,7 +274,7 @@
     {
       "name": "huggingface/pytorch-image-models",
       "url": "https://github.com/huggingface/pytorch-image-models",
-      "stars": 37309,
+      "stars": 37313,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-21",
       "archived": false,
@@ -284,9 +284,9 @@
     {
       "name": "pytorch/vision",
       "url": "https://github.com/pytorch/vision",
-      "stars": 18027,
+      "stars": 18032,
       "license": "BSD-3-Clause",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Datasets, Transforms and Models specific to Computer Vision",
       "task": "foundation"
@@ -294,9 +294,9 @@
     {
       "name": "google-ai-edge/mediapipe",
       "url": "https://github.com/google-ai-edge/mediapipe",
-      "stars": 37825,
+      "stars": 37873,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Cross-platform, customizable ML solutions for live and streaming media.",
       "task": "pose-face"
@@ -304,7 +304,7 @@
     {
       "name": "CMU-Perceptual-Computing-Lab/openpose",
       "url": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
-      "stars": 34613,
+      "stars": 34619,
       "license": "NOASSERTION",
       "pushedAt": "2024-08-03",
       "archived": false,
@@ -314,7 +314,7 @@
     {
       "name": "open-mmlab/mmpose",
       "url": "https://github.com/open-mmlab/mmpose",
-      "stars": 8079,
+      "stars": 8083,
       "license": "Apache-2.0",
       "pushedAt": "2025-08-04",
       "archived": false,
@@ -324,7 +324,7 @@
     {
       "name": "deepinsight/insightface",
       "url": "https://github.com/deepinsight/insightface",
-      "stars": 30293,
+      "stars": 30309,
       "license": "NONE",
       "pushedAt": "2026-10-19",
       "archived": false,
@@ -334,7 +334,7 @@
     {
       "name": "ageitgey/face_recognition",
       "url": "https://github.com/ageitgey/face_recognition",
-      "stars": 56921,
+      "stars": 56924,
       "license": "MIT",
       "pushedAt": "2026-06-25",
       "archived": false,
@@ -344,7 +344,7 @@
     {
       "name": "serengil/deepface",
       "url": "https://github.com/serengil/deepface",
-      "stars": 23731,
+      "stars": 23740,
       "license": "MIT",
       "pushedAt": "2026-11-20",
       "archived": false,
@@ -352,9 +352,19 @@
       "task": "pose-face"
     },
     {
+      "name": "taufeeque9/HumanFallDetection",
+      "url": "https://github.com/taufeeque9/HumanFallDetection",
+      "stars": 356,
+      "license": "MIT",
+      "pushedAt": "2026-04-29",
+      "archived": false,
+      "description": "Real-time, Multi-person & Multi-camera Fall Detector in Python",
+      "task": "pose-face"
+    },
+    {
       "name": "PaddlePaddle/PaddleOCR",
       "url": "https://github.com/PaddlePaddle/PaddleOCR",
-      "stars": 93130,
+      "stars": 93303,
       "license": "Apache-2.0",
       "pushedAt": "2026-09-16",
       "archived": false,
@@ -364,7 +374,7 @@
     {
       "name": "JaidedAI/EasyOCR",
       "url": "https://github.com/JaidedAI/EasyOCR",
-      "stars": 30165,
+      "stars": 30176,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-13",
       "archived": false,
@@ -374,9 +384,9 @@
     {
       "name": "tesseract-ocr/tesseract",
       "url": "https://github.com/tesseract-ocr/tesseract",
-      "stars": 77643,
+      "stars": 77673,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Tesseract Open Source OCR Engine (main repository)",
       "task": "ocr"
@@ -384,7 +394,7 @@
     {
       "name": "naptha/tesseract.js",
       "url": "https://github.com/naptha/tesseract.js",
-      "stars": 38853,
+      "stars": 38855,
       "license": "Apache-2.0",
       "pushedAt": "2026-05-17",
       "archived": false,
@@ -394,7 +404,7 @@
     {
       "name": "mindee/doctr",
       "url": "https://github.com/mindee/doctr",
-      "stars": 6442,
+      "stars": 6443,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-24",
       "archived": false,
@@ -404,9 +414,9 @@
     {
       "name": "opendatalab/MinerU",
       "url": "https://github.com/opendatalab/MinerU",
-      "stars": 84277,
+      "stars": 84375,
       "license": "NOASSERTION",
-      "pushedAt": "2026-11-22",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
       "task": "ocr"
@@ -414,9 +424,9 @@
     {
       "name": "docling-project/docling",
       "url": "https://github.com/docling-project/docling",
-      "stars": 70969,
+      "stars": 71101,
       "license": "MIT",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Get your documents ready for gen AI",
       "task": "ocr"
@@ -424,7 +434,7 @@
     {
       "name": "microsoft/table-transformer",
       "url": "https://github.com/microsoft/table-transformer",
-      "stars": 2946,
+      "stars": 2947,
       "license": "MIT",
       "pushedAt": "2024-06-24",
       "archived": true,
@@ -434,9 +444,9 @@
     {
       "name": "zxing-cpp/zxing-cpp",
       "url": "https://github.com/zxing-cpp/zxing-cpp",
-      "stars": 2112,
+      "stars": 2118,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-23",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "C++ port of ZXing",
       "task": "ocr"
@@ -444,7 +454,7 @@
     {
       "name": "ankandrew/fast-plate-ocr",
       "url": "https://github.com/ankandrew/fast-plate-ocr",
-      "stars": 817,
+      "stars": 819,
       "license": "MIT",
       "pushedAt": "2026-11-17",
       "archived": false,
@@ -454,7 +464,7 @@
     {
       "name": "openalpr/openalpr",
       "url": "https://github.com/openalpr/openalpr",
-      "stars": 11490,
+      "stars": 11493,
       "license": "AGPL-3.0",
       "pushedAt": "2024-01-11",
       "archived": false,
@@ -462,11 +472,21 @@
       "task": "ocr"
     },
     {
+      "name": "RapidAI/RapidOCR",
+      "url": "https://github.com/RapidAI/RapidOCR",
+      "stars": 8637,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-26",
+      "archived": false,
+      "description": "📄 Awesome OCR multiple programing languages toolkits based on ONNX Runtime, OpenVINO, MNN, PaddlePaddle, TensorRT and PyTorch.",
+      "task": "ocr"
+    },
+    {
       "name": "roboflow/supervision",
       "url": "https://github.com/roboflow/supervision",
-      "stars": 51706,
+      "stars": 51732,
       "license": "MIT",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "We write your reusable computer vision tools. 💜",
       "task": "tracking"
@@ -474,9 +494,9 @@
     {
       "name": "roboflow/inference",
       "url": "https://github.com/roboflow/inference",
-      "stars": 2500,
+      "stars": 2501,
       "license": "NOASSERTION",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Turn any computer or edge device into a command center for your computer vision projects.",
       "task": "tracking"
@@ -484,9 +504,9 @@
     {
       "name": "roboflow/trackers",
       "url": "https://github.com/roboflow/trackers",
-      "stars": 4020,
+      "stars": 4022,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-23",
+      "pushedAt": "2026-11-25",
       "archived": false,
       "description": "Trackers gives you clean, modular re-implementations of leading multi-object tracking algorithms released under the permissive Apache 2.0 license. You combine them with any detection model you already use.",
       "task": "tracking"
@@ -494,7 +514,7 @@
     {
       "name": "mikel-brostrom/boxmot",
       "url": "https://github.com/mikel-brostrom/boxmot",
-      "stars": 8329,
+      "stars": 8330,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-20",
       "archived": false,
@@ -504,7 +524,7 @@
     {
       "name": "FoundationVision/ByteTrack",
       "url": "https://github.com/FoundationVision/ByteTrack",
-      "stars": 6828,
+      "stars": 6833,
       "license": "MIT",
       "pushedAt": "2024-06-19",
       "archived": false,
@@ -514,9 +534,9 @@
     {
       "name": "cvat-ai/cvat",
       "url": "https://github.com/cvat-ai/cvat",
-      "stars": 17200,
+      "stars": 17211,
       "license": "MIT",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "CVAT is a leading data annotation platform for image, video, audio, and 3D datasets. It offers open-source, cloud, and enterprise products, as well as labeling services, with AI-assisted labeling, quality assurance, team collaboration, analytics, and developer APIs.",
       "task": "data"
@@ -524,9 +544,9 @@
     {
       "name": "HumanSignal/label-studio",
       "url": "https://github.com/HumanSignal/label-studio",
-      "stars": 28754,
+      "stars": 28773,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
       "task": "data"
@@ -534,9 +554,9 @@
     {
       "name": "voxel51/fiftyone",
       "url": "https://github.com/voxel51/fiftyone",
-      "stars": 11336,
+      "stars": 11341,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Refine high-quality datasets and visual AI models",
       "task": "data"
@@ -544,7 +564,7 @@
     {
       "name": "albumentations-team/albumentations",
       "url": "https://github.com/albumentations-team/albumentations",
-      "stars": 15294,
+      "stars": 15295,
       "license": "MIT",
       "pushedAt": "2025-06-25",
       "archived": true,
@@ -562,9 +582,19 @@
       "task": "data"
     },
     {
+      "name": "gaia-solutions-on-demand/DFireDataset",
+      "url": "https://github.com/gaia-solutions-on-demand/DFireDataset",
+      "stars": 491,
+      "license": "NOASSERTION",
+      "pushedAt": "2026-10-18",
+      "archived": false,
+      "description": "D-Fire: an image data set for fire and smoke detection.",
+      "task": "data"
+    },
+    {
       "name": "NVIDIA/TensorRT",
       "url": "https://github.com/NVIDIA/TensorRT",
-      "stars": 13480,
+      "stars": 13486,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-18",
       "archived": false,
@@ -574,9 +604,9 @@
     {
       "name": "openvinotoolkit/openvino",
       "url": "https://github.com/openvinotoolkit/openvino",
-      "stars": 12395,
+      "stars": 12757,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
       "task": "deploy"
@@ -584,9 +614,9 @@
     {
       "name": "triton-inference-server/server",
       "url": "https://github.com/triton-inference-server/server",
-      "stars": 11162,
+      "stars": 11165,
       "license": "BSD-3-Clause",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "The Triton Inference Server provides an optimized cloud and edge inferencing solution.",
       "task": "deploy"
@@ -604,9 +634,9 @@
     {
       "name": "huggingface/transformers.js",
       "url": "https://github.com/huggingface/transformers.js",
-      "stars": 16455,
+      "stars": 16458,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-25",
       "archived": false,
       "description": "State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!",
       "task": "deploy"
@@ -614,7 +644,7 @@
     {
       "name": "opencv/opencv_zoo",
       "url": "https://github.com/opencv/opencv_zoo",
-      "stars": 1146,
+      "stars": 1150,
       "license": "Apache-2.0",
       "pushedAt": "2026-10-20",
       "archived": false,
@@ -622,11 +652,31 @@
       "task": "deploy"
     },
     {
+      "name": "blakeblackshear/frigate",
+      "url": "https://github.com/blakeblackshear/frigate",
+      "stars": 37941,
+      "license": "MIT",
+      "pushedAt": "2026-11-26",
+      "archived": false,
+      "description": "NVR with realtime local object detection for IP cameras",
+      "task": "deploy"
+    },
+    {
+      "name": "NVIDIA-AI-Blueprints/video-search-and-summarization",
+      "url": "https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization",
+      "stars": 2010,
+      "license": "Apache-2.0",
+      "pushedAt": "2026-11-26",
+      "archived": false,
+      "description": "NVIDIA AI Blueprint for video search and summarization (VSS) is a GPU-accelerated reference architecture for building video analytics agents with real-time verified alerts, visual Q&A, and automated reporting. The VSS Blueprint uses vision language models (VLMs) such as NVIDIA Cosmos, LLMs such as NVIDIA Nemotron, RAG, and NVIDIA NIMs.",
+      "task": "deploy"
+    },
+    {
       "name": "opencv/opencv",
       "url": "https://github.com/opencv/opencv",
-      "stars": 91704,
+      "stars": 91742,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Open Source Computer Vision Library",
       "task": "image"
@@ -634,7 +684,7 @@
     {
       "name": "xinntao/Real-ESRGAN",
       "url": "https://github.com/xinntao/Real-ESRGAN",
-      "stars": 37633,
+      "stars": 37679,
       "license": "BSD-3-Clause",
       "pushedAt": "2024-08-06",
       "archived": false,
@@ -644,7 +694,7 @@
     {
       "name": "DepthAnything/Depth-Anything-V2",
       "url": "https://github.com/DepthAnything/Depth-Anything-V2",
-      "stars": 9213,
+      "stars": 9237,
       "license": "Apache-2.0",
       "pushedAt": "2026-03-24",
       "archived": false,
@@ -654,7 +704,7 @@
     {
       "name": "apple-aiml-research/ml-depth-pro",
       "url": "https://github.com/apple-aiml-research/ml-depth-pro",
-      "stars": 5804,
+      "stars": 5807,
       "license": "NOASSERTION",
       "pushedAt": "2026-09-11",
       "archived": false,
@@ -664,7 +714,7 @@
     {
       "name": "ros2/ros2",
       "url": "https://github.com/ros2/ros2",
-      "stars": 6347,
+      "stars": 6353,
       "license": "NONE",
       "pushedAt": "2026-11-17",
       "archived": false,
@@ -674,9 +724,9 @@
     {
       "name": "moveit/moveit2",
       "url": "https://github.com/moveit/moveit2",
-      "stars": 2133,
+      "stars": 2134,
       "license": "BSD-3-Clause",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-25",
       "archived": false,
       "description": ":robot: MoveIt for ROS 2",
       "task": "robotics"
@@ -684,7 +734,7 @@
     {
       "name": "isl-org/Open3D",
       "url": "https://github.com/isl-org/Open3D",
-      "stars": 14248,
+      "stars": 14256,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-14",
       "archived": false,
@@ -694,7 +744,7 @@
     {
       "name": "PointCloudLibrary/pcl",
       "url": "https://github.com/PointCloudLibrary/pcl",
-      "stars": 11232,
+      "stars": 11234,
       "license": "NOASSERTION",
       "pushedAt": "2026-11-14",
       "archived": false,
@@ -704,9 +754,9 @@
     {
       "name": "realsenseai/librealsense",
       "url": "https://github.com/realsenseai/librealsense",
-      "stars": 9111,
+      "stars": 9114,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "RealSense SDK",
       "task": "robotics"
@@ -714,7 +764,7 @@
     {
       "name": "luxonis/depthai",
       "url": "https://github.com/luxonis/depthai",
-      "stars": 1070,
+      "stars": 1069,
       "license": "NONE",
       "pushedAt": "2026-10-26",
       "archived": false,
@@ -724,9 +774,9 @@
     {
       "name": "huggingface/lerobot",
       "url": "https://github.com/huggingface/lerobot",
-      "stars": 29064,
+      "stars": 29104,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning",
       "task": "robotics"
@@ -734,7 +784,7 @@
     {
       "name": "openvla/openvla",
       "url": "https://github.com/openvla/openvla",
-      "stars": 7341,
+      "stars": 7353,
       "license": "MIT",
       "pushedAt": "2025-03-23",
       "archived": false,
@@ -744,7 +794,7 @@
     {
       "name": "Physical-Intelligence/openpi",
       "url": "https://github.com/Physical-Intelligence/openpi",
-      "stars": 14747,
+      "stars": 14772,
       "license": "Apache-2.0",
       "pushedAt": "2026-08-24",
       "archived": false,
@@ -754,9 +804,9 @@
     {
       "name": "google-deepmind/mujoco",
       "url": "https://github.com/google-deepmind/mujoco",
-      "stars": 18454,
+      "stars": 18499,
       "license": "Apache-2.0",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "task": "robotics"
@@ -764,9 +814,9 @@
     {
       "name": "isaac-sim/IsaacLab",
       "url": "https://github.com/isaac-sim/IsaacLab",
-      "stars": 8713,
+      "stars": 8731,
       "license": "NOASSERTION",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "Unified framework for robot learning with multi-physics/renderer support",
       "task": "robotics"
@@ -774,7 +824,7 @@
     {
       "name": "NVlabs/FoundationPose",
       "url": "https://github.com/NVlabs/FoundationPose",
-      "stars": 3716,
+      "stars": 3719,
       "license": "NOASSERTION",
       "pushedAt": "2026-04-29",
       "archived": false,
@@ -794,7 +844,7 @@
     {
       "name": "AprilRobotics/apriltag",
       "url": "https://github.com/AprilRobotics/apriltag",
-      "stars": 2626,
+      "stars": 2634,
       "license": "NOASSERTION",
       "pushedAt": "2026-08-07",
       "archived": false,
@@ -804,9 +854,9 @@
     {
       "name": "colmap/colmap",
       "url": "https://github.com/colmap/colmap",
-      "stars": 13285,
+      "stars": 13302,
       "license": "NOASSERTION",
-      "pushedAt": "2026-11-24",
+      "pushedAt": "2026-11-26",
       "archived": false,
       "description": "COLMAP - Structure-from-Motion and Multi-View Stereo",
       "task": "3d"
@@ -814,7 +864,7 @@
     {
       "name": "nerfstudio-project/nerfstudio",
       "url": "https://github.com/nerfstudio-project/nerfstudio",
-      "stars": 12251,
+      "stars": 12264,
       "license": "Apache-2.0",
       "pushedAt": "2025-07-29",
       "archived": false,
@@ -824,7 +874,7 @@
     {
       "name": "facebookresearch/vggt",
       "url": "https://github.com/facebookresearch/vggt",
-      "stars": 14668,
+      "stars": 14679,
       "license": "NOASSERTION",
       "pushedAt": "2026-05-19",
       "archived": false,
@@ -834,7 +884,7 @@
     {
       "name": "facebookresearch/co-tracker",
       "url": "https://github.com/facebookresearch/co-tracker",
-      "stars": 5211,
+      "stars": 5213,
       "license": "NOASSERTION",
       "pushedAt": "2026-03-03",
       "archived": false,
@@ -844,7 +894,7 @@
     {
       "name": "google-deepmind/tapnet",
       "url": "https://github.com/google-deepmind/tapnet",
-      "stars": 2273,
+      "stars": 2275,
       "license": "Apache-2.0",
       "pushedAt": "2026-11-02",
       "archived": false,

@@ -14,26 +14,31 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/contact"
   return { title: t("eyebrow"), description: t("subtitle") };
 }
 
-export default function ContactPage({ params }: PageProps<"/[locale]/contact">) {
+const needs = ["check", "pilot", "deploy", "care", "labeling", "robotics", "other"] as const;
+
+export default function ContactPage({ params, searchParams }: PageProps<"/[locale]/contact">) {
   const { locale } = use(params);
+  const { need } = use(searchParams);
+  const preset = needs.find((n) => n === need);
   setRequestLocale(locale);
   const t = useTranslations("contact");
   const p = useTranslations("pricing");
 
+  // Only the channels that are actually set up (see src/config/site.ts).
   const channels = [
-    { href: site.bookCall, label: t("channels.call"), icon: CalendarDays, accent: true },
-    { href: site.telegram, label: t("channels.telegram"), icon: Send },
-    { href: site.whatsapp, label: t("channels.whatsapp"), icon: MessageCircle },
-    { href: `mailto:${site.email}`, label: `${t("channels.email")} · ${site.email}`, icon: Mail },
-  ];
+    site.telegram && { href: site.telegram, label: t("channels.telegram"), icon: Send, accent: true },
+    site.bookCall && { href: site.bookCall, label: t("channels.call"), icon: CalendarDays, accent: !site.telegram },
+    site.whatsapp && { href: site.whatsapp, label: t("channels.whatsapp"), icon: MessageCircle, accent: false },
+    site.email && { href: `mailto:${site.email}`, label: `${t("channels.email")} · ${site.email}`, icon: Mail, accent: false },
+  ].filter((c) => !!c);
 
   return (
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
       <Container className="grid gap-10 py-14 lg:grid-cols-[1.4fr_1fr]">
-        <ContactForm />
+        <ContactForm need={preset} />
         <aside className="space-y-4">
-          <h2 className="font-display text-lg font-semibold">{t("channels.title")}</h2>
+          {channels.length > 0 && <h2 className="font-display text-lg font-semibold">{t("channels.title")}</h2>}
           <ul className="space-y-3">
             {channels.map(({ href, label, icon: Icon, accent }) => (
               <li key={label}>

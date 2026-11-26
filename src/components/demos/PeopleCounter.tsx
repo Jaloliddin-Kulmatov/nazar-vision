@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { RotateCcw, ArrowRightLeft } from "lucide-react";
 import DemoStage, { Panel } from "@/components/demo/DemoStage";
+import { EventLog, useEventLog } from "@/components/demo/EventLog";
 import { useModel } from "@/lib/demo/useModel";
 import { mediapipeDetector, type Det } from "@/lib/demo/detectors";
 import { drawBox } from "@/lib/demo/image";
@@ -63,9 +64,12 @@ export default function PeopleCounterDemo() {
   const pending = useRef<Pt | null>(null);
   const last = useRef(0);
   const labels: [string, string] = [t("crossIn"), t("crossOut")];
+  const log = useEventLog();
+  const logged = useRef({ in: 0, out: 0 });
 
   const resetCounts = () => {
     counter.current.reset();
+    logged.current = { in: 0, out: 0 };
     setCounts({ in: 0, out: 0 });
   };
   const pick = (c: CountClass) => {
@@ -115,7 +119,11 @@ export default function PeopleCounterDemo() {
         if (now - last.current > 250) {
           last.current = now;
           setInView(n);
-          setCounts({ ...counter.current.counts });
+          const c = counter.current.counts;
+          for (let i = logged.current.in; i < c.in; i++) log.add(labels[0], `${target} · ${i + 1}`);
+          for (let i = logged.current.out; i < c.out; i++) log.add(labels[1], `${target} · ${i + 1}`);
+          logged.current = { ...c };
+          setCounts({ ...c });
         }
       }}
       onImage={async (input, ctx) => {
@@ -185,6 +193,7 @@ export default function PeopleCounterDemo() {
         </div>
         <p className="mt-4 text-xs text-dim">{t("drawLine")}</p>
       </Panel>
+      <EventLog events={log.events} onClear={log.clear} name="people-counter" />
     </DemoStage>
   );
 }

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { RotateCcw } from "lucide-react";
 import DemoStage, { Panel } from "@/components/demo/DemoStage";
+import { EventLog, useEventLog } from "@/components/demo/EventLog";
 import { useModel } from "@/lib/demo/useModel";
 import { mediapipeDetector, type Det } from "@/lib/demo/detectors";
 import { drawBox } from "@/lib/demo/image";
@@ -62,6 +63,7 @@ export default function VehicleSpeedDemo() {
   const [lines, setLines] = useState<{ a: [Pt, Pt]; b: [Pt, Pt] }>({ a: DEFAULT_A, b: DEFAULT_B });
   const [draft, setDraft] = useState<Pt[]>([]);
   const [log, setLog] = useState<number[]>([]);
+  const events = useEventLog();
   const last = useRef(0);
   const lastClock = useRef(0);
 
@@ -112,7 +114,11 @@ export default function VehicleSpeedDemo() {
         }
         if (now - last.current > 300) {
           last.current = now;
-          if (trap.current.log.length !== log.length) setLog([...trap.current.log]);
+          const all = trap.current.log;
+          if (all.length !== log.length) {
+            for (const v of all.slice(log.length)) events.add(t("evSpeed"), `${Math.round(v)} km/h`, v > limit ? "alert" : "info");
+            setLog([...all]);
+          }
         }
       }}
       onImage={async (input, ctx) => {
@@ -175,6 +181,7 @@ export default function VehicleSpeedDemo() {
         <p className="mt-3 text-sm text-muted">{t("speedDraw")}</p>
         <p className="mt-2 text-xs text-dim">{t("speedNote")}</p>
       </Panel>
+      <EventLog events={events.events} onClear={events.clear} name="vehicle-speed" />
     </DemoStage>
   );
 }

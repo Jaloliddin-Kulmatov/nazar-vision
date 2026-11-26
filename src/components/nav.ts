@@ -9,6 +9,7 @@ export const navItems = [
 
 export const footerItems = [
   ...navItems,
+  { href: "/pilot", key: "pilot" },
   { href: "/open-source", key: "openSource" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },

@@ -18,7 +18,10 @@
     "useCases": "Use cases",
     "code": "Free code",
     "signIn": "Sign in",
-    "account": "Account"
+    "account": "Account",
+    "pilot": "Pilot",
+    "privacy": "Privacy",
+    "terms": "Terms"
   },
   "common": {
     "tryIt": "Try it",
@@ -44,7 +47,7 @@
     },
     "stats": [
       {
-        "value": "19",
+        "value": "24",
         "label": "live demos, with sample videos"
       },
       {
@@ -159,7 +162,7 @@
     "scenes": {
       "title": "Pick a scene and watch a model work on it",
       "subtitle": "Each one opens a live demo already running on that clip. Then switch to your webcam or upload your own footage.",
-      "all": "All 19 demos",
+      "all": "All 24 demos",
       "items": {
         "safety-zone": "Warehouse with a forklift",
         "ppe-check": "Worker with a tablet",
@@ -697,6 +700,31 @@
         "title": "Ask about a photo",
         "short": "One model that describes a scene in words, lists the objects in it, finds anything you type and reads the text.",
         "business": "Searchable camera archives, automatic incident notes, checking photos sent by field staff, and finding objects no detector was trained for."
+      },
+      "plate-reader": {
+        "title": "Number plate reader (Uzbekistan)",
+        "short": "Finds number plates in a photo and reads them, checks the Uzbek format, shows the region and flags plates from your list.",
+        "business": "Gates and barriers at warehouses, car parks and fuel stations, logging trucks in and out, stop-lists and allow-lists without a guard writing plates down."
+      },
+      "fire-smoke": {
+        "title": "Fire and smoke alert",
+        "short": "Watches a camera for flames and smoke. An alarm goes off only when several checks in a row agree, so a sunset or a lamp doesn't wake anyone.",
+        "business": "Early warning in warehouses, workshops, car parks and open storage, on the cameras already installed, before a smoke detector on a high ceiling reacts."
+      },
+      "fall-detection": {
+        "title": "Fall and person-down alert",
+        "short": "Follows each person's body pose. Raises an alert when someone falls, and a softer one when someone lies on the floor and doesn't get up.",
+        "business": "Care homes, hospitals, lone workers in warehouses and plants, night shifts: help arrives in minutes, not when someone happens to walk past."
+      },
+      "video-search": {
+        "title": "Search video by text",
+        "short": "Type what you are looking for, like “a white van” or “a person carrying a box”, and jump straight to the moments that match.",
+        "business": "Find an incident in hours of recordings in seconds: a delivery, a vehicle, a person in a red jacket. Nobody has to scrub through footage."
+      },
+      "left-behind": {
+        "title": "Left-behind object alert",
+        "short": "Notices a bag, backpack or suitcase that has been set down with nobody near it, and raises an alert after the time you choose.",
+        "business": "Stations, airports, malls and bank halls: spot unattended bags quickly, and lost property, without an operator watching every screen."
       }
     },
     "ui": {
@@ -793,7 +821,18 @@
         "bottlesFrame": "Bottles on a line",
         "driverVideo": "Drowsy driver video",
         "trafficFrame": "Traffic",
-        "crowdFrame": "Busy street"
+        "crowdFrame": "Busy street",
+        "carGreen": "Green Lada, Tashkent",
+        "carRed": "Red Lada, Tashkent",
+        "plateClose": "Plate close-up",
+        "fireSmokeVideo": "Building fire (drone)",
+        "fireFieldVideo": "Fire in a field",
+        "sunsetVideo": "Sunset (should stay quiet)",
+        "personDownVideo": "Person on the ground",
+        "suitcasePlatformVideo": "Suitcase on a platform",
+        "luggageFloorVideo": "Luggage on the floor",
+        "luggageOwnerVideo": "Owner with suitcase",
+        "manLyingVideo": "Man lying on the floor"
       },
       "style": "Style",
       "uploadMedia": "Upload photo or video",
@@ -908,7 +947,119 @@
       "askFind": "Find",
       "askNote": "Answers are in English. On a computer without a modern graphics chip, each answer takes 10–40 seconds.",
       "askNothing": "Nothing found. Try other words.",
-      "askTime": "Answered in {s} s"
+      "askTime": "Answered in {s} s",
+      "eventLog": "Event log ({n})",
+      "eventLogEmpty": "Nothing yet. Events appear here as the demo notices them.",
+      "eventLogCsv": "Download CSV",
+      "eventLogClear": "Clear the log",
+      "eventLogNote": "In a real system this goes to a report, a dashboard or Telegram, so nobody has to watch the footage.",
+      "evZoneEntry": "Zone entry",
+      "evZoneDetail": "{n} in the zone",
+      "evSpeed": "Vehicle measured",
+      "plateRead": "Plate read",
+      "plateUnsure": "Couldn't match the Uzbek format:",
+      "plateNone": "No plate found. Try a closer photo where the plate is at least 100 pixels wide.",
+      "plateOnList": "On your list",
+      "plateRegions": {
+        "tashkentCity": "Tashkent city",
+        "tashkentRegion": "Tashkent region",
+        "sirdaryo": "Sirdaryo region",
+        "jizzakh": "Jizzakh region",
+        "samarkand": "Samarkand region",
+        "fergana": "Fergana region",
+        "namangan": "Namangan region",
+        "andijan": "Andijan region",
+        "kashkadarya": "Kashkadarya region",
+        "surkhandarya": "Surkhandarya region",
+        "bukhara": "Bukhara region",
+        "navoi": "Navoi region",
+        "khorezm": "Khorezm region",
+        "karakalpakstan": "Karakalpakstan"
+      },
+      "plateKinds": {
+        "private": "private car",
+        "company": "company vehicle"
+      },
+      "plateFixes": "{n} look-alike characters corrected (read as “{raw}”)",
+      "plateList": "Plates to flag",
+      "plateListHint": "Separate plates with commas. Flagged plates turn red: use it as a stop-list or an allow-list at a gate.",
+      "plateCredit": "Sample photos: Jamshid Nurkulov and Dickelbers, Wikimedia Commons, CC BY-SA 4.0.",
+      "fireStatus": "Fire and smoke",
+      "fireStates": {
+        "clear": "All clear",
+        "suspect": "Something looks like fire, checking…",
+        "alarm": "ALARM: fire or smoke confirmed"
+      },
+      "fireAlarm": "Fire alarm",
+      "fireLabel": "Fire",
+      "smokeLabel": "Smoke",
+      "fireChecks": "Checks run",
+      "fireRaw": "Single-frame alarms",
+      "fireConfirmed": "Confirmed alarms",
+      "fireSpeed": "{ms} ms per check",
+      "fireTuning": "Sensitivity",
+      "fireThreshold": "Score needed",
+      "fireNeed": "Checks that must agree",
+      "fireNeedValue": "{n} of {of}",
+      "fireNote": "“Single-frame alarms” counts how often a system that trusts one frame would have gone off. Lower the score needed and set the checks to 1 to see how jumpy that is.",
+      "fallStatus": "People",
+      "fallStates": {
+        "upright": "OK",
+        "pending": "down",
+        "down": "Person down",
+        "fallen": "FALL"
+      },
+      "fallBanner": {
+        "fall": "Fall detected: check on the person",
+        "down": "Someone is on the floor",
+        "ok": "{n} in view, nobody down"
+      },
+      "fallEvent": "Fall",
+      "downEvent": "Person down",
+      "downDetail": "#{id} lying for {s} s",
+      "fallCount": "Falls",
+      "downCount": "Person-down alerts",
+      "fallSettings": "Rules",
+      "fallLying": "Alert if lying longer than",
+      "fallTry": "Try it on your webcam: step back until your whole body is in view, then sit or lie on the floor.",
+      "fallNote": "A fall is a quick change from standing to lying with the hips dropping. Squatting and bending over don't count.",
+      "leftStatus": "Bags and owners",
+      "leftStates": {
+        "moving": "moving",
+        "attended": "with owner",
+        "unattended": "alone",
+        "alert": "LEFT BEHIND",
+        "noOwner": "nobody near"
+      },
+      "leftBanner": {
+        "alert": "{n} left-behind alert(s)",
+        "watch": "{n} bag(s) alone, counting",
+        "ok": "No unattended bags"
+      },
+      "leftEvent": "Left behind",
+      "leftDetail": "Bag #{id} alone for {s} s",
+      "leftBags": "Bags",
+      "leftPeople": "People",
+      "leftAlerts": "Alerts",
+      "leftSettings": "Rules",
+      "leftLimit": "Alert after a bag is alone for",
+      "leftLegend": {
+        "moving": "Moving or being carried",
+        "attended": "Set down, owner nearby",
+        "unattended": "Set down, nobody near: counting",
+        "alert": "Alone past the limit"
+      },
+      "leftNote": "A bag counts as left behind when it stops moving and no person is near it. In a real site the alert goes to the security desk with a snapshot.",
+      "searchPickHint": "Pick a clip. Each frame is turned into numbers once (about 150 MB on first load), then every search takes a moment.",
+      "searchOwnVideo": "Search my own video",
+      "searchIndexing": "Reading the video… {p}%",
+      "searchTimeline": "How well each moment matches (click a bar to jump there)",
+      "searchAsk": "What are you looking for?",
+      "searchPlaceholder": "e.g. a white van",
+      "searchNote": "Describe it in English, in a few words. The video never leaves your computer.",
+      "searchMoments": "Best moments",
+      "searchEmpty": "Type something to search for.",
+      "searchIndexed": "{n} frames read in {s} s"
     },
     "card": {
       "video": "Video and webcam",
@@ -929,7 +1080,9 @@
     "codeBand": {
       "title": "Every demo here is free and open source",
       "text": "Sign up once to download the full working code (MIT licence) and build on it."
-    }
+    },
+    "licenceLabel": "Licence: {licence}",
+    "licenceHint": "The model's licence allows commercial use. You can ship it in your own product."
   },
   "oss": {
     "eyebrow": "Open-source library",
@@ -1152,14 +1305,16 @@
         "b4": "Over $50,000",
         "unknown": "Not sure yet"
       },
-      "filesHint": "Have photos or a video? Paste a link (Google Drive, Telegram, Dropbox) in the message."
+      "filesHint": "Have photos or a video? Paste a link (Google Drive, Telegram, Dropbox) in the message.",
+      "limited": "Too many messages from your connection. Please try again in an hour, or write to us on Telegram."
     },
     "channels": {
       "title": "Prefer a direct line?",
       "call": "Book a 30-minute call",
       "telegram": "Message on Telegram",
       "whatsapp": "Message on WhatsApp",
-      "email": "Email us"
+      "email": "Email us",
+      "telegramShort": "Write on Telegram"
     }
   },
   "footer": {
@@ -1556,7 +1711,10 @@
         "expired": "That code has expired. Send a new one.",
         "too_many_attempts": "Too many wrong tries. Send a new code."
       },
-      "formTextCode": "Free. Continue with Google, or confirm your email with a 6-digit code."
+      "formTextCode": "Free. Continue with Google, or confirm your email with a 6-digit code.",
+      "deleteAccount": "Delete my account",
+      "deleteConfirm": "Delete your account and download history? This can't be undone.",
+      "deleted": "Your account has been deleted."
     }
   },
   "account": {
@@ -1565,5 +1723,218 @@
     "subtitle": "Sign in with the email you signed up with to download the source code on this device.",
     "whatIsIt": "New here? Signing up is free and unlocks the code for every demo.",
     "seeCode": "See what you get"
+  },
+  "why": {
+    "eyebrow": "Why Nazar",
+    "title": "What you get here that most video-analytics offers don't give you",
+    "subtitle": "Common market practice next to how we work. You can check every line in the demos.",
+    "colTopic": "What",
+    "colUs": "Nazar Vision",
+    "colThem": "Typical offer",
+    "note": "Compared with common practice in the video-analytics market, not with any one company.",
+    "ctaPilot": "See how a two-week pilot works",
+    "ctaDemos": "Try the demos",
+    "ctaPilotPlan": "Day-by-day pilot plan",
+    "rows": [
+      {
+        "topic": "Trying it",
+        "us": "24 live demos in your browser, on sample clips or your own camera, before any call.",
+        "them": "A demo only after a sales call, often a recorded video.",
+        "mark": "no"
+      },
+      {
+        "topic": "Your video",
+        "us": "Demos run on your device. Systems we build run on your own server or edge computer.",
+        "them": "Footage is often sent to the vendor's cloud.",
+        "mark": "partly"
+      },
+      {
+        "topic": "Price",
+        "us": "A fixed quote per project. No never-ending fee for every camera.",
+        "them": "A monthly subscription per camera, for as long as you use it.",
+        "mark": "no"
+      },
+      {
+        "topic": "Ownership",
+        "us": "You get the source code and the trained model, and can leave whenever you like.",
+        "them": "The system only works inside their platform.",
+        "mark": "no"
+      },
+      {
+        "topic": "Licences",
+        "us": "Only models whose licences allow commercial use (Apache-2.0, MIT). The licence is shown on every demo.",
+        "them": "Popular detectors are AGPL-licensed: a closed product needs a paid licence, which is often skipped.",
+        "mark": "partly"
+      },
+      {
+        "topic": "False alarms",
+        "us": "Alerts are confirmed over several frames, and accuracy is measured on your footage before you pay for a rollout.",
+        "them": "“99% accuracy” claims measured on someone else's data.",
+        "mark": "partly"
+      },
+      {
+        "topic": "Language and alerts",
+        "us": "Uzbek, Russian and English. Alerts in Telegram, CSV reports, or straight into 1C / ERP.",
+        "them": "Often Russian or English only, with alerts only in their own app.",
+        "mark": "partly"
+      }
+    ]
+  },
+  "pilot": {
+    "eyebrow": "Pilot",
+    "title": "A two-week pilot on your own cameras",
+    "subtitle": "One question, your footage, and a clear yes or no at the end. Tasks that ready models can handle fit in two weeks; custom defect models take up to four.",
+    "planTitle": "Day by day",
+    "planSubtitle": "A standard pilot for counting, zones, PPE, number plates, fire and smoke, falls or left-behind objects.",
+    "facts": [
+      "About two hours of your team's time in total",
+      "Works with your existing IP cameras (RTSP) or with recorded clips",
+      "Video stays on your premises, or on a small computer we leave on site",
+      "The feasibility check before the pilot is free"
+    ],
+    "cta": "Request a pilot",
+    "days": [
+      {
+        "when": "Day 1",
+        "title": "Kick-off and claim sheet",
+        "text": "We agree on one question, the camera, what counts as an event, and the pass and stop thresholds, in writing."
+      },
+      {
+        "when": "Days 2–3",
+        "title": "Footage",
+        "text": "You give access to the cameras or send recordings: about an hour of normal work, busy times included."
+      },
+      {
+        "when": "Days 4–5",
+        "title": "Test set",
+        "text": "We label a sample and set it aside before any tuning, so the score can't be gamed."
+      },
+      {
+        "when": "Days 6–8",
+        "title": "Tuning and live run",
+        "text": "Zones, thresholds and alert rules are set for your site. The system runs live and sends alerts to a Telegram chat you choose."
+      },
+      {
+        "when": "Day 9",
+        "title": "Results",
+        "text": "Accuracy on the frozen test set and against your current process, with every missed and false alert shown."
+      },
+      {
+        "when": "Day 10",
+        "title": "Go or no-go",
+        "text": "A short meeting and a memo you keep: go to deployment, change the plan, or stop. All three are fine outcomes."
+      }
+    ],
+    "fitTitle": "What we need from you",
+    "fitSubtitle": "Most pilots need only camera access and one person who knows the process. These tasks run on ready models:",
+    "whyTitle": "Why pilot with us"
+  },
+  "privacy": {
+    "eyebrow": "Privacy",
+    "title": "Privacy policy",
+    "subtitle": "What we collect, why, where it is kept, and how to delete it.",
+    "updated": "Last updated: 26 November 2026",
+    "sections": [
+      {
+        "title": "The short version",
+        "items": [
+          "The demos run entirely in your browser. Photos, videos and webcam images you use in a demo never leave your device.",
+          "We count visits without cookies and never store IP addresses.",
+          "If you sign up for the free code, we keep your name, email and company so you can sign in and download it. You can delete your account at any time."
+        ]
+      },
+      {
+        "title": "What we collect",
+        "items": [
+          "Account (only if you sign up): name, email, company, whether you used Google or email, whether the email was confirmed, sign-up and last-visit dates, and how many times you downloaded the code.",
+          "Contact form: what you write and the details you enter, so we can answer you.",
+          "Visit statistics: page visited, language, country (worked out by our host from your IP address, which we do not keep), device type, the site that sent you, and which demos were run. Visitors are grouped by an anonymous ID that changes every day.",
+          "Abuse protection: to limit repeated sign-in and contact requests we count them per visitor using a one-way scrambled form of the IP address, kept for up to two days."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "items": [
+          "nv_session keeps you signed in (up to one year). It is set only when you sign in.",
+          "nv_oauth is used for ten minutes during Google sign-in to protect the process.",
+          "nv_admin is used only on the site owner's dashboard.",
+          "There are no advertising or tracking cookies and no third-party analytics."
+        ]
+      },
+      {
+        "title": "Who processes the data",
+        "items": [
+          "Vercel hosts the website.",
+          "Supabase stores the database.",
+          "Resend sends confirmation codes and email replies.",
+          "Google, only if you choose to sign in with Google: we receive your name and email address.",
+          "The AI models used in the demos are downloaded to your browser from Hugging Face and Google. They do not receive your images."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "items": [
+          "Accounts: until you delete them or ask us to.",
+          "Contact messages: until the conversation is finished, or earlier on request.",
+          "Visit statistics: anonymous, kept to understand how the site is used."
+        ]
+      },
+      {
+        "title": "Your choices",
+        "items": [
+          "Delete your account yourself on the Account page: sign in, then press “Delete my account”. This also removes your download history.",
+          "Ask us to show, correct or delete anything else we hold about you through the contact page.",
+          "You can use every demo without signing up."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "eyebrow": "Terms",
+    "title": "Terms of use",
+    "subtitle": "The rules for using the demos, the free code and your account.",
+    "updated": "Last updated: 26 November 2026",
+    "sections": [
+      {
+        "title": "Demos",
+        "items": [
+          "The demos are free and provided as they are, to show what computer vision can do. They are not a safety system: don't rely on them to protect people or property.",
+          "Only use photos and videos you have the right to use, and ask people before filming them."
+        ]
+      },
+      {
+        "title": "Free source code",
+        "items": [
+          "The downloadable demo code is released under the MIT licence: you may use and change it and sell products built with it.",
+          "Each AI model keeps its own licence, shown on its demo page. All models used allow commercial use.",
+          "Sample videos come from Pexels and sample car photos from Wikimedia Commons (CC BY-SA 4.0). Credits are included with the code."
+        ]
+      },
+      {
+        "title": "Accounts",
+        "items": [
+          "Use a real email address. We may remove accounts used for spam or abuse.",
+          "We may close new sign-ups at any time."
+        ]
+      },
+      {
+        "title": "Projects and pilots",
+        "items": [
+          "Paid work (pilots, deployments and support) is covered by a separate written agreement, which takes precedence over these terms."
+        ]
+      },
+      {
+        "title": "Liability",
+        "items": [
+          "We do our best to keep the site and demos working but can't promise they always will. As far as the law allows, we are not liable for losses from using the free demos or code."
+        ]
+      },
+      {
+        "title": "Changes",
+        "items": [
+          "We may update these terms. The date at the top shows the current version."
+        ]
+      }
+    ]
   }
 }

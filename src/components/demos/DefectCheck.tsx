@@ -3,37 +3,15 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import DemoStage, { Panel } from "@/components/demo/DemoStage";
-import { hfProgress, useModel, type Progress } from "@/lib/demo/useModel";
-import { transformers } from "@/lib/demo/hf";
+import { useModel } from "@/lib/demo/useModel";
+import { loadClip, zeroShot, type Clip } from "@/lib/demo/clip";
 import { samples } from "@/lib/content";
 
-const MODEL = "Xenova/mobileclip_s0";
-type Scorer = (input: HTMLCanvasElement, labels: string[]) => Promise<{ label: string; score: number }[]>;
-
-/** Zero-shot classification with MobileCLIP: compare the image embedding to each label's text embedding. */
-async function loadClip(onProgress: Progress): Promise<Scorer> {
-  const t = await transformers();
-  const progress_callback = hfProgress(onProgress);
-  const [tokenizer, textModel, processor, visionModel] = await Promise.all([
-    t.AutoTokenizer.from_pretrained(MODEL),
-    t.CLIPTextModelWithProjection.from_pretrained(MODEL, { dtype: "q8", progress_callback }),
-    t.AutoProcessor.from_pretrained(MODEL),
-    t.CLIPVisionModelWithProjection.from_pretrained(MODEL, { dtype: "q8", progress_callback }),
-  ]);
-
-  return async (input, labels) => {
-    const prompts = labels.map((l) => `a photo of ${l}`);
-    const textInputs = tokenizer(prompts, { padding: "max_length", truncation: true });
-    const { text_embeds } = await textModel(textInputs);
-    const image = t.RawImage.fromCanvas(input);
-    const imageInputs = await processor(image);
-    const { image_embeds } = await visionModel(imageInputs);
-    const txt = text_embeds.normalize(2, -1).tolist() as number[][];
-    const [img] = image_embeds.normalize(2, -1).tolist() as number[][];
-    const logits = txt.map((v) => 100 * v.reduce((s, x, i) => s + x * img[i], 0));
-    const probs = t.softmax(logits) as number[];
-    return labels.map((label, i) => ({ label, score: probs[i] })).sort((a, b) => b.score - a.score);
-  };
+/** Zero-shot classification with CLIP: compare the image embedding to each label's text embedding. */
+async function score(clip: Clip, input: HTMLCanvasElement, labels: string[]) {
+  const [img, txt] = await Promise.all([clip.embedImage(input), clip.embedTexts(labels.map((l) => `a photo of ${l}`))]);
+  const probs = zeroShot(img, txt);
+  return labels.map((label, i) => ({ label, score: probs[i] })).sort((a, b) => b.score - a.score);
 }
 
 const parse = (s: string) =>
@@ -58,7 +36,7 @@ export default function DefectCheckDemo() {
   return (
     <DemoStage
       webcam={false}
-      size="51 MB"
+      size="153 MB"
       model={model}
       maxSide={768}
       samples={[
@@ -68,7 +46,7 @@ export default function DefectCheckDemo() {
       ]}
       onImage={async (input) => {
         if (labels.length < 2) return;
-        setScores(await model.get()!(input, labels));
+        setScores(await score(model.get()!, input, labels));
       }}
       rerunKey={labels.join("|")}
       onSourceChange={() => setScores([])}

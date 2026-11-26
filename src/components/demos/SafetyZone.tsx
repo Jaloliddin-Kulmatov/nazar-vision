@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { RotateCcw, Siren } from "lucide-react";
 import DemoStage, { Panel } from "@/components/demo/DemoStage";
+import { EventLog, useEventLog } from "@/components/demo/EventLog";
 import { useModel } from "@/lib/demo/useModel";
 import { mediapipeDetector, type Det } from "@/lib/demo/detectors";
 import { drawBox } from "@/lib/demo/image";
@@ -66,6 +67,8 @@ export default function SafetyZoneDemo() {
   const [state, setState] = useState<ZoneState>({ inside: 0, alert: false, events: 0, occupiedMs: 0 });
   const [people, setPeople] = useState(0);
   const last = useRef(0);
+  const log = useEventLog();
+  const logged = useRef(0);
 
   const process = (ctx: CanvasRenderingContext2D, dets: Det[], now: number | null) => {
     const w = ctx.canvas.width;
@@ -85,6 +88,7 @@ export default function SafetyZoneDemo() {
 
   const reset = () => {
     monitor.current.reset();
+    logged.current = 0;
     setState({ inside: 0, alert: false, events: 0, occupiedMs: 0 });
   };
 
@@ -104,6 +108,8 @@ export default function SafetyZoneDemo() {
         const r = process(ctx, model.get()!.detectFrame(video, now), now);
         if (now - last.current > 200) {
           last.current = now;
+          for (let i = logged.current; i < r.events; i++) log.add(t("evZoneEntry"), t("evZoneDetail", { n: r.inside }), "alert");
+          logged.current = r.events;
           setState(r);
           setPeople(r.people);
         }
@@ -168,6 +174,7 @@ export default function SafetyZoneDemo() {
           </button>
         </div>
       </Panel>
+      <EventLog events={log.events} onClear={log.clear} name="safety-zone" />
     </DemoStage>
   );
 }

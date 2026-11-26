@@ -6,13 +6,13 @@ import { CheckCircle2, AlertCircle, Loader2, Send } from "lucide-react";
 import { industryIds } from "@/lib/content";
 import { site } from "@/config/site";
 
-type Status = "idle" | "sending" | "success" | "error" | "invalid";
+type Status = "idle" | "sending" | "success" | "error" | "invalid" | "limited";
 
 const needIds = ["check", "pilot", "deploy", "care", "labeling", "robotics", "other"] as const;
 const timelineIds = ["now", "quarter", "later", "exploring"] as const;
 const budgetIds = ["b1", "b2", "b3", "b4", "unknown"] as const;
 
-export default function ContactForm() {
+export default function ContactForm({ need = "check" }: { need?: (typeof needIds)[number] }) {
   const t = useTranslations("contact.form");
   const ind = useTranslations("industries");
   const ch = useTranslations("contact.channels");
@@ -33,7 +33,7 @@ export default function ContactForm() {
         setStatus("success");
         form.reset();
       } else {
-        setStatus(res.status === 400 ? "invalid" : "error");
+        setStatus(res.status === 400 ? "invalid" : res.status === 429 ? "limited" : "error");
       }
     } catch {
       setStatus("error");
@@ -84,7 +84,7 @@ export default function ContactForm() {
         </label>
         <label className="block text-sm">
           <span className="mb-1.5 block text-muted">{t("need")}</span>
-          <select name="need" defaultValue="check" className="field">
+          <select name="need" defaultValue={need} className="field">
             {needIds.map((id) => (
               <option key={id} value={id}>
                 {t(`needs.${id}`)}
@@ -138,21 +138,21 @@ export default function ContactForm() {
         </label>
       </div>
 
-      {(status === "error" || status === "invalid") && (
+      {(status === "error" || status === "invalid" || status === "limited") && (
         <p className="flex items-start gap-2 rounded-lg border border-danger/40 bg-danger/10 p-3 text-sm" role="alert">
           <AlertCircle className="mt-0.5 size-4 shrink-0 text-danger" aria-hidden="true" />
           <span>
-            {status === "invalid" ? t("invalid") : t("error")}{" "}
-            {status === "error" && (
-              <>
-                <a href={site.telegram} target="_blank" rel="noopener noreferrer" className="text-cyan underline">
-                  {ch("telegram")}
-                </a>{" "}
-                ·{" "}
-                <a href={`mailto:${site.email}`} className="text-cyan underline">
-                  {site.email}
-                </a>
-              </>
+            {status === "invalid" ? t("invalid") : status === "limited" ? t("limited") : t("error")}{" "}
+            {status === "error" && site.telegram && (
+              <a href={site.telegram} target="_blank" rel="noopener noreferrer" className="text-cyan underline">
+                {ch("telegram")}
+              </a>
+            )}
+            {status === "error" && site.telegram && site.email && " · "}
+            {status === "error" && site.email && (
+              <a href={`mailto:${site.email}`} className="text-cyan underline">
+                {site.email}
+              </a>
             )}
           </span>
         </p>

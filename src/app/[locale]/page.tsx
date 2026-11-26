@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import HeroLive from "@/components/HeroLive";
 import { Faq, IndustryGrid, ServicesGrid, TwoPaths } from "@/components/sections";
 import { OfferLadder } from "@/components/services";
+import { WhyNazar } from "@/components/trust";
 import { repos } from "@/lib/repos";
 
 /** Scenes on the home page: each opens its demo already running on that clip. */
@@ -26,6 +27,7 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
   const p = useTranslations("pricing");
   const o = useTranslations("offers");
   const d = useTranslations("demos");
+  const w = useTranslations("why");
 
   const topRepos = [...repos].sort((a, b) => b.stars - a.stars).slice(0, 6);
 
@@ -91,6 +93,11 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
             </li>
           ))}
         </ul>
+      </Section>
+
+      <Section className="border-y border-line bg-bg-2">
+        <SectionHeader eyebrow={w("eyebrow")} title={w("title")} subtitle={w("subtitle")} />
+        <WhyNazar />
       </Section>
 
       <Section>

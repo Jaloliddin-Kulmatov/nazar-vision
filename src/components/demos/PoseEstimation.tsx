@@ -2,27 +2,14 @@
 
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import type { PoseLandmarker, NormalizedLandmark } from "@mediapipe/tasks-vision";
+import type { NormalizedLandmark } from "@mediapipe/tasks-vision";
 import DemoStage, { Panel } from "@/components/demo/DemoStage";
 import { useModel } from "@/lib/demo/useModel";
-import { createWithFallback, getFileset, markMode, mediapipe, MP_MODELS, setMode } from "@/lib/demo/mediapipe";
+import { setMode } from "@/lib/demo/mediapipe";
+import { loadPose, type LoadedPose } from "@/lib/demo/pose";
 import { samples, videos } from "@/lib/content";
 
-type Loaded = { task: PoseLandmarker; mp: Awaited<ReturnType<typeof mediapipe>> };
-
-async function loadPose(): Promise<Loaded> {
-  const mp = await mediapipe();
-  const fs = await getFileset();
-  const task = await createWithFallback((delegate) =>
-    mp.PoseLandmarker.createFromOptions(fs, {
-      baseOptions: { modelAssetPath: MP_MODELS.pose, delegate },
-      runningMode: "VIDEO",
-      numPoses: 4,
-    }),
-  );
-  markMode(task, "VIDEO");
-  return { task, mp };
-}
+type Loaded = LoadedPose;
 
 type Body = { tilt: number; handsUp: boolean };
 

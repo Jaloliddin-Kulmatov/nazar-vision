@@ -6,6 +6,7 @@ import { Container, Section, SectionHeader, ButtonLink } from "@/components/ui";
 import { Pipeline, ServicesGrid } from "@/components/sections";
 import { ClientChecklist, FailureModes, HardwareStack, OfferLadder, PilotPack } from "@/components/services";
 import RoiCalculator from "@/components/RoiCalculator";
+import { WhyNazar } from "@/components/trust";
 import { site } from "@/config/site";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/services">): Promise<Metadata> {
@@ -45,6 +46,7 @@ export default function ServicesPage({ params }: PageProps<"/[locale]/services">
   const t = useTranslations("services");
   const o = useTranslations("offers");
   const h = useTranslations("home");
+  const w = useTranslations("why");
   const labelTypes = t.raw("labelTypes.items") as string[];
 
   return (
@@ -65,6 +67,11 @@ export default function ServicesPage({ params }: PageProps<"/[locale]/services">
         </Container>
       </section>
 
+      <Section className="border-y border-line bg-bg-2">
+        <SectionHeader eyebrow={w("eyebrow")} title={w("title")} subtitle={w("subtitle")} />
+        <WhyNazar />
+      </Section>
+
       <Section>
         <SectionHeader eyebrow={o("eyebrow")} title={o("title")} subtitle={o("subtitle")} />
         <OfferLadder />
@@ -78,6 +85,9 @@ export default function ServicesPage({ params }: PageProps<"/[locale]/services">
       <Section>
         <SectionHeader eyebrow={t("pilotPack.eyebrow")} title={t("pilotPack.title")} subtitle={t("pilotPack.subtitle")} />
         <PilotPack />
+        <ButtonLink href="/pilot" variant="ghost" className="mt-6">
+          {w("ctaPilotPlan")}
+        </ButtonLink>
       </Section>
 
       <Section className="border-y border-line bg-bg-2">
@@ -125,14 +135,16 @@ export default function ServicesPage({ params }: PageProps<"/[locale]/services">
           <p className="mt-3 max-w-2xl text-muted">{t("cta.text")}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/contact">{t("cta.primary")}</ButtonLink>
-            <a
-              href={site.bookCall}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl border border-line-strong px-5 py-3 text-sm font-semibold hover:border-cyan hover:text-cyan"
-            >
-              {t("cta.secondary")}
-            </a>
+            {site.bookCall && (
+              <a
+                href={site.bookCall}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border border-line-strong px-5 py-3 text-sm font-semibold hover:border-cyan hover:text-cyan"
+              >
+                {t("cta.secondary")}
+              </a>
+            )}
           </div>
         </div>
       </Section>

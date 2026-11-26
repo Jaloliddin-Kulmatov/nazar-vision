@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { Download, Loader2, LogOut, RefreshCw, Trash2 } from "lucide-react";
+import { Check, Download, Loader2, LogOut, Mail, RefreshCw, Trash2 } from "lucide-react";
 
 type Count = { key: string; n: number };
 type Stats = {
@@ -19,7 +19,27 @@ type Stats = {
   signupsOpen: boolean;
 };
 type Signup = { id: string; name: string; email: string; company: string; provider: string; email_verified: boolean; created_at: string; last_seen_at: string; downloads: number };
-type Load = { status: "loading" } | { status: "login"; error?: string } | { status: "error"; error: string } | { status: "ready"; stats: Stats; signups: Signup[] };
+type Inquiry = {
+  id: string;
+  created_at: string;
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  industry: string;
+  need: string;
+  cameras: string;
+  timeline: string;
+  budget: string;
+  message: string;
+  emailed: boolean;
+  handled: boolean;
+};
+type Load =
+  | { status: "loading" }
+  | { status: "login"; error?: string }
+  | { status: "error"; error: string }
+  | { status: "ready"; stats: Stats; signups: Signup[]; inquiries: Inquiry[] };
 
 const fmtDate = (s: string) => new Date(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 const SOURCE_LABEL: Record<string, string> = {
@@ -45,10 +65,10 @@ export default function AdminDashboard() {
   const refresh = useCallback(async (period: number) => {
     const res = await fetch(`/api/admin/stats?days=${period}`, { cache: "no-store" }).catch(() => null);
     if (!res) return setLoad({ status: "error", error: "db_error" });
-    const out = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; stats?: Stats; signups?: Signup[] };
+    const out = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; stats?: Stats; signups?: Signup[]; inquiries?: Inquiry[] };
     if (res.status === 401) return setLoad({ status: "login" });
     if (!out.ok || !out.stats) return setLoad({ status: "error", error: out.error ?? "db_error" });
-    setLoad({ status: "ready", stats: out.stats, signups: out.signups ?? [] });
+    setLoad({ status: "ready", stats: out.stats, signups: out.signups ?? [], inquiries: out.inquiries ?? [] });
   }, []);
 
   useEffect(() => {
@@ -105,7 +125,8 @@ export default function AdminDashboard() {
     );
   }
 
-  const { stats, signups } = load;
+  const { stats, signups, inquiries } = load;
+  const open = inquiries.filter((q) => !q.handled).length;
   const t = stats.totals;
   const demoTitle = (slug: string) => (d.has(`items.${slug}.title`) ? d(`items.${slug}.title`) : slug);
 
@@ -118,6 +139,16 @@ export default function AdminDashboard() {
   const remove = async (s: Signup) => {
     if (!window.confirm(`Delete ${s.name} (${s.email}) and their download history? This can't be undone.`)) return;
     await fetch(`/api/admin/signups/${s.id}`, { method: "DELETE" });
+    await refresh(days);
+  };
+
+  const markHandled = async (q: Inquiry) => {
+    await fetch(`/api/admin/inquiries/${q.id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ handled: !q.handled }) });
+    await refresh(days);
+  };
+  const removeInquiry = async (q: Inquiry) => {
+    if (!window.confirm(`Delete the message from ${q.name} (${q.email})? This can't be undone.`)) return;
+    await fetch(`/api/admin/inquiries/${q.id}`, { method: "DELETE" });
     await refresh(days);
   };
 
@@ -241,6 +272,64 @@ export default function AdminDashboard() {
         <TopList title="Devices" rows={stats.devices} />
         <TopList title="Site language" rows={stats.locales.map((r) => ({ ...r, key: r.key.toUpperCase() }))} />
       </div>
+
+      {/* Contact-form messages */}
+      <section className="rounded-xl border border-line bg-panel/60 p-5">
+        <h2 className="font-display text-lg font-bold">
+          Messages from the contact form ({inquiries.length}){open > 0 && <span className="ml-2 rounded bg-amber/15 px-2 py-0.5 text-sm text-amber">{open} to answer</span>}
+        </h2>
+        {inquiries.length === 0 ? (
+          <p className="mt-3 text-sm text-muted">No messages yet. Messages are saved here even when email sending isn&apos;t set up.</p>
+        ) : (
+          <ul className="mt-3 space-y-3">
+            {inquiries.map((q) => (
+              <li key={q.id} className={`rounded-lg border p-4 ${q.handled ? "border-line opacity-60" : "border-line-strong bg-bg-2"}`}>
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="font-semibold">
+                      {q.name}
+                      {q.company && <span className="font-normal text-muted"> · {q.company}</span>}
+                    </p>
+                    <p className="mt-0.5 flex flex-wrap gap-x-3 text-sm">
+                      <a href={`mailto:${q.email}`} className="text-cyan hover:text-cyan-hi">
+                        {q.email}
+                      </a>
+                      {q.phone && <span className="text-muted">{q.phone}</span>}
+                      <span className="tabular text-dim">{new Date(q.created_at).toLocaleString("en-GB")}</span>
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 gap-1">
+                    <a href={`mailto:${q.email}?subject=${encodeURIComponent("Re: your message to Nazar Vision")}`} className="rounded-md p-2 text-dim hover:bg-cyan/10 hover:text-cyan" aria-label={`Reply to ${q.email}`}>
+                      <Mail className="size-4" aria-hidden="true" />
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => void markHandled(q)}
+                      className={`rounded-md p-2 hover:bg-lime/10 ${q.handled ? "text-lime" : "text-dim hover:text-lime"}`}
+                      aria-label={q.handled ? "Mark as not answered" : "Mark as answered"}
+                      aria-pressed={q.handled}
+                    >
+                      <Check className="size-4" aria-hidden="true" />
+                    </button>
+                    <button type="button" onClick={() => void removeInquiry(q)} className="rounded-md p-2 text-dim hover:bg-danger/10 hover:text-danger" aria-label={`Delete message from ${q.email}`}>
+                      <Trash2 className="size-4" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+                <p className="mt-3 whitespace-pre-wrap text-sm">{q.message}</p>
+                <p className="mt-2 flex flex-wrap gap-1.5 text-xs text-muted">
+                  {[q.need, q.industry, q.cameras, q.timeline, q.budget].filter(Boolean).map((x) => (
+                    <span key={x} className="rounded bg-line px-1.5 py-0.5">
+                      {x}
+                    </span>
+                  ))}
+                  {!q.emailed && <span className="rounded bg-amber/10 px-1.5 py-0.5 text-amber">not emailed</span>}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
 
       {/* People */}
       <section className="rounded-xl border border-line bg-panel/60 p-5">
