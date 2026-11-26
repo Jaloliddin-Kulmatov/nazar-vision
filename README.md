@@ -48,18 +48,20 @@ Next.js project at `.code-kit/nazar-vision-demos.zip` (about 85 KB; it fetches t
 `npm run samples`). `/[locale]/code` shows a sign-up form; `/api/code` serves the zip to signed-in users
 only and logs each download.
 
-Accounts use Supabase email sign-in links. To switch them on:
+Sign-ups are stored in any Postgres database named by `DATABASE_URL` (Supabase, Neon, Vercel Postgres…).
+The tables are created automatically on first use, in their own `nazar_vision` schema
+(`signups` and `code_downloads`), so Supabase's public API never exposes them. Signing up sets a
+signed, http-only cookie on that browser; there is no password and no email step.
 
-1. In your Supabase project, run `supabase/schema.sql` in the SQL editor (profiles and downloads tables,
-   row-level security, and a trigger that copies name and company from the sign-up form).
-2. In Authentication → URL configuration, set the Site URL to `https://nazar-vision.vercel.app` and add
-   `https://nazar-vision.vercel.app/**` and `http://localhost:3000/**` to the redirect URLs.
-3. In Vercel (and `.env.local` for local work) set `NEXT_PUBLIC_SUPABASE_URL` and
-   `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (the anon key also works), then redeploy.
-4. Supabase's built-in email sender only allows a few emails an hour. Before launch, add your own SMTP
-   (for example Resend) in Authentication → SMTP settings.
+To switch it on, add `DATABASE_URL` in Vercel → Settings → Environment Variables and redeploy.
+For Supabase, use the **Session pooler** connection string (Connect → Session pooler,
+`...pooler.supabase.com`), not the direct `db.<project>.supabase.co` one: the direct address is
+IPv6-only and Vercel can't reach it. Put the real database password in it, URL-encoding any special
+characters. Optional: `SESSION_SECRET` (otherwise derived from `DATABASE_URL`), and the Resend
+variables from the contact form to get an email for each new sign-up.
 
-Until step 3 is done the code page says sign-up opens shortly and points to the contact form.
+To see who signed up, open the database (Supabase → Table editor → schema `nazar_vision`).
+Until `DATABASE_URL` is set the code page says sign-up opens shortly and points to the contact form.
 
 ## Docs
 

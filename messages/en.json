@@ -1466,7 +1466,7 @@
   "code": {
     "eyebrow": "Free code",
     "title": "Free source code for every demo",
-    "subtitle": "Sign up once and download the complete, working code behind all the demos on this site. Use it to learn, to prototype, or inside your own product.",
+    "subtitle": "Sign up once (free) and download the complete, working code behind all the demos on this site. Use it to learn, to prototype, or inside your own product.",
     "includedTitle": "What you get",
     "included": [
       "A ready-to-run Next.js and TypeScript project with every demo from this site",
@@ -1503,26 +1503,23 @@
     "licence": "Our code is MIT-licensed. The AI models are downloaded from their publishers and keep their own licences; check each model card before commercial use. The README in the download lists every model with a link.",
     "access": {
       "formTitle": "Sign up to download",
-      "formText": "Free. We email you a sign-in link; no password needed.",
+      "formText": "Free. Fill this in once and the download starts right away.",
       "name": "Your name",
       "company": "Company (optional)",
       "email": "Work email",
-      "submit": "Email me a sign-in link",
-      "privacy": "We use your details only to send the link and, now and then, news about new demos. No spam, no sharing.",
-      "sentTitle": "Check your email",
-      "sentText": "Open the link we just sent from this browser. It brings you back here, signed in, with the download ready.",
-      "useAnother": "Use a different email",
+      "submit": "Sign up and get the code",
+      "privacy": "We keep your name, company and email to tell you about new demos now and then. No spam, no sharing.",
       "readyTitle": "Your download is ready",
       "readyText": "Signed in as {email}.",
       "download": "Download source code ({size})",
       "signOut": "Sign out",
-      "tooMany": "Too many sign-in emails in a short time. Wait a few minutes and try again.",
-      "failed": "We couldn’t send the email. Check the address and try again.",
-      "linkFailed": "That sign-in link didn’t work: it may have expired or been opened in another browser. Ask for a new one below.",
+      "failed": "Something went wrong on our side. Try again in a minute, or write to us.",
       "required": "Sign up below to download the code.",
       "soonTitle": "Sign-up opens shortly",
       "soonText": "We are switching on accounts for code downloads. Until then, write to us and we’ll send you the code directly.",
-      "soonCta": "Ask for the code"
+      "soonCta": "Ask for the code",
+      "emailInvalid": "That email address doesn’t look right.",
+      "nameRequired": "Please add your name."
     }
   }
 }

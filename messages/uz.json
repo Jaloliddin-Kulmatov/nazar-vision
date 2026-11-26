@@ -1466,7 +1466,7 @@
   "code": {
     "eyebrow": "Bepul kod",
     "title": "Har bir demo uchun bepul manba kodi",
-    "subtitle": "Bir marta ro‘yxatdan o‘ting va saytdagi barcha demolarning to‘liq, ishlaydigan kodini yuklab oling. O‘rganish, prototip yoki o‘z mahsulotingiz uchun.",
+    "subtitle": "Bir marta (bepul) ro‘yxatdan o‘ting va saytdagi barcha demolarning to‘liq, ishlaydigan kodini yuklab oling. O‘rganish, prototip yoki o‘z mahsulotingiz uchun.",
     "includedTitle": "Nimalar olasiz",
     "included": [
       "Saytdagi barcha demolar bilan ishga tayyor Next.js va TypeScript loyihasi",
@@ -1503,26 +1503,23 @@
     "licence": "Kodimiz MIT litsenziyasi ostida. AI modellar mualliflaridan yuklanadi va o‘z litsenziyalarini saqlaydi; tijoriy foydalanishdan oldin har bir model kartasini tekshiring. Arxivdagi README barcha modellarni havolalar bilan sanab o‘tadi.",
     "access": {
       "formTitle": "Yuklab olish uchun ro‘yxatdan o‘ting",
-      "formText": "Bepul. Pochtangizga kirish havolasini yuboramiz, parol kerak emas.",
+      "formText": "Bepul. Bir marta to‘ldiring, yuklab olish darhol boshlanadi.",
       "name": "Ismingiz",
       "company": "Kompaniya (ixtiyoriy)",
       "email": "Ish pochtasi",
-      "submit": "Kirish havolasini yuborish",
-      "privacy": "Ma’lumotlaringizni faqat havola yuborish va ba’zan yangi demolar haqida xabar berish uchun ishlatamiz. Spam yo‘q, boshqalarga berilmaydi.",
-      "sentTitle": "Pochtangizni tekshiring",
-      "sentText": "Yuborgan havolamizni shu brauzerda oching. U sizni yuklab olish tayyor holda shu yerga qaytaradi.",
-      "useAnother": "Boshqa pochtani kiritish",
+      "submit": "Ro‘yxatdan o‘tish va kodni olish",
+      "privacy": "Ismingiz, kompaniyangiz va pochtangizni ba’zan yangi demolar haqida xabar berish uchun saqlaymiz. Spam yo‘q, boshqalarga berilmaydi.",
       "readyTitle": "Yuklab olish tayyor",
       "readyText": "{email} sifatida kirdingiz.",
       "download": "Manba kodini yuklab olish ({size})",
       "signOut": "Chiqish",
-      "tooMany": "Qisqa vaqtda juda ko‘p xat. Bir necha daqiqa kutib, qayta urinib ko‘ring.",
-      "failed": "Xat yuborilmadi. Manzilni tekshirib, qayta urinib ko‘ring.",
-      "linkFailed": "Kirish havolasi ishlamadi: muddati o‘tgan yoki boshqa brauzerda ochilgan bo‘lishi mumkin. Quyida yangisini so‘rang.",
+      "failed": "Bizning tomonda xatolik. Bir daqiqadan so‘ng urinib ko‘ring yoki bizga yozing.",
       "required": "Kodni yuklab olish uchun quyida ro‘yxatdan o‘ting.",
       "soonTitle": "Ro‘yxatdan o‘tish tez orada ochiladi",
       "soonText": "Kodni yuklab olish uchun akkauntlarni ulamoqdamiz. Hozircha bizga yozing, kodni to‘g‘ridan-to‘g‘ri yuboramiz.",
-      "soonCta": "Kodni so‘rash"
+      "soonCta": "Kodni so‘rash",
+      "emailInvalid": "Pochta manzilida xato bor shekilli.",
+      "nameRequired": "Iltimos, ismingizni yozing."
     }
   }
 }

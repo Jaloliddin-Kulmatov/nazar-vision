@@ -1,61 +1,48 @@
 "use client";
 
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Download, Loader2, LogOut, MailCheck } from "lucide-react";
-import type { User } from "@supabase/supabase-js";
-import { browserClient } from "@/lib/supabase/client";
+import { Download, Loader2, LogOut } from "lucide-react";
 import { ButtonLink } from "./ui";
 
-type Status = "checking" | "signedOut" | "sent" | "signedIn" | "unavailable";
+type State = { status: "checking" } | { status: "unavailable" } | { status: "signedOut" } | { status: "signedIn"; email: string };
 
-/** Sign-up form, or the download button once the visitor is signed in. */
+/** Sign-up form, or the download button once the visitor has signed up on this browser. */
 export default function CodeAccess({ kitSize }: { kitSize: string }) {
   const t = useTranslations("code.access");
   const locale = useLocale();
-  const supabase = useMemo(() => browserClient(), []);
-  const [status, setStatus] = useState<Status>(supabase ? "checking" : "unavailable");
-  const [user, setUser] = useState<User | null>(null);
+  const [state, setState] = useState<State>({ status: "checking" });
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [notice] = useState(() =>
-    typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("signin"),
-  );
+  const [required, setRequired] = useState(false);
 
   useEffect(() => {
-    if (!supabase) return;
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user);
-      setStatus(data.user ? "signedIn" : "signedOut");
-    });
-    const { data } = supabase.auth.onAuthStateChange((_e, session) => {
-      setUser(session?.user ?? null);
-      if (session?.user) setStatus("signedIn");
-    });
-    return () => data.subscription.unsubscribe();
-  }, [supabase]);
+    fetch("/api/me", { cache: "no-store" })
+      .then((r) => r.json() as Promise<{ enabled: boolean; email: string | null }>)
+      .then((me) => {
+        setRequired(new URLSearchParams(window.location.search).get("signin") === "required");
+        setState(!me.enabled ? { status: "unavailable" } : me.email ? { status: "signedIn", email: me.email } : { status: "signedOut" });
+      })
+      .catch(() => setState({ status: "unavailable" }));
+  }, []);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!supabase) return;
-    const form = new FormData(e.currentTarget);
-    const email = String(form.get("email") ?? "").trim();
+    const form = Object.fromEntries(new FormData(e.currentTarget));
     setBusy(true);
     setError(null);
-    const next = `/${locale}/code`;
-    const { error: err } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${window.location.origin}/api/auth/callback?next=${encodeURIComponent(next)}`,
-        data: { name: String(form.get("name") ?? "").trim(), company: String(form.get("company") ?? "").trim() },
-      },
-    });
+    try {
+      const res = await fetch("/api/signup", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const out = (await res.json()) as { ok: boolean; email?: string; error?: string };
+      if (out.ok && out.email) setState({ status: "signedIn", email: out.email });
+      else setError(out.error === "email_invalid" ? t("emailInvalid") : out.error === "name_required" ? t("nameRequired") : t("failed"));
+    } catch {
+      setError(t("failed"));
+    }
     setBusy(false);
-    if (err) return setError(err.status === 429 ? t("tooMany") : t("failed"));
-    setStatus("sent");
   };
 
-  if (status === "checking") {
+  if (state.status === "checking") {
     return (
       <div className="flex min-h-48 items-center justify-center rounded-xl border border-line bg-panel/60">
         <Loader2 className="size-6 animate-spin text-cyan" aria-hidden="true" />
@@ -63,7 +50,7 @@ export default function CodeAccess({ kitSize }: { kitSize: string }) {
     );
   }
 
-  if (status === "unavailable") {
+  if (state.status === "unavailable") {
     return (
       <div className="rounded-xl border border-line bg-panel/60 p-6 sm:p-8">
         <h2 className="font-display text-2xl font-bold">{t("soonTitle")}</h2>
@@ -75,41 +62,29 @@ export default function CodeAccess({ kitSize }: { kitSize: string }) {
     );
   }
 
-  if (status === "signedIn" && user) {
+  if (state.status === "signedIn") {
     return (
-      <div className="rounded-xl border border-cyan bg-panel p-6 sm:p-8">
+      <div className="rounded-xl border border-cyan bg-panel p-6 sm:p-8" role="status">
         <h2 className="font-display text-2xl font-bold">{t("readyTitle")}</h2>
-        <p className="mt-2 text-muted">{t("readyText", { email: user.email ?? "" })}</p>
-        <a
-          href={`/api/code?locale=${locale}`}
-          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-cyan px-5 py-2.5 font-semibold text-bg hover:bg-cyan-hi"
-        >
-          <Download className="size-4" aria-hidden="true" /> {t("download", { size: kitSize })}
-        </a>
-        <button
-          type="button"
-          onClick={async () => {
-            await supabase?.auth.signOut();
-            setUser(null);
-            setStatus("signedOut");
-          }}
-          className="ml-3 mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg border border-line-strong px-4 text-sm hover:border-text"
-        >
-          <LogOut className="size-4" aria-hidden="true" /> {t("signOut")}
-        </button>
-      </div>
-    );
-  }
-
-  if (status === "sent") {
-    return (
-      <div className="rounded-xl border border-lime/40 bg-lime/5 p-6 sm:p-8" role="status">
-        <MailCheck className="size-8 text-lime" aria-hidden="true" />
-        <h2 className="mt-4 font-display text-2xl font-bold">{t("sentTitle")}</h2>
-        <p className="mt-2 text-muted">{t("sentText")}</p>
-        <button type="button" onClick={() => setStatus("signedOut")} className="mt-5 text-sm font-semibold text-cyan hover:text-cyan-hi">
-          {t("useAnother")}
-        </button>
+        <p className="mt-2 text-muted">{t("readyText", { email: state.email })}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href={`/api/code?locale=${locale}`}
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-cyan px-5 py-2.5 font-semibold text-bg hover:bg-cyan-hi"
+          >
+            <Download className="size-4" aria-hidden="true" /> {t("download", { size: kitSize })}
+          </a>
+          <button
+            type="button"
+            onClick={async () => {
+              await fetch("/api/signout", { method: "POST" }).catch(() => undefined);
+              setState({ status: "signedOut" });
+            }}
+            className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-line-strong px-4 text-sm hover:border-text"
+          >
+            <LogOut className="size-4" aria-hidden="true" /> {t("signOut")}
+          </button>
+        </div>
       </div>
     );
   }
@@ -120,12 +95,7 @@ export default function CodeAccess({ kitSize }: { kitSize: string }) {
         <h2 className="font-display text-2xl font-bold">{t("formTitle")}</h2>
         <p className="mt-2 text-muted">{t("formText")}</p>
       </div>
-      {notice === "failed" && (
-        <p className="rounded-lg border border-danger/40 bg-danger/10 p-3 text-sm" role="alert">
-          {t("linkFailed")}
-        </p>
-      )}
-      {notice === "required" && <p className="rounded-lg border border-line-strong bg-bg-2 p-3 text-sm">{t("required")}</p>}
+      {required && <p className="rounded-lg border border-line-strong bg-bg-2 p-3 text-sm">{t("required")}</p>}
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm">
           <span className="mb-1.5 block text-muted">{t("name")}</span>
@@ -140,6 +110,8 @@ export default function CodeAccess({ kitSize }: { kitSize: string }) {
         <span className="mb-1.5 block text-muted">{t("email")}</span>
         <input name="email" type="email" required maxLength={200} autoComplete="email" className="field" />
       </label>
+      {/* Honeypot for bots; hidden from people and screen readers. */}
+      <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       {error && (
         <p className="text-sm text-danger" role="alert">
           {error}
